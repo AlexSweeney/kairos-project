@@ -1,0 +1,146 @@
+/* =============================== Header =============================== */
+header {
+	display: flex;
+	flex-direction: row; 
+	position: absolute;
+	background: transparent;
+	width: 100%;
+  height: 100px; 
+  z-index: 2;
+}
+
+/* =============================== Nav =================================== */
+nav a {
+	font-family: Noto-Sans, sans-serif;
+	font-size: 14px;
+	line-height: 19.07px;
+}
+
+nav a:hover {
+	cursor: pointer;
+}
+
+/* =============================== Header Left ============================ */
+.header-left {
+	padding-top: 36px;
+}
+
+/* ======== Nav Left */
+.nav-left {
+	display: flex;
+	align-items: center;
+	width: 525.12px;
+	height: 100%;  
+}
+
+.nav-left li {
+	display: flex;
+	align-items: flex-end; 
+	height: 100%;
+} 
+
+.nav-left a {
+	font-weight: 700;
+	color: #181949;
+}
+
+.nav-right a {
+	font-weight: 400;
+	color: #FFFFFF;
+}
+
+/* ======== Logo */
+.logo {
+	width: 176px;
+	height: 30px;
+	left: 81.6px;
+	top: 51.5px;
+	position: absolute;
+}
+
+/* ======== Home */
+.home-container {
+	display: flex;
+	align-items: center;
+}
+
+.home-container:hover {
+	cursor: pointer;
+}
+
+.home-icon {
+	position: absolute;
+	left: 416.97px;
+	top: 61.14px;
+	width: 16.03px;
+	height: 16.72px;
+}
+
+.home-text {
+	position: absolute;
+	left: 445px;
+	top: 60px;
+}
+
+/* =============================== Header Right ============================ */
+/* ======== Options bar */
+.options-bar {
+	background: #181949;
+	width: 100%;
+	height: 36px;
+	display: flex;
+	justify-content: flex-end;
+	z-index: 2;
+}  
+
+.options-container {
+	margin-right: 155.82px;
+	margin-top: 12px;
+	display: flex;
+}
+
+.options-container li {
+	display: flex;
+	position: relative;
+}
+
+.options-container h3 {
+	margin-left: 82px;
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	line-height: 16.41px;
+	font-weight: 400;
+	color: #CFE5FF;
+}
+
+.options-container h3:hover {
+	cursor: pointer; 
+}
+
+/* ======== Header Right */
+.header-right {
+	width: 914.8px;
+	height: 100%; 
+	position: relative;
+}
+
+.nav-right { 
+  margin-left: 33.88px;
+  margin-top: 24px; 
+}
+
+.nav-right ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.nav-right ul a {
+	margin-right: 72px;
+}
+
+.chevron-icon {
+	width: 8px;
+	height: 6px; 
+	margin-left: 4.18px;
+	margin-top: 5px;
+}

@@ -1,4 +1,5 @@
 import './reset.css';
+import './header.css';
 import './App.css'; 
 import logo from './imgs/logo-icon.png';
 import home from './imgs/home-icon.svg';
@@ -48,6 +49,14 @@ function App() {
      		</div>
 
      		<div className="main-view-right">
+     			<div className="time-options">
+     				<div className="time-option time-option-selected">
+     					<h4>Now</h4>
+     				</div>
+     				<div className="time-option">
+     					<h4>Future</h4>
+     				</div>
+     			</div> 
      		</div> 
      	</section>
 
