@@ -43,10 +43,11 @@ function App() {
      		</header>
 
      		<div className="main-view-left">
-     			<h2>Asia IT Market Place</h2>
+     			<h2>Asia IT</h2>
+     			<h2>Market Place</h2>
      		</div>
+
      		<div className="main-view-right">
-     			
      		</div> 
      	</section>
 
