@@ -2,6 +2,11 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: Noto-Sans;
+	src: url('./fonts/NotoSans-Regular.ttf');
+}
+
 /* ================= Colors ================= */
 .white-background {
 	background: #FFFFFF;
@@ -19,6 +24,14 @@
 	background: #F3F9FF;
 }
 
+/* ================= Headers ================ */
+h2 {
+	font-family: Noto-Sans, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 19.07px;
+}
+
 /* ================= Layout ================= */
 .background {
 	width: 100vw;
@@ -33,17 +46,59 @@
 	position: relative;
 }
 
-header {
-	background: transparent;
-  height: 100px;
-	position: absolute;
-  width: 100%;
-}
-
 /* ================= Main-view ============== */
 .main-view {
 	height: 655.22px;
 	display: flex;
+}
+
+/* ======= Header */
+header {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	background: transparent;
+	width: 100%;
+  height: 100px; 
+  padding-top: 36px;
+}
+
+/* ======= Header Left */
+.header-left {
+	display: flex;
+	align-items: center;
+	width: 784.78px;
+	height: 100%; 
+}
+
+.header-left h2 {
+	left: 445px;
+	position: absolute;
+}
+
+.logo {
+	width: 176px;
+	height: 30px;
+	left: 81.6px;
+	position: absolute;
+}
+
+.home-container {
+	display: flex;
+	align-items: center;
+}
+
+.home-icon {
+	position: absolute;
+	left: 416.97px;
+	width: 16.03px;
+	height: 16.72px;
+}
+
+/* ======= Header Right */
+.header-right {
+	width: 914.8px;
+	height: 100%; 
 }
 
 .main-view-left {

@@ -1,18 +1,31 @@
 import './reset.css';
 import './App.css'; 
+import logo from './imgs/logo-icon.png';
+import home from './imgs/home-icon.svg';
 
 function App() {
   return (
   	<div className="background">
      <div className="container">
-     	<header>
-
-     	</header>
-
      	<section className="main-view white-background">
+     		<header>
+     			<div className="header-left">
+     				<img className="logo" src={logo} alt="daoukiwoom logo"/>
+
+     				<span className="home-container">
+     					<img className="home-icon" src={home} alt="home icon"/>
+     					<h2>Home</h2>
+     				</span>
+     			</div>
+     			<div className="header-right">
+
+     			</div>
+     		</header>
      		<div className="main-view-left"></div>
      		<div className="main-view-right">
-     			<div className="options-bar"></div> 
+     			<div className="options-bar">
+
+     			</div> 
      		</div> 
      	</section>
      	<section className="alert-bar pink-background" alt="background-image">
