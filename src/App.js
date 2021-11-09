@@ -2,6 +2,7 @@ import './reset.css';
 import './App.css'; 
 import logo from './imgs/logo-icon.png';
 import home from './imgs/home-icon.svg';
+import chevron from './imgs/chevron-icon.svg';
 
 function App() {
   return (
@@ -21,6 +22,13 @@ function App() {
      				</nav> 
      			</div>
      			<div className="header-right">
+	     			<div className="options-bar">
+	     				<ul className="options-container">
+	     					<li><h3>EN</h3><img className="chevron-icon" src={chevron} alt="downward pointing chevron"/></li>
+	     					<li><h3>Company</h3><img className="chevron-icon"  src={chevron} alt="downward pointing chevron"/></li>
+	     					<li><h3>Partner Market Place</h3><img className="chevron-icon" src={chevron} alt="downward pointing chevron"/></li>
+	     				</ul>
+	     			</div> 
      				<nav className="nav-right">
      					<ul>
 	     					<li><a>Auto Homepage</a></li>
@@ -36,9 +44,7 @@ function App() {
 
      		<div className="main-view-left"></div>
      		<div className="main-view-right">
-     			<div className="options-bar">
-
-     			</div> 
+     			
      		</div> 
      	</section>
 
