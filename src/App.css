@@ -50,6 +50,23 @@ nav a:hover {
 	color: #FFFFFF;
 }
 
+h2 {
+
+}
+
+.options-container h3 {
+	margin-left: 82px;
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	line-height: 16.41px;
+	font-weight: 400;
+	color: #CFE5FF;
+}
+
+.options-container h3:hover {
+	cursor: pointer; 
+}
+
 /* ================= Layout ================= */
 .background {
 	width: 100vw;
@@ -146,7 +163,6 @@ header {
 	margin-right: 155.82px;
 	margin-top: 12px;
 	display: flex;
-	color: #CFE5FF;
 }
 
 .options-container li {
@@ -159,18 +175,6 @@ header {
 	height: 6px; 
 	margin-left: 4.18px;
 	margin-top: 5px;
-}
-
-.options-container h3 {
-	margin-left: 82px;
-	font-family: Roboto, sans-serif;
-	font-size: 14px;
-	line-height: 16.41px;
-	font-weight: 400;
-}
-
-.options-container h3:hover {
-	cursor: pointer; 
 }
 
 .nav-right { 

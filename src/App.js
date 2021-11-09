@@ -42,7 +42,9 @@ function App() {
      			</div>
      		</header>
 
-     		<div className="main-view-left"></div>
+     		<div className="main-view-left">
+     			<h2>Asia IT Market Place</h2>
+     		</div>
      		<div className="main-view-right">
      			
      		</div> 
