@@ -44,12 +44,8 @@ header {
 
 .main-view-right {
 	width: 914.8px;
-}
-
-.main-view-background-image {
-	width: 100%;
-	height: 100%;
-}
+	background-image: url('./imgs/background-image.jpg');
+} 
 
 .alert-bar {
 	height: 112px;

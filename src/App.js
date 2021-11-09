@@ -1,6 +1,5 @@
 import './reset.css';
-import './App.css';
-import backgroundImage from './imgs/background-image.jpg';
+import './App.css'; 
 
 function App() {
   return (
@@ -10,8 +9,7 @@ function App() {
      		<div className="main-view-right">
      			<header>
 
-     			</header>
-     			<img src={backgroundImage} alt="background-image"/>
+     			</header> 
      		</div> 
      	</section>
      	<section className="alert-bar pink-background" alt="background-image">
