@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+}
+
+/* ================= Colors ================= */
+.white-background {
+	background: #FFFFFF;
+}
+
+.pink-background {
+	background: #FFD1E8;
+}
+
+.grey-background {
+	background: #F4F4F4;
+}
+
+.blue-background {
+	background: #F3F9FF;
+}
+
+/* ================= Layout ================= */
+.container {
+	width: 1440px; 
+	display: flex;
+	flex-direction: column; 
+}
+
+/* ================= Main-view ============== */
+header {
+	background: #181949;
+	width: 100%;
+	height: 36px;
+}
+
+.main-view {
+	height: 655.22px;
+	display: flex;
+}
+
+.main-view-left {
+	width: 784.78px;
+}
+
+.main-view-right {
+	width: 914.8px;
+}
+
+.main-view-background-image {
+	width: 100%;
+	height: 100%;
+}
+
+.alert-bar {
+	height: 112px;
+}
+
+/* ================= Icon-views ============= */
+.icon-view {
+	height: 405.75px;
+	width: 100%;
+}
+
+/* ================= Options-view =========== */
+.options-view {
+	height: 487.06px;
+}
+
+.offices-view {
+	border-top: 1px solid #999999;
+	height: 320px;
+}
