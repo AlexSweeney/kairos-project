@@ -1,4 +1,5 @@
 import './reset.css';
+import './fonts.css';
 import './header.css';
 import './App.css'; 
 import logo from './imgs/logo-icon.png';
