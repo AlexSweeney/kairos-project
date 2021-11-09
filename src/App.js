@@ -72,7 +72,7 @@ function App() {
      	</section>
 
      	<section className="alert-bar pink-background" alt="background-image">
-
+     		<p>You are now viewing an <em>IT Software</em> that has been verified by <em>over 1 million users.</em></p>
      	</section>
 
      	<section className="it-cloud-view icon-view white-background">
