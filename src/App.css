@@ -61,19 +61,73 @@
 	padding-top: 100px;
 } 
 
-.time-options {
-
+/* Option Buttons */
+.option-buttons {
+	display: flex;
+	margin-left: 315.88px;
+	margin-top: 55.37px;
 }
 
-.time-option {
+.option-button {
+	background: transparent;
+	border: none;
+
 	width: 124.42px; 
 	padding-bottom: 16px;
+	display: flex;
+	justify-content: center;  
+
+	font-family: Noto-Sans, sans-serif;
+	font-style: SemiBold;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 30px;
+	color: #FFFFFF;
+	opacity: 0.5;
+} 
+
+.option-button:hover {
+	cursor: pointer;
 }
 
-.time-option-selected {
+.option-button-selected  {
 	border-bottom: 1.5px solid #CFE5FF;
+ 	opacity: 1;
 }
 
+/* Option Info */
+.options-info {
+	margin-left: 180px;
+	margin-right: 180px;
+	margin-top: 29.36px;
+	display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.option-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.option-number {
+	font-family: Noto-Sans, sans-serif;
+	font-style: bold;
+	font-size: 64px;
+	line-height: 87px;
+	color: #CFE5FF;
+} 
+
+.option-text {
+	font-family: Noto-Sans, sans-serif;
+	font-style: regular;
+	font-size: 20px;
+	line-height: 27px;
+	color: #FFFFFF;
+	text-align: center;
+}
+  
 /* ================= Alert-view ============= */
 .alert-bar {
 	height: 112px;

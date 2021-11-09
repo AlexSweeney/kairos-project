@@ -1,7 +1,7 @@
 import './reset.css';
 import './fonts.css';
-import './header.css';
 import './App.css'; 
+import './header.css'; 
 import logo from './imgs/logo-icon.png';
 import home from './imgs/home-icon.svg';
 import chevron from './imgs/chevron-icon.svg';
@@ -50,14 +50,24 @@ function App() {
      		</div>
 
      		<div className="main-view-right">
-     			<div className="time-options">
-     				<div className="time-option time-option-selected">
-     					<h4>Now</h4>
-     				</div>
-     				<div className="time-option">
-     					<h4>Future</h4>
-     				</div>
+     			<div className="option-buttons">
+     				<button className="option-button option-button-selected">Now</button>
+     				<button className="option-button">Future</button>
      			</div> 
+     			<div className="options-info">
+     				<div className="option-info">
+     					<h3 className="option-number">6</h3>
+     					<h3 className="option-text">different<br/>IT Software<br/>Networks</h3>
+     				</div>
+     				<div className="option-info">
+     					<h3 className="option-number">32</h3>
+     					<h3 className="option-text">partners</h3>
+     				</div>
+     				<div className="option-info">
+     					<h3 className="option-number">4</h3>
+     					<h3 className="option-text">countries</h3>
+     				</div>
+     			</div>
      		</div> 
      	</section>
 
