@@ -20,19 +20,27 @@
 }
 
 /* ================= Layout ================= */
+.background {
+	width: 100vw;
+	height: 100%;
+	background: #838080;
+}
+
 .container {
 	width: 1440px; 
 	display: flex;
 	flex-direction: column; 
+	position: relative;
+}
+
+header {
+	background: transparent;
+  height: 100px;
+	position: absolute;
+  width: 100%;
 }
 
 /* ================= Main-view ============== */
-header {
-	background: #181949;
-	width: 100%;
-	height: 36px;
-}
-
 .main-view {
 	height: 655.22px;
 	display: flex;
@@ -47,6 +55,13 @@ header {
 	background-image: url('./imgs/background-image.jpg');
 } 
 
+.options-bar {
+	background: #181949;
+	width: 100%;
+	height: 36px;
+}
+
+/* ================= Alert-view ============= */
 .alert-bar {
 	height: 112px;
 }

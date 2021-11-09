@@ -3,13 +3,16 @@ import './App.css';
 
 function App() {
   return (
+  	<div className="background">
      <div className="container">
+     	<header>
+
+     	</header>
+
      	<section className="main-view white-background">
      		<div className="main-view-left"></div>
      		<div className="main-view-right">
-     			<header>
-
-     			</header> 
+     			<div className="options-bar"></div> 
      		</div> 
      	</section>
      	<section className="alert-bar pink-background" alt="background-image">
@@ -40,6 +43,7 @@ function App() {
 
      	</section>
      </div>
+    </div>
   );
 }
 
