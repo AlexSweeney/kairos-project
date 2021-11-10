@@ -13,7 +13,22 @@ import screenIconFive from './imgs/screen-icon-5.svg';
 import screenIconSix from './imgs/screen-icon-6.svg';
 
 function App() { 
-  const navLinkStyle = {
+  const logoStyle = {
+    'width' : '176px',
+    'height': '30px', 
+  };  
+
+  const navLinkLeftStyle = {
+    'font-family': 'Noto Sans',
+    'font-size': '14px',
+    'font-style': 'normal',
+    'font-weight': '700',
+    'line-height': '19px', 
+    'letter-spacing': '0em', 
+    'color': '#181949',
+  };
+
+  const navLinkRightStyle = {
     'font-family': 'Noto Sans', 
     'font-size': '14px',
     'font-style': 'normal',
@@ -31,10 +46,10 @@ function App() {
      			<div className="header-left">
      				<nav className="nav-left">
      					<ul>
-	     					<li><img className="logo" src={logo} alt="daoukiwoom logo"/></li>
+	     					<li><img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/></li>
 	     					<li className="home-container">
 	     						<img className="home-icon" src={home} alt="home icon"/>
-	     						<a className="home-text nav-link" style={navLinkStyle}>Home</a>
+	     						<a className="home-text nav-link nav-link-left" style={navLinkLeftStyle}>Home</a>
 	     					</li>
      					</ul>
      				</nav> 
@@ -49,12 +64,12 @@ function App() {
 	     			</div> 
      				<nav className="nav-right">
      					<ul>
-	     					<li><a className="nav-link" style={navLinkStyle}>Auto Homepage</a></li>
-	     					<li><a className="nav-link" style={navLinkStyle}>Sales</a></li>
-	     					<li><a className="nav-link" style={navLinkStyle}>CRM</a></li>
-	     					<li><a className="nav-link" style={navLinkStyle}>Electronic Office</a></li>
-	     					<li><a className="nav-link" style={navLinkStyle}>Cloud ERP</a></li>
-	     					<li><a className="nav-link" style={navLinkStyle}>SSL</a></li>
+	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Auto Homepage</a></li>
+	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Sales</a></li>
+	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>CRM</a></li>
+	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Electronic Office</a></li>
+	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Cloud ERP</a></li>
+	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>SSL</a></li>
      					</ul>
      				</nav>
      			</div>

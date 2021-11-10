@@ -31,17 +31,7 @@ header {
 	display: flex;
 	align-items: flex-end; 
 	height: 100%;
-} 
-
-.nav-left a {
-	font-weight: 700;
-	color: #181949;
-}
-
-.nav-right a {
-	font-weight: 400;
-	color: #FFFFFF;
-}
+}  
 
 /* ======== Logo */
 .logo { 
