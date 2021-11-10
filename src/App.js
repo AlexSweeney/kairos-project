@@ -6,6 +6,7 @@ import logo from './imgs/logo-icon.png';
 import home from './imgs/home-icon.svg';
 import chevron from './imgs/chevron-icon.svg';
 import screenIconOne from './imgs/screen-icon-1.svg';
+import screenIconTwo from './imgs/screen-icon-2.svg';
 
 function App() {
   return (
@@ -76,11 +77,11 @@ function App() {
      		<p>You are now viewing an <em>IT Software</em> that has been verified by <em>over 1 million users.</em></p>
      	</section>
 
-     	<section className="it-cloud-view icon-view white-background">
+     	<section className="it-cloud-view white-background">
      		<div className="icon-view-title-container">
      			<h2>IT CLOUD SEA’S IT SERVICE</h2>
      		</div> 
-     		<div className="icon-view-container">
+     		<div className="info-box-container">
      			<img className="screen-icon" src={screenIconOne} alt="computer screen icon"/>
 	     		<div className="info-box">
 	     			<h3 className="info-box-heading">ASSETS</h3>
@@ -91,7 +92,13 @@ function App() {
      	</section>
 
      	<section className="accounting-view icon-view grey-background">
-
+     		
+	     		<div className="info-box">
+	     			<h3 className="info-box-heading">ACCOUNTING</h3>
+	     			<p className="info-box-text">Accounting</p>
+	     			<button className="info-button">G-Book</button>
+	     		</div>
+	     		<img className="screen-icon" src={screenIconTwo} alt="computer screen icon"/>
      	</section>
 
      	<section className="hr-admin-view icon-view white-background">

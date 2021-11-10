@@ -149,34 +149,16 @@
 
 /* ================= Icon-views ============= */
 .icon-view {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 	height: 405.75px;
 	width: 100%;
-	display: flex;
-	flex-direction: column;
+	padding-left: 403.86px;
+	padding-right: 403.86px;
 }
 
-.it-cloud-view {
-	height: 100%;
-	padding-top: 77.78px;
-	padding-left:  279.54px;
-	padding-right: 279.54px;
-	padding-bottom: 85.44px;
-}
-
-.icon-view-title-container {
-	font-family: Noto-Sans, sans-serif;
-	font-size: 48px;
-	line-height: 65px;
-	font-weight: 700;
-	color: #181949;  
-	text-align: center;
-	padding-bottom: 104.64px;
-}
-
-.icon-view-container {
-	display: flex;  
-	justify-content: space-between;
-}
 
 .screen-icon {
 	width: 280px;
@@ -219,6 +201,40 @@
 	font-size: 16px;
 	line-height: 16px; 
 	color: #FFFFFF;
+}
+
+.info-box-container {
+	display: flex;   
+}
+
+/* === IT-cloud-view */
+.it-cloud-view {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding-top: 77.78px;
+	padding-left:  279.54px;
+	padding-right: 279.54px;
+	padding-bottom: 85.44px;
+}
+
+.icon-view-title-container {
+	font-family: Noto-Sans, sans-serif;
+	font-size: 48px;
+	line-height: 65px;
+	font-weight: 700;
+	color: #181949;  
+	text-align: center;
+	padding-bottom: 104.64px;
+}
+
+.it-cloud-view .screen-icon {
+	margin-right: 322.63px;
+}
+
+/* === Accounting-view */
+.accounting-view .screen-icon {
+	margin-left: 213.14px;
 }
  
 /* ================= Options-view =========== */
