@@ -153,12 +153,21 @@
 .icon-view {
 	display: flex; 
   align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  gap: 170px;
+  flex-direction: row; 
+  justify-content: space-between;
 	height: 405.75px;
 	width: 100%;
 } 
+
+.icon-view-wide {
+	padding-left: 209px;
+  padding-right: 360px;
+}
+
+.icon-view-slim {  
+	padding-left: 366px;
+	padding-right: 439px;
+}
 
 .screen-icon {
 	width: 280px;
@@ -213,16 +222,6 @@
 }
 
 /* === IT-cloud-view */
-.it-cloud-view {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	padding-top: 77.78px;
-	padding-left:  279.54px;
-	padding-right: 279.54px;
-	padding-bottom: 85.44px;
-}
-
 .icon-view-title-container {
 	font-family: Noto-Sans, sans-serif;
 	font-size: 48px;
@@ -230,35 +229,7 @@
 	font-weight: 700;
 	color: #181949;  
 	text-align: center;
-	padding-bottom: 104.64px;
-}
-
-.it-cloud-view .screen-icon {
-	margin-right: 322.63px;
-}
-
-/* === Accounting-view */
-.accounting-view {
-	padding-left: 403.86px;
-	padding-right: 403.86px;
-}
-
-.accounting-view .screen-icon {
-	margin-left: 213.14px;
-}
-
-/* === HR-Admin View */
-.hr-admin-view {
-	padding-left: 279.54px;
-} 
-
-.hr-admin-view .screen-icon {
-	margin-right: 282.13px;
-}
-
-.hr-admin-view .info-box {
-	align-self: flex-start;
-	margin-top: 76px;
+	padding-top: 45px;
 }
 
 .hr-admin-view .info-box-row-1 .info-button-container {
@@ -272,17 +243,6 @@
 .hr-admin-view .info-box-row-2 {
 	margin-top: 18.15px;
 } 
-
-/* === Sales View */
-.sales-view {
-	padding-left: 328.56px;
-}
-
-.sales-view .info-box {
-	align-self: flex-start;
-	padding-right: 315.56px;
-	margin-top: 88px;
-}
 
 /* ================= Options-view =========== */
 .options-view {

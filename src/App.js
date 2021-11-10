@@ -91,18 +91,18 @@ function App() {
      		<div className="icon-view-title-container">
      			<h2>IT CLOUD SEA’S IT SERVICE</h2>
      		</div> 
-     		<div className="info-box-container">
+     		<div className=" icon-view icon-view-wide">
      			<img className="screen-icon" src={screenIconOne} alt="computer screen icon"/>
 	     		<div className="info-box">
 	     			<h3 className="info-box-heading">ASSETS</h3>
 	     			<p className="info-box-text">Inventory Management</p>
 	     			<button className="info-button">G-Book</button>
-	     		</div>
-     		</div> 
+	     		</div> 
+	     	</div>
      	</section>
 
      	{/* ========================== Accounting view =================== */}
-     	<section className="accounting-view icon-view grey-background"> 
+     	<section className="accounting-view icon-view icon-view-slim grey-background"> 
      		<div className="info-box">
      			<h3 className="info-box-heading">ACCOUNTING</h3>
      			<p className="info-box-text">Accounting</p>
@@ -112,7 +112,7 @@ function App() {
      	</section>
 
      	{/* ========================== HR Admin View =================== */}
-     	<section className="hr-admin-view icon-view white-background">
+     	<section className="hr-admin-view icon-view icon-view-wide white-background">
      		<img className="screen-icon" src={screenIconThree} alt="computer screen icon"/>
      		<div className="info-box">
      			<h3 className="info-box-heading">HR & ADMIN</h3>
@@ -144,7 +144,7 @@ function App() {
      	</section>
 
      	{/* ========================== Sales View =================== */}
-     	<section className="sales-view icon-view grey-background">
+     	<section className="sales-view icon-view icon-view-slim grey-background">
      		<div className="info-box">
      			<h3 className="info-box-heading">SALES</h3>
      			<p className="info-box-text">Create Homepage</p>
@@ -155,7 +155,7 @@ function App() {
      	</section>
 
      	{/* ========================== Customer View ================ */}
-     	<section className="customer-view icon-view white-background">
+     	<section className="customer-view icon-view icon-view-wide white-background">
      		<img className="screen-icon" src={screenIconFive} alt="computer screen icon"/>
      		<div className="info-box">
      			<h3 className="info-box-heading">CUSTOMER</h3>
@@ -165,7 +165,7 @@ function App() {
      	</section>
 
      	{/* ========================== Security View ================ */}
-     	<section className="security-view icon-view grey-background">
+     	<section className="security-view icon-view icon-view-slim grey-background">
      		<div className="info-box">
      			<h3 className="info-box-heading">SECURITY</h3>
      			<p className="info-box-text">SSL server</p>
