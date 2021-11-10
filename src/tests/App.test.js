@@ -5,6 +5,7 @@ import App from './../App.jsx';
 
 let container;
 const navLinkNames = ['Home', 'Auto Homepage', 'Sales', 'CRM', 'Electronic office', 'Cloud ERP', 'SSL'];
+const optionNames = ['EN', 'Company', 'Partner Market Place'];
 
 function hexToRGB(hex) {
 	hex = hex.replace('#', '');
@@ -15,6 +16,10 @@ function hexToRGB(hex) {
 
   return `rgb(${a}, ${b}, ${c})`;
 }
+
+function containsTextContent(nodes, text) {
+	return Array.from(nodes).some(node => node.textContent === text);
+} 
 
 beforeEach(() => {
 	container = document.createElement('div');
@@ -29,6 +34,7 @@ afterEach(() => {
 test.todo('check font loads')
 test.todo('test hexToRGB fn')
 test.todo('test elements ordered correctly')
+test.todo('test containsTextContent')
 
 describe('<App/>', () => {
 	describe('<Header/>', () => {
@@ -74,7 +80,12 @@ describe('<App/>', () => {
 		describe('nav links', () => {
 			it('should render all nav links', () => {
 				const navLinks = container.querySelectorAll('.nav-link');
-				expect(navLinks.length).toEqual(navLinkNames.length)
+				expect(navLinks.length).toEqual(navLinkNames.length) 
+
+				navLinkNames.forEach(navLinkName => {
+					const check = containsTextContent(navLinks, navLinkName);
+					expect(check).toEqual(true)
+				})
 			})
 
 			describe('nav links', () => {
@@ -150,5 +161,80 @@ describe('<App/>', () => {
 				})  
 			}) 
 		})  
+
+		describe.only('options-bar', () => {
+			it('should render all options', () => {
+				const options = document.querySelectorAll('.option');
+				expect(options.length).toEqual(optionNames.length) 
+ 
+				optionNames.forEach(optionName => {
+					const check = containsTextContent(options, optionName);
+					expect(check).toEqual(true)
+				}) 
+			})
+ 
+			it('option headings should have "fontFamily": "Roboto, sans-serif"', () => {
+				const optionHeadings = document.querySelectorAll('.option-heading');
+
+				optionHeadings.forEach(optionHeading => {
+					expect(optionHeading.style.fontFamily).toEqual('Roboto, sans-serif')
+				})
+			})
+
+			it('option headings should have "fontSize" : "14px"', () => {
+				const optionHeadings = document.querySelectorAll('.option-heading');
+
+				optionHeadings.forEach(optionHeading => {
+					expect(optionHeading.style.fontSize).toEqual('14px')
+				})
+			})
+
+			it('option headings should have "fontStyle" : "normal"', () => {
+				const optionHeadings = document.querySelectorAll('.option-heading');
+
+				optionHeadings.forEach(optionHeading => {
+					expect(optionHeading.style.fontStyle).toEqual('normal')
+				})
+			})
+
+			it('option headings should have "fontWeight" : "400"', () => {
+				const optionHeadings = document.querySelectorAll('.option-heading');
+
+				optionHeadings.forEach(optionHeading => {
+					expect(optionHeading.style.fontWeight).toEqual('400')
+				})
+			})
+
+			it('option headings should have "lineHeight" : "16px"', () => {
+				const optionHeadings = document.querySelectorAll('.option-heading');
+
+				optionHeadings.forEach(optionHeading => {
+					expect(optionHeading.style.lineHeight).toEqual('16px')
+				})
+			}) 
+
+			it('options should have chevron-icon', () => {
+				const options = document.querySelectorAll('.option');
+
+				options.forEach(option => {
+					const check = option.querySelector('.chevron-icon');
+					expect(check).not.toEqual(null)
+				})
+			}) 
+		})
+
+		describe('chevron-icons', () => {
+			it.only('chevron-icon should have "width" : "8px"', () => {
+				
+			}) 
+ 
+			it('chevron-icon should have "height" : "6px"', () => {
+				
+			})
+
+			it('chevron-icon should have "background" : "#CFE5FF"', () => {
+				
+			})
+		})
 	})
 })

@@ -1,4 +1,4 @@
-/* =============================== Header =============================== */
+/* =============================== Header ================================= */
 header {
 	display: flex;
 	flex-direction: row; 
@@ -9,7 +9,7 @@ header {
   z-index: 2; 
 }
 
-/* =============================== Nav =================================== */
+/* =============================== Nav links ============================== */
 .nav-link:hover {
 	cursor: pointer;
 }
@@ -27,7 +27,7 @@ header {
 	height: 100%;  
 }
 
-.nav-left li {
+.nav-left .nav-link {
 	display: flex;
 	align-items: flex-end; 
 	height: 100%;
@@ -71,23 +71,23 @@ header {
 	width: 100%;
 	height: 36px;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
+	padding-left: 350px;
+	padding-top: 8px;
 	z-index: 2;
 }  
 
-.options-container {
-	margin-right: 155.82px;
-	margin-top: 12px;
+.options-container { 
 	display: flex;
 }
 
-.options-container li {
+.option {
 	display: flex;
-	position: relative;
+	align-items: center;
+	margin-right: 82px;
 }
 
-.options-container h3 {
-	margin-left: 82px;
+.option-heading { 
 	font-family: Roboto, sans-serif;
 	font-size: 14px;
 	line-height: 16.41px;
@@ -95,7 +95,7 @@ header {
 	color: #CFE5FF;
 }
 
-.options-container h3:hover {
+.options-heading:hover {
 	cursor: pointer; 
 }
 
@@ -116,13 +116,10 @@ header {
 	flex-direction: row;
 }
 
-.nav-right ul a {
+.nav-link-right {
 	margin-right: 72px;
 }
 
 .chevron-icon {
-	width: 8px;
-	height: 6px; 
 	margin-left: 4.18px;
-	margin-top: 5px;
 }

@@ -23,13 +23,27 @@ function App() {
     'height': '16.72px',
   };
 
+  const chevronIconStyle = {
+    'width': '8px',
+    'height': '6px',
+    'background': '#CFE5FF',
+  }; 
+
+  const optionHeadingStyle = {
+    'fontFamily': 'Roboto, sans-serif',
+    'fontSize': '14px',
+    'fontStyle': 'normal',
+    'fontWeight': '400',
+    'lineHeight': '16px',
+    'color': '#CFE5FF',
+  }; 
+
   const navLinkLeftStyle = {
     'fontFamily': 'Noto Sans, sans-serif',
     'fontSize': '14px',
     'fontStyle': 'normal',
     'fontWeight': '700',
-    'lineHeight': '19px', 
-    'letterSpacing': '0em', 
+    'lineHeight': '19px',  
     'color': '#181949',
   };
 
@@ -39,6 +53,7 @@ function App() {
     'fontStyle': 'normal',
     'fontWeight': '400',
     'lineHeight': '19px', 
+    'color': '#FFFFFF',
   };
 
   return (
@@ -62,9 +77,18 @@ function App() {
      			<div className="header-right">
 	     			<div className="options-bar">
 	     				<ul className="options-container">
-	     					<li><h3>EN</h3><img className="chevron-icon" src={chevron} alt="downward pointing chevron"/></li>
-	     					<li><h3>Company</h3><img className="chevron-icon"  src={chevron} alt="downward pointing chevron"/></li>
-	     					<li><h3>Partner Market Place</h3><img className="chevron-icon" src={chevron} alt="downward pointing chevron"/></li>
+	     					<li className="option">
+                  <h3 className="option-heading" style={optionHeadingStyle}>EN</h3>
+                  <img className="chevron-icon" src={chevron} alt="downward pointing chevron"/>
+                </li>
+	     					<li className="option">
+                  <h3 className="option-heading" style={optionHeadingStyle}>Company</h3>
+                  <img className="chevron-icon"  src={chevron} alt="downward pointing chevron"/>
+                </li>
+	     					<li className="option">
+                  <h3 className="option-heading" style={optionHeadingStyle}>Partner Market Place</h3>
+                  <img className="chevron-icon" src={chevron} alt="downward pointing chevron"/>
+                </li>
 	     				</ul>
 	     			</div> 
      				<nav className="nav-right">
