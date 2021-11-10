@@ -1,7 +1,7 @@
-import './reset.css';
-import './fonts.css';
-import './App.css'; 
-import './header.css'; 
+import './styles/reset.css';
+import './styles/fonts.css';
+import './styles/App.css'; 
+import './styles/header.css'; 
 import logo from './imgs/logo-icon.png';
 import home from './imgs/home-icon.svg';
 import chevron from './imgs/chevron-icon.svg';
@@ -12,7 +12,15 @@ import screenIconFour from './imgs/screen-icon-4.svg';
 import screenIconFive from './imgs/screen-icon-5.svg';
 import screenIconSix from './imgs/screen-icon-6.svg';
 
-function App() {
+function App() { 
+  const navLinkStyle = {
+    'font-family': 'Noto Sans', 
+    'font-size': '14px',
+    'font-style': 'normal',
+    'font-weight': '400',
+    'line-height': '19px', 
+  };
+
   return (
   	<div className="background">
      <div className="container">
@@ -26,7 +34,7 @@ function App() {
 	     					<li><img className="logo" src={logo} alt="daoukiwoom logo"/></li>
 	     					<li className="home-container">
 	     						<img className="home-icon" src={home} alt="home icon"/>
-	     						<a className="home-text">Home</a>
+	     						<a className="home-text nav-link" style={navLinkStyle}>Home</a>
 	     					</li>
      					</ul>
      				</nav> 
@@ -41,12 +49,12 @@ function App() {
 	     			</div> 
      				<nav className="nav-right">
      					<ul>
-	     					<li><a>Auto Homepage</a></li>
-	     					<li><a>Sales</a></li>
-	     					<li><a>CRM</a></li>
-	     					<li><a>Electronic Office</a></li>
-	     					<li><a>Cloud ERP</a></li>
-	     					<li><a>SSL</a></li>
+	     					<li><a className="nav-link" style={navLinkStyle}>Auto Homepage</a></li>
+	     					<li><a className="nav-link" style={navLinkStyle}>Sales</a></li>
+	     					<li><a className="nav-link" style={navLinkStyle}>CRM</a></li>
+	     					<li><a className="nav-link" style={navLinkStyle}>Electronic Office</a></li>
+	     					<li><a className="nav-link" style={navLinkStyle}>Cloud ERP</a></li>
+	     					<li><a className="nav-link" style={navLinkStyle}>SSL</a></li>
      					</ul>
      				</nav>
      			</div>
