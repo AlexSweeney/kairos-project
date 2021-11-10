@@ -7,12 +7,15 @@ import home from './imgs/home-icon.svg';
 import chevron from './imgs/chevron-icon.svg';
 import screenIconOne from './imgs/screen-icon-1.svg';
 import screenIconTwo from './imgs/screen-icon-2.svg';
+import screenIconThree from './imgs/screen-icon-3.svg';
 
 function App() {
   return (
   	<div className="background">
      <div className="container">
+     	{/* ========================== Main View ========================== */}
      	<section className="main-view white-background">
+     	{/* ======== Header ====== */}
      		<header>
      			<div className="header-left">
      				<nav className="nav-left">
@@ -46,11 +49,13 @@ function App() {
      			</div>
      		</header>
 
+     		{/* ======== Main View Left ====== */}
      		<div className="main-view-left">
      			<h2>Asia IT</h2>
      			<h2>Market Place</h2>
      		</div>
 
+     		{/* ======== Main View Right ====== */}
      		<div className="main-view-right">
      			<div className="option-buttons">
      				<button className="option-button option-button-selected">Now</button>
@@ -73,10 +78,12 @@ function App() {
      		</div> 
      	</section>
 
+     	{/* ========================== Alert Bar ========================== */}
      	<section className="alert-bar pink-background" alt="background-image">
      		<p>You are now viewing an <em>IT Software</em> that has been verified by <em>over 1 million users.</em></p>
      	</section>
 
+     	{/* ========================== IT cloud view ====================== */}
      	<section className="it-cloud-view white-background">
      		<div className="icon-view-title-container">
      			<h2>IT CLOUD SEA’S IT SERVICE</h2>
@@ -91,6 +98,7 @@ function App() {
      		</div> 
      	</section>
 
+     	{/* ========================== Accounting view =================== */}
      	<section className="accounting-view icon-view grey-background"> 
 	     		<div className="info-box">
 	     			<h3 className="info-box-heading">ACCOUNTING</h3>
@@ -100,26 +108,59 @@ function App() {
 	     		<img className="screen-icon" src={screenIconTwo} alt="computer screen icon"/>
      	</section>
 
+     	{/* ========================== HR Admin View =================== */}
      	<section className="hr-admin-view icon-view white-background">
-
+     		<img className="screen-icon" src={screenIconThree} alt="computer screen icon"/>
+     		<div className="info-box">
+     			<h3 className="info-box-heading">HR & ADMIN</h3>
+     			<div className="info-box-row info-box-row-1">
+     				<div className="info-button-container">
+     					<p className="info-box-text">Webmail</p>
+	     				<button className="info-button">E-office</button>
+     				</div>
+     				<div className="info-button-container">
+     					<p className="info-box-text">E-Approval</p>
+	     				<button className="info-button">E-office</button>
+     				</div>
+     				<div className="info-button-container">
+     					<p className="info-box-text">E-Document</p>
+	     				<button className="info-button">E-office</button>
+     				</div>
+     			</div>
+     			<div className="info-box-row info-box-row-2">
+     				<div className="info-button-container">
+     					<p className="info-box-text">E-Check in.out</p>
+	     				<button className="info-button">E-office</button>
+     				</div>
+     				<div className="info-button-container">
+     					<p className="info-box-text">Co-work/Project</p>
+	     				<button className="info-button">E-office</button>
+     				</div>
+     			</div>
+     		</div>
      	</section>
 
+     	{/* ========================== Sales View =================== */}
      	<section className="sales-view icon-view grey-background">
 
      	</section>
 
+     	{/* ========================== Customer View ================ */}
      	<section className="customer-view icon-view white-background">
 
      	</section>
 
+     	{/* ========================== Security View ================ */}
      	<section className="security-view icon-view grey-background">
 
      	</section>
 
+     	{/* ========================== Options View ================ */}
      	<section className="options-view blue-background">
 
      	</section>
 
+     	{/* ========================== Offices View ================ */}
      	<section className="offices-view blue-background">
 
      	</section>

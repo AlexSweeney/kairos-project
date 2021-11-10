@@ -151,16 +151,12 @@
 
 /* ================= Icon-views ============= */
 .icon-view {
-	display: flex;
-  justify-content: center;
+	display: flex; 
   align-items: center;
   flex-direction: row;
 	height: 405.75px;
 	width: 100%;
-	padding-left: 403.86px;
-	padding-right: 403.86px;
-}
-
+} 
 
 .screen-icon {
 	width: 280px;
@@ -209,6 +205,11 @@
 	display: flex;   
 }
 
+.info-box-row {
+	display: flex;
+	text-align: center;
+}
+
 /* === IT-cloud-view */
 .it-cloud-view {
 	display: flex;
@@ -235,10 +236,42 @@
 }
 
 /* === Accounting-view */
+.accounting-view {
+	padding-left: 403.86px;
+	padding-right: 403.86px;
+}
+
 .accounting-view .screen-icon {
 	margin-left: 213.14px;
 }
- 
+
+/* === HR-Admin View */
+.hr-admin-view {
+	padding-left: 279.54px;
+} 
+
+.hr-admin-view .screen-icon {
+	margin-right: 282.13px;
+}
+
+.hr-admin-view .info-box {
+	align-self: flex-start;
+	margin-top: 76px;
+}
+
+.hr-admin-view .info-box-row-1 .info-button-container {
+	margin-right: 32px;
+}
+
+.hr-admin-view .info-box-row-1 .info-button-container:last-child {
+	margin-right: 0;
+}
+
+.hr-admin-view .info-box-row-2 {
+	margin-top: 18.15px;
+}
+
+
 /* ================= Options-view =========== */
 .options-view {
 	height: 487.06px;

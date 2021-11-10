@@ -53,8 +53,7 @@ nav a:hover {
 .logo { 
 	left: 81.6px;
 	top: 51.5px;
-	position: absolute;
-	image-rendering: crisp-edges;
+	position: absolute; 
 }
 
 /* ======== Home */
