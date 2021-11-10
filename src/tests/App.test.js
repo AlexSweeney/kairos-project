@@ -184,53 +184,57 @@ describe('<App/>', () => {
 				}) 
 			})
 
-			it('should have "background": "#181949"', () => {
-				const optionsBar = document.querySelector('.options-bar');
-				const res = hexToRGB('#181949');
+			describe('background', () => {
+				it('should have "background": "#181949"', () => {
+					const optionsBar = document.querySelector('.options-bar');
+					const res = hexToRGB('#181949');
 
-				expect(optionsBar.style.background).toEqual(res)
-			})
- 
-			it('option headings should have "fontFamily": "Roboto, sans-serif"', () => {
-				const optionHeadings = document.querySelectorAll('.option-heading');
-
-				optionHeadings.forEach(optionHeading => {
-					expect(optionHeading.style.fontFamily).toEqual('Roboto, sans-serif')
+					expect(optionsBar.style.background).toEqual(res)
 				})
 			})
+			
+ 			describe('option heading styles', () => {
+ 				it('option headings should have "fontFamily": "Roboto, sans-serif"', () => {
+					const optionHeadings = document.querySelectorAll('.option-heading');
 
-			it('option headings should have "fontSize" : "14px"', () => {
-				const optionHeadings = document.querySelectorAll('.option-heading');
-
-				optionHeadings.forEach(optionHeading => {
-					expect(optionHeading.style.fontSize).toEqual('14px')
+					optionHeadings.forEach(optionHeading => {
+						expect(optionHeading.style.fontFamily).toEqual('Roboto, sans-serif')
+					})
 				})
-			})
 
-			it('option headings should have "fontStyle" : "normal"', () => {
-				const optionHeadings = document.querySelectorAll('.option-heading');
+				it('option headings should have "fontSize" : "14px"', () => {
+					const optionHeadings = document.querySelectorAll('.option-heading');
 
-				optionHeadings.forEach(optionHeading => {
-					expect(optionHeading.style.fontStyle).toEqual('normal')
+					optionHeadings.forEach(optionHeading => {
+						expect(optionHeading.style.fontSize).toEqual('14px')
+					})
 				})
-			})
 
-			it('option headings should have "fontWeight" : "400"', () => {
-				const optionHeadings = document.querySelectorAll('.option-heading');
+				it('option headings should have "fontStyle" : "normal"', () => {
+					const optionHeadings = document.querySelectorAll('.option-heading');
 
-				optionHeadings.forEach(optionHeading => {
-					expect(optionHeading.style.fontWeight).toEqual('400')
+					optionHeadings.forEach(optionHeading => {
+						expect(optionHeading.style.fontStyle).toEqual('normal')
+					})
 				})
-			})
 
-			it('option headings should have "lineHeight" : "16px"', () => {
-				const optionHeadings = document.querySelectorAll('.option-heading');
+				it('option headings should have "fontWeight" : "400"', () => {
+					const optionHeadings = document.querySelectorAll('.option-heading');
 
-				optionHeadings.forEach(optionHeading => {
-					expect(optionHeading.style.lineHeight).toEqual('16px')
+					optionHeadings.forEach(optionHeading => {
+						expect(optionHeading.style.fontWeight).toEqual('400')
+					})
 				})
-			}) 
 
+				it('option headings should have "lineHeight" : "16px"', () => {
+					const optionHeadings = document.querySelectorAll('.option-heading');
+
+					optionHeadings.forEach(optionHeading => {
+						expect(optionHeading.style.lineHeight).toEqual('16px')
+					})
+				}) 
+ 			})
+			
 			it('options should have chevron-icon', () => {
 				const options = document.querySelectorAll('.option');
 
@@ -318,11 +322,227 @@ describe('<App/>', () => {
 			})
 		})
 	}) 
-
-
+ 
 	/* ==================== Main View Right */
 	describe('.main-view-right', () => {
+		describe('background', () => {
+			it('should have "backgroundImage": "url(background-image.jpg)"', () => {
+				const mainViewRight = document.querySelector('.main-view-right');
 
+				expect(mainViewRight.style.backgroundImage).toEqual('url(background-image.jpg)')
+			})
+
+			it('should have "backgroundSize": "cover"', () => {
+				const mainViewRight = document.querySelector('.main-view-right');
+
+				expect(mainViewRight.style.backgroundSize).toEqual('cover')
+			})
+		}) 
+
+		describe('options-buttons', () => {
+			it('should have "fontFamily" : "Noto Sans, sans-serif" ', () => {
+				const optionButtons = document.querySelectorAll('.option-button');
+
+				optionButtons.forEach(optionButton => {
+					expect(optionButton.style.fontFamily).toEqual('Noto Sans, sans-serif')
+				})
+			})
+
+			it('should have "fontSize" : "22px" ', () => {
+				const optionButtons = document.querySelectorAll('.option-button');
+
+				optionButtons.forEach(optionButton => {
+					expect(optionButton.style.fontSize).toEqual('22px')
+				})
+			})
+
+			it('should have "fontStyle" : "SemiBold" ', () => {
+				const optionButtons = document.querySelectorAll('.option-button');
+
+				optionButtons.forEach(optionButton => {
+					expect(optionButton.style.fontStyle).toEqual('SemiBold')
+				})
+			})  
+
+			it('should have "fontWeight" : "600" ', () => {
+				const optionButtons = document.querySelectorAll('.option-button');
+
+				optionButtons.forEach(optionButton => {
+					expect(optionButton.style.fontWeight).toEqual('600')
+				})
+			})   
+
+			it('should have "lineHeight" : "30px" ', () => {
+				const optionButtons = document.querySelectorAll('.option-button');
+
+				optionButtons.forEach(optionButton => {
+					expect(optionButton.style.lineHeight).toEqual('30px')
+				})
+			})  
+
+			it('should have "background" : "transparent" ', () => {
+				const optionButtons = document.querySelectorAll('.option-button');
+
+				optionButtons.forEach(optionButton => {
+					expect(optionButton.style.background).toEqual('transparent')
+				})
+			})  
+
+			it('should have "width" : "124.42px" ', () => {
+				const optionButtons = document.querySelectorAll('.option-button');
+
+				optionButtons.forEach(optionButton => {
+					expect(optionButton.style.width).toEqual('124.42px')
+				})
+			})  
+
+			it('should have "paddingBottom" : "16px" ', () => {
+				const optionButtons = document.querySelectorAll('.option-button');
+
+				optionButtons.forEach(optionButton => {
+					expect(optionButton.style.paddingBottom).toEqual('16px')
+				})
+			})  
+
+			describe('selected option button', () => {
+				it('should have "opacity": "1"', () => {
+					const optionButtons = document.querySelectorAll('.option-button-selected');
+
+					optionButtons.forEach(optionButton => {
+						expect(optionButton.style.opacity).toEqual('1')
+					})
+				})
+
+				it('should have "borderBottom": "1.5px solid #CFE5FF"', () => {
+					const optionButtons = document.querySelectorAll('.option-button-selected');
+
+					optionButtons.forEach(optionButton => {
+						expect(optionButton.style.borderBottom).toEqual('1.5px solid #CFE5FF')
+					})
+				})
+			})
+
+			describe('unselected option button', () => {
+				it('should have "opacity": "0.5"', () => {
+					const optionButtons = document.querySelectorAll('.option-button-deselected');
+
+					optionButtons.forEach(optionButton => {
+						expect(optionButton.style.opacity).toEqual('0.5')
+					})
+				})
+			})
+		})
+
+		describe('options-info', () => {
+			describe('number', () => {
+				it('should have "fontFamily: Noto Sans, sans-serif"', () => {
+					const numbers = document.querySelectorAll('.option-number');
+
+					numbers.forEach(number => {
+						expect(number.style.fontFamily).toEqual('Noto Sans, sans-serif')
+					})
+				})
+
+				it('should have "fontSize: 64px"', () => {
+					const numbers = document.querySelectorAll('.option-number');
+
+					numbers.forEach(number => {
+						expect(number.style.fontSize).toEqual('64px')
+					})
+				}) 
+
+				it('should have "fontStyle: normal"', () => {
+					const numbers = document.querySelectorAll('.option-number');
+
+					numbers.forEach(number => {
+						expect(number.style.fontStyle).toEqual('normal')
+					})
+				}) 
+
+				it('should have "fontWeight: 700"', () => {
+					const numbers = document.querySelectorAll('.option-number');
+
+					numbers.forEach(number => {
+						expect(number.style.fontWeight).toEqual('700')
+					})
+				})    
+
+				it('should have "lineHeight: 87px"', () => {
+					const numbers = document.querySelectorAll('.option-number');
+
+					numbers.forEach(number => {
+						expect(number.style.lineHeight).toEqual('87px')
+					})
+				})
+
+				it('should have "color: #CFE5FF"', () => {
+					const numbers = document.querySelectorAll('.option-number');
+					const res = hexToRGB('#CFE5FF')
+
+					numbers.forEach(number => {
+						expect(number.style.color).toEqual(res)
+					})
+				}) 
+			})
+
+			describe('text', () => {
+				it('should have "fontFamily: Noto Sans, sans-serif', () => {
+					const optionText = document.querySelectorAll('.option-text');
+
+					optionText.forEach(el => {
+						expect(el.style.fontFamily).toEqual('Noto Sans, sans-serif')
+					})
+				})
+
+				it('should have "fontSize: 20px', () => {
+					const optionText = document.querySelectorAll('.option-text');
+
+					optionText.forEach(el => {
+						expect(el.style.fontSize).toEqual('20px')
+					})
+				})
+
+				it('should have "fontStyle: normal', () => {
+					const optionText = document.querySelectorAll('.option-text');
+
+					optionText.forEach(el => {
+						expect(el.style.fontStyle).toEqual('normal')
+					})
+				})
+
+				it('should have "fontWeight: 400', () => {
+					const optionText = document.querySelectorAll('.option-text');
+
+					optionText.forEach(el => {
+						expect(el.style.fontWeight).toEqual('400')
+					})
+				})
+
+				it('should have "lineHeight: 27px', () => {
+					const optionText = document.querySelectorAll('.option-text');
+
+					optionText.forEach(el => {
+						expect(el.style.lineHeight).toEqual('27px')
+					})
+				})
+
+				it('should have "textAlign: center', () => {
+					const optionText = document.querySelectorAll('.option-text');
+
+					optionText.forEach(el => {
+						expect(el.style.textAlign).toEqual('center')
+					})
+				})
+
+				it('should have "color: #FFFFFF', () => {
+					const optionText = document.querySelectorAll('.option-text');
+
+					optionText.forEach(el => {
+						expect(el.style.color).toEqual('#FFFFFF')
+					})
+				})
+			}) 
+		})
 	})
 
 	/* ======================================= Alert Bar ==================================== */

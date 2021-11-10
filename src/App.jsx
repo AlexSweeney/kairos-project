@@ -5,6 +5,7 @@ import './styles/header.css';
 import logo from './imgs/logo-icon.png';
 import home from './imgs/home-icon.svg';
 import chevron from './imgs/chevron-icon.svg';
+import backgroundImage from './imgs/background-image.jpg';
 import screenIconOne from './imgs/screen-icon-1.svg';
 import screenIconTwo from './imgs/screen-icon-2.svg';
 import screenIconThree from './imgs/screen-icon-3.svg';
@@ -13,87 +14,141 @@ import screenIconFive from './imgs/screen-icon-5.svg';
 import screenIconSix from './imgs/screen-icon-6.svg';
 
 function App() { 
+  // ==================== Colors */
   const whiteBackground = '#FFFFFF';
+  const darkBlueBackground = '#181949';
+
+  const darkBlueText = '#181949';
+  const lightBlueText = '#CFE5FF';
+  const whiteText = '#FFFFFF';
 
   // ==================== Icon Styles */
   const logoStyle = {
-    'width' : '176px',
-    'height': '30px', 
+    width : '176px',
+    height: '30px', 
   };  
 
   const homeIconStyle = {
-    'width' : '16.03px',
-    'height': '16.72px',
+    width : '16.03px',
+    height: '16.72px',
   };
 
   const chevronIconStyle = {
-    'width': '8px',
-    'height': '6px',
-    'color': '#CFE5FF',
+    width: '8px',
+    height: '6px',
+    color: lightBlueText,
   }; 
 
   // ==================== Header Styles */
   const headerLeftStyle = {
-    'background' : '#FFFFFF',
+    background : whiteBackground,
   };
 
   const headerRightStyle = {
-    'background' : 'transparent',
+    background : 'transparent',
   };
 
   // ==================== Option Styles */
   const optionsBarStyle = {
-    background : '#181949',
+    background : darkBlueBackground,
   };
 
   const optionHeadingStyle = {
-    'fontFamily': 'Roboto, sans-serif',
-    'fontSize': '14px',
-    'fontStyle': 'normal',
-    'fontWeight': '400',
-    'lineHeight': '16px',
-    'color': '#CFE5FF',
+    fontFamily: 'Roboto, sans-serif',
+    fontSize: '14px',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: '16px',
+    color: lightBlueText,
   }; 
 
   // ==================== Nav Styles */
   const navLinkLeftStyle = {
-    'fontFamily': 'Noto Sans, sans-serif',
-    'fontSize': '14px',
-    'fontStyle': 'normal',
-    'fontWeight': '700',
-    'lineHeight': '19px',  
-    'color': '#181949',
+    fontFamily: 'Noto Sans, sans-serif',
+    fontSize: '14px',
+    fontStyle: 'normal',
+    fontWeight: '700',
+    lineHeight: '19px',  
+    color: darkBlueText,
   };
 
   const navLinkRightStyle = {
-    'fontFamily': 'Noto Sans, sans-serif', 
-    'fontSize': '14px',
-    'fontStyle': 'normal',
-    'fontWeight': '400',
-    'lineHeight': '19px', 
-    'color': '#FFFFFF',
+    fontFamily: 'Noto Sans, sans-serif', 
+    fontSize: '14px',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: '19px', 
+    color: whiteBackground,
   };
 
   // ==================== Main-View left Styles */
   const mainViewLeftStyle = {
-    'background': whiteBackground,
+    background: whiteBackground,
   };
 
   const mainViewLeftHeaderStyle = {
-    'fontFamily': 'Noto Sans, sans-serif',
-    'fontSize': '56px',
-    'fontStyle': 'normal',
-    'fontWeight': '700',
-    'line-height': '76px',
-    'letter-spacing': '0.01em',
-    'color': '#181949',
+    fontFamily: 'Noto Sans, sans-serif',
+    fontSize: '56px',
+    fontStyle: 'normal',
+    fontWeight: '700',
+    lineHeight: '76px',
+    letterSpacing: '0.01em',
+    color: darkBlueText,
   };   
+
+  // ==================== Main-View Right Styles */
+  const mainViewRightStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+  };
+
+  const optionButtonStyle = {
+    background: 'transparent',
+    width: '124.42px',
+    paddingBottom: '16px',
+    fontFamily: 'Noto Sans, sans-serif',
+    fontStyle: 'SemiBold',
+    fontSize: '22px',
+    fontWeight: '600',
+    lineHeight: '30px',
+    color: whiteText,
+  };
+
+  const optionButtonSelectedStyle = {
+    ...optionButtonStyle,
+    opacity: 1,
+    borderBottom: `1.5px solid ${lightBlueText}`,
+  };
+
+  const optionButtonDeselectedStyle = {
+    ...optionButtonStyle,
+    opacity: 0.5,
+  }; 
+
+  const optionNumberStyle = {
+    fontFamily: 'Noto Sans, sans-serif',
+    fontStyle: 'normal',
+    fontSize: '64px',
+    fontWeight: '700',
+    lineHeight: '87px',
+    color: '#CFE5FF',
+  }; 
+
+  const optionTextStyle = {
+    fontFamily: 'Noto Sans, sans-serif',
+    fontSize: '20px',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: '27px', 
+    textAlign: 'center',
+    color: '#FFFFFF',
+  };
 
   return (
   	<div className="background">
      <div className="container">
      	{/* ========================== Main View ========================== */}
-     	<section className="main-view white-background">
+     	<section className="main-view">
      	{/* ======== Header ====== */}
      		<header>
      			<div className="header-left" style={headerLeftStyle}>
@@ -143,23 +198,23 @@ function App() {
      		</div>
 
      		{/* ======== Main View Right ====== */}
-     		<div className="main-view-right">
+     		<div className="main-view-right" style={mainViewRightStyle}>
      			<div className="option-buttons">
-     				<button className="option-button option-button-selected">Now</button>
-     				<button className="option-button">Future</button>
+     				<button className="option-button option-button-selected" style={optionButtonSelectedStyle}>Now</button>
+     				<button className="option-button option-button-deselected" style={optionButtonDeselectedStyle}>Future</button>
      			</div> 
      			<div className="options-info">
      				<div className="option-info">
-     					<h3 className="option-number">6</h3>
-     					<h3 className="option-text">different<br/>IT Software<br/>Networks</h3>
+     					<h3 className="option-number" style={optionNumberStyle}>6</h3>
+     					<h3 className="option-text" style={optionTextStyle}>different<br/>IT Software<br/>Networks</h3>
      				</div>
      				<div className="option-info">
-     					<h3 className="option-number">32</h3>
-     					<h3 className="option-text">partners</h3>
+     					<h3 className="option-number" style={optionNumberStyle}>32</h3>
+     					<h3 className="option-text" style={optionTextStyle}>partners</h3>
      				</div>
      				<div className="option-info">
-     					<h3 className="option-number">4</h3>
-     					<h3 className="option-text">countries</h3>
+     					<h3 className="option-number" style={optionNumberStyle}>4</h3>
+     					<h3 className="option-text" style={optionTextStyle}>countries</h3>
      				</div>
      			</div>
      		</div> 

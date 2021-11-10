@@ -4,9 +4,9 @@
 }
 
 /* ================= Colors ================= */
-/*.white-background {
+.white-background {
 	background: #FFFFFF;
-}*/
+}
 
 .pink-background {
 	background: #FFD1E8;
@@ -54,8 +54,6 @@
 /* ======= Main View Right */
 .main-view-right {
 	width: 914.8px;
-	background-image: url('./../imgs/background-image.jpg');
-	background-size: cover;
 	z-index: 0;
 	padding-top: 100px;
 } 
@@ -68,30 +66,13 @@
 }
 
 .option-button {
-	background: transparent;
 	border: none;
-
-	width: 124.42px; 
-	padding-bottom: 16px;
 	display: flex;
 	justify-content: center;  
-
-	font-family: Noto-Sans, sans-serif;
-	font-style: SemiBold;
-	font-size: 22px;
-	font-weight: 600;
-	line-height: 30px;
-	color: #FFFFFF;
-	opacity: 0.5;
 } 
 
 .option-button:hover {
 	cursor: pointer;
-}
-
-.option-button-selected  {
-	border-bottom: 1.5px solid #CFE5FF;
- 	opacity: 1;
 }
 
 /* Option Info */
