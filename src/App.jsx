@@ -13,6 +13,9 @@ import screenIconFive from './imgs/screen-icon-5.svg';
 import screenIconSix from './imgs/screen-icon-6.svg';
 
 function App() { 
+  const whiteBackground = '#FFFFFF';
+
+  // ==================== Icon Styles */
   const logoStyle = {
     'width' : '176px',
     'height': '30px', 
@@ -26,8 +29,22 @@ function App() {
   const chevronIconStyle = {
     'width': '8px',
     'height': '6px',
-    'background': '#CFE5FF',
+    'color': '#CFE5FF',
   }; 
+
+  // ==================== Header Styles */
+  const headerLeftStyle = {
+    'background' : '#FFFFFF',
+  };
+
+  const headerRightStyle = {
+    'background' : 'transparent',
+  };
+
+  // ==================== Option Styles */
+  const optionsBarStyle = {
+    background : '#181949',
+  };
 
   const optionHeadingStyle = {
     'fontFamily': 'Roboto, sans-serif',
@@ -38,6 +55,7 @@ function App() {
     'color': '#CFE5FF',
   }; 
 
+  // ==================== Nav Styles */
   const navLinkLeftStyle = {
     'fontFamily': 'Noto Sans, sans-serif',
     'fontSize': '14px',
@@ -56,6 +74,21 @@ function App() {
     'color': '#FFFFFF',
   };
 
+  // ==================== Main-View left Styles */
+  const mainViewLeftStyle = {
+    'background': whiteBackground,
+  };
+
+  const mainViewLeftHeaderStyle = {
+    'fontFamily': 'Noto Sans, sans-serif',
+    'fontSize': '56px',
+    'fontStyle': 'normal',
+    'fontWeight': '700',
+    'line-height': '76px',
+    'letter-spacing': '0.01em',
+    'color': '#181949',
+  };   
+
   return (
   	<div className="background">
      <div className="container">
@@ -63,7 +96,7 @@ function App() {
      	<section className="main-view white-background">
      	{/* ======== Header ====== */}
      		<header>
-     			<div className="header-left">
+     			<div className="header-left" style={headerLeftStyle}>
      				<nav className="nav-left">
      					<ul>
 	     					<li><img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/></li>
@@ -74,8 +107,8 @@ function App() {
      					</ul>
      				</nav> 
      			</div>
-     			<div className="header-right">
-	     			<div className="options-bar">
+     			<div className="header-right" style={headerRightStyle}>
+	     			<div className="options-bar" style={optionsBarStyle}>
 	     				<ul className="options-container">
 	     					<li className="option">
                   <h3 className="option-heading" style={optionHeadingStyle}>EN</h3>
@@ -96,7 +129,7 @@ function App() {
 	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Auto Homepage</a></li>
 	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Sales</a></li>
 	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>CRM</a></li>
-	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Electronic Office</a></li>
+	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Electronic office</a></li>
 	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Cloud ERP</a></li>
 	     					<li><a className="nav-link nav-link-right" style={navLinkRightStyle}>SSL</a></li>
      					</ul>
@@ -105,9 +138,8 @@ function App() {
      		</header>
 
      		{/* ======== Main View Left ====== */}
-     		<div className="main-view-left">
-     			<h2>Asia IT</h2>
-     			<h2>Market Place</h2>
+     		<div className="main-view-left" style={mainViewLeftStyle}>
+     			<h2 className="main-view-left-header" style={mainViewLeftHeaderStyle}>Asia IT Market Place</h2>
      		</div>
 
      		{/* ======== Main View Right ====== */}

@@ -4,9 +4,9 @@
 }
 
 /* ================= Colors ================= */
-.white-background {
+/*.white-background {
 	background: #FFFFFF;
-}
+}*/
 
 .pink-background {
 	background: #FFD1E8;
@@ -47,11 +47,8 @@
 	padding-left: 86.53px;
 }
 
-.main-view-left h2 {
-	font-family: Noto-Sans, sans-serif;
-	font-weight: 700;
-	font-size: 56px;
-	line-height: 76.27px;
+.main-view-left-header {
+	width: 400px;
 }
 
 /* ======= Main View Right */

@@ -37,11 +37,28 @@ test.todo('test elements ordered correctly')
 test.todo('test containsTextContent')
 
 describe('<App/>', () => {
+	/* ======================================= Header ======================================= */
 	describe('<Header/>', () => {
 		it('should render header', () => {
 			const header = container.querySelector('header'); 
 			expect(header).not.toEqual(null)
 		}) 
+
+		describe('header-left', () => {
+			it('should have "background": "#FFFFFF"', () => {
+				const optionsBar = document.querySelector('.header-left');
+				const res = hexToRGB('#FFFFFF');
+
+				expect(optionsBar.style.background).toEqual(res)
+			}) 
+		})
+
+		describe('header-right', () => {
+			it('should have "background": "transparent"', () => {
+				const optionsBar = document.querySelector('.header-right'); 
+				expect(optionsBar.style.background).toEqual('transparent')
+			}) 
+		})
 
 		describe('logo', () => {
 			it('should render logo', () => {
@@ -83,7 +100,7 @@ describe('<App/>', () => {
 				expect(navLinks.length).toEqual(navLinkNames.length) 
 
 				navLinkNames.forEach(navLinkName => {
-					const check = containsTextContent(navLinks, navLinkName);
+					const check = containsTextContent(navLinks, navLinkName); 
 					expect(check).toEqual(true)
 				})
 			})
@@ -108,16 +125,10 @@ describe('<App/>', () => {
 					it('left nav link should have "lineHeight" : "19px"', () => {
 						const navLink = container.querySelector('.nav-link-left');
 						expect(navLink.style.lineHeight).toEqual('19px')
-					}) 
-
-					it('left nav link should have "letterSpacing" : "0em"', () => {
-						const navLink = container.querySelector('.nav-link-left');
-						expect(navLink.style.letterSpacing).toEqual('0em')
-					})   
+					})  
 
 					it('left nav link should have "color" : "#181949"', () => {
-						const navLink = container.querySelector('.nav-link-left');
-						console.log(navLink.style)
+						const navLink = container.querySelector('.nav-link-left'); 
 						const res = hexToRGB('#181949');
 						expect(navLink.style.color).toEqual(res)
 					})      
@@ -171,6 +182,13 @@ describe('<App/>', () => {
 					const check = containsTextContent(options, optionName);
 					expect(check).toEqual(true)
 				}) 
+			})
+
+			it('should have "background": "#181949"', () => {
+				const optionsBar = document.querySelector('.options-bar');
+				const res = hexToRGB('#181949');
+
+				expect(optionsBar.style.background).toEqual(res)
 			})
  
 			it('option headings should have "fontFamily": "Roboto, sans-serif"', () => {
@@ -245,9 +263,67 @@ describe('<App/>', () => {
 
 				chevronIcons.forEach(chevronIcon => {
 					const target = hexToRGB('#CFE5FF');
-					expect(chevronIcon.style.background).toEqual(target)
+					expect(chevronIcon.style.color).toEqual(target)
 				})
 			})
 		})
 	})
+
+	/* ======================================= Main View ==================================== */
+	/* ==================== Main View Left */
+	describe('.main-view-left', () => {
+		describe('background', () => {
+			it('should have "background": "#FFFFFF"', () => {
+				const mainViewLeft = document.querySelector('.main-view-left');
+				const res = hexToRGB('#FFFFFF');
+				expect(mainViewLeft.style.background).toEqual(res)
+			})
+		})
+
+		describe('header', () => {
+			it('should have "fontFamily": "Noto Sans, sans-serif"', () => {
+				const header = document.querySelector('.main-view-left-header');
+				expect(header.style.fontFamily).toEqual('Noto Sans, sans-serif')
+			})
+
+			it('should have "fontSize": "56px"', () => {
+				const header = document.querySelector('.main-view-left-header');
+				expect(header.style.fontSize).toEqual('56px')
+			})
+
+			it('should have "fontStyle": "normal"', () => {
+				const header = document.querySelector('.main-view-left-header');
+				expect(header.style.fontStyle).toEqual('normal')
+			})
+
+			it('should have "fontWeight": "700"', () => {
+				const header = document.querySelector('.main-view-left-header');
+				expect(header.style.fontWeight).toEqual('700')
+			})
+
+			it('should have "lineHeight": "76px"', () => {
+				const header = document.querySelector('.main-view-left-header');
+				expect(header.style.lineHeight).toEqual('76px')
+			})
+
+			it('should have "letterSpacing": "0.01em"', () => {
+				const header = document.querySelector('.main-view-left-header');
+				expect(header.style.letterSpacing).toEqual('0.01em')
+			})
+
+			it('should have "color": "#181949"', () => {
+				const header = document.querySelector('.main-view-left-header');
+				const res = hexToRGB('#181949');
+				expect(header.style.color).toEqual(res)
+			})
+		})
+	}) 
+
+
+	/* ==================== Main View Right */
+	describe('.main-view-right', () => {
+
+	})
+
+	/* ======================================= Alert Bar ==================================== */
 })

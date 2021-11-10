@@ -28,8 +28,7 @@ header {
 }
 
 .nav-left .nav-link {
-	display: flex;
-	align-items: flex-end; 
+	display: flex; 
 	height: 100%;
 }  
 
