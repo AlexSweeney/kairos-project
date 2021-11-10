@@ -162,7 +162,7 @@ describe('<App/>', () => {
 			}) 
 		})  
 
-		describe.only('options-bar', () => {
+		describe('options-bar', () => {
 			it('should render all options', () => {
 				const options = document.querySelectorAll('.option');
 				expect(options.length).toEqual(optionNames.length) 
@@ -224,16 +224,29 @@ describe('<App/>', () => {
 		})
 
 		describe('chevron-icons', () => {
-			it.only('chevron-icon should have "width" : "8px"', () => {
-				
+			it('chevron-icon should have "width" : "8px"', () => {
+				const chevronIcons = document.querySelectorAll('.chevron-icon');
+
+				chevronIcons.forEach(chevronIcon => {
+					expect(chevronIcon.style.width).toEqual('8px')
+				})
 			}) 
  
 			it('chevron-icon should have "height" : "6px"', () => {
-				
+				const chevronIcons = document.querySelectorAll('.chevron-icon');
+
+				chevronIcons.forEach(chevronIcon => {
+					expect(chevronIcon.style.height).toEqual('6px')
+				})
 			})
 
 			it('chevron-icon should have "background" : "#CFE5FF"', () => {
-				
+				const chevronIcons = document.querySelectorAll('.chevron-icon');
+
+				chevronIcons.forEach(chevronIcon => {
+					const target = hexToRGB('#CFE5FF');
+					expect(chevronIcon.style.background).toEqual(target)
+				})
 			})
 		})
 	})

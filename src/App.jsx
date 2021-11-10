@@ -79,15 +79,15 @@ function App() {
 	     				<ul className="options-container">
 	     					<li className="option">
                   <h3 className="option-heading" style={optionHeadingStyle}>EN</h3>
-                  <img className="chevron-icon" src={chevron} alt="downward pointing chevron"/>
+                  <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
                 </li>
 	     					<li className="option">
                   <h3 className="option-heading" style={optionHeadingStyle}>Company</h3>
-                  <img className="chevron-icon"  src={chevron} alt="downward pointing chevron"/>
+                  <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
                 </li>
 	     					<li className="option">
                   <h3 className="option-heading" style={optionHeadingStyle}>Partner Market Place</h3>
-                  <img className="chevron-icon" src={chevron} alt="downward pointing chevron"/>
+                  <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
                 </li>
 	     				</ul>
 	     			</div> 
