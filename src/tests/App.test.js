@@ -28,6 +28,7 @@ afterEach(() => {
 
 test.todo('check font loads')
 test.todo('test hexToRGB fn')
+test.todo('test elements ordered correctly')
 
 describe('<App/>', () => {
 	describe('<Header/>', () => {
@@ -77,28 +78,28 @@ describe('<App/>', () => {
 			})
 
 			describe('nav links', () => {
-				describe.only('left nav link', () => {
-					it('left nav link should have "font-family" : "Noto Sans"', () => {
+				describe('left nav link', () => {
+					it('left nav link should have "fontFamily" : "Noto Sans, sans-serif"', () => {
 						const navLink = container.querySelector('.nav-link-left');
-						expect(navLink.style.fontFamily).toEqual('Noto Sans')
+						expect(navLink.style.fontFamily).toEqual('Noto Sans, sans-serif')
 					}) 
 
-					it('left nav link should have "font-style" : "normal"', () => {
+					it('left nav link should have "fontStyle" : "normal"', () => {
 						const navLink = container.querySelector('.nav-link-left');
 						expect(navLink.style.fontStyle).toEqual('normal')
 					})
 
-					it('left nav link should have "font-weight" : "700"', () => {
+					it('left nav link should have "fontWeight" : "700"', () => {
 						const navLink = container.querySelector('.nav-link-left');
 						expect(navLink.style.fontWeight).toEqual('700')
 					})
 
-					it('left nav link should have "line-height" : "19px"', () => {
+					it('left nav link should have "lineHeight" : "19px"', () => {
 						const navLink = container.querySelector('.nav-link-left');
 						expect(navLink.style.lineHeight).toEqual('19px')
 					}) 
 
-					it('left nav link should have "letter-spacing" : "0em"', () => {
+					it('left nav link should have "letterSpacing" : "0em"', () => {
 						const navLink = container.querySelector('.nav-link-left');
 						expect(navLink.style.letterSpacing).toEqual('0em')
 					})   
@@ -111,59 +112,43 @@ describe('<App/>', () => {
 					})      
 				})
 
-				describe.skip('right nav links', () => {
-					it('right nav links should have "font-family" : "Noto Sans"', () => {
-						const navLinks = container.querySelectorAll('.nav-link');
+				describe('right nav links', () => {
+					it('right nav links should have "fontFamily" : "Noto Sans, sans-serif"', () => {
+						const navLinks = container.querySelectorAll('.nav-link-right');
 						navLinks.forEach(navLink => {
-							expect(navLink.style['font-family']).toEqual('Noto Sans')
+							expect(navLink.style.fontFamily).toEqual('Noto Sans, sans-serif')
 						})
 					})
 
-					it('right nav links should have "font-size" : "14px"', () => {
-						const navLinks = container.querySelectorAll('.nav-link');
+					it('right nav links should have "fontSize" : "14px"', () => {
+						const navLinks = container.querySelectorAll('.nav-link-right');
 						navLinks.forEach(navLink => {
-							expect(navLink.style['font-size']).toEqual('14px')
+							expect(navLink.style.fontSize).toEqual('14px')
 						})
 					})
 
-					it('right nav links should have "font-style" : "normal"', () => {
-						const navLinks = container.querySelectorAll('.nav-link');
+					it('right nav links should have "fontStyle" : "normal"', () => {
+						const navLinks = container.querySelectorAll('.nav-link-right');
 						navLinks.forEach(navLink => {
-							expect(navLink.style['font-style']).toEqual('normal')
+							expect(navLink.style.fontStyle).toEqual('normal')
 						})
 					})
 
-					it('right nav links should have "font-weight" : "400"', () => {
-						const navLinks = container.querySelectorAll('.nav-link');
+					it('right nav links should have "fontWeight" : "400"', () => {
+						const navLinks = container.querySelectorAll('.nav-link-right');
 						navLinks.forEach(navLink => {
-							expect(navLink.style['font-weight']).toEqual('400')
+							expect(navLink.style.fontWeight).toEqual('400')
 						})
 					})
 
-					it('right nav links should have "line-height" : "19px"', () => {
-						const navLinks = container.querySelectorAll('.nav-link');
+					it('right nav links should have "lineHeight" : "19px"', () => {
+						const navLinks = container.querySelectorAll('.nav-link-right');
 						navLinks.forEach(navLink => {
-							expect(navLink.style['line-height']).toEqual('19px')
+							expect(navLink.style.lineHeight).toEqual('19px')
 						})
 					})
 				})  
 			}) 
-		}) 
-
-		describe('header-left', () => {
-			describe('logo', () => {
-
-			})
-
-			describe('home link', () => {
-				describe('home-icon', () => {
-
-				}) 
-			})
-		})
-
-		describe('header-right', () => {
-
-		})
+		})  
 	})
 })

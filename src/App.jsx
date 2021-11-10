@@ -24,7 +24,7 @@ function App() {
   };
 
   const navLinkLeftStyle = {
-    'fontFamily': 'Noto Sans',
+    'fontFamily': 'Noto Sans, sans-serif',
     'fontSize': '14px',
     'fontStyle': 'normal',
     'fontWeight': '700',
@@ -34,11 +34,11 @@ function App() {
   };
 
   const navLinkRightStyle = {
-    /*'font-family': 'Noto Sans', 
-    'font-size': '14px',
-    'font-style': 'normal',
-    'font-weight': '400',
-    'line-height': '19px', */
+    'fontFamily': 'Noto Sans, sans-serif', 
+    'fontSize': '14px',
+    'fontStyle': 'normal',
+    'fontWeight': '400',
+    'lineHeight': '19px', 
   };
 
   return (
