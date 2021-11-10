@@ -154,6 +154,8 @@
 	display: flex; 
   align-items: center;
   flex-direction: row;
+  justify-content: center;
+  gap: 170px;
 	height: 405.75px;
 	width: 100%;
 } 

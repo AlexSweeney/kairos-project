@@ -9,6 +9,8 @@ import screenIconOne from './imgs/screen-icon-1.svg';
 import screenIconTwo from './imgs/screen-icon-2.svg';
 import screenIconThree from './imgs/screen-icon-3.svg';
 import screenIconFour from './imgs/screen-icon-4.svg';
+import screenIconFive from './imgs/screen-icon-5.svg';
+import screenIconSix from './imgs/screen-icon-6.svg';
 
 function App() {
   return (
@@ -154,12 +156,22 @@ function App() {
 
      	{/* ========================== Customer View ================ */}
      	<section className="customer-view icon-view white-background">
-
+     		<img className="screen-icon" src={screenIconFive} alt="computer screen icon"/>
+     		<div className="info-box">
+     			<h3 className="info-box-heading">CUSTOMER</h3>
+     			<p className="info-box-text">Customer Request Management</p>
+     			<button className="info-button">OQUFIE</button>
+     		</div>
      	</section>
 
      	{/* ========================== Security View ================ */}
      	<section className="security-view icon-view grey-background">
-
+     		<div className="info-box">
+     			<h3 className="info-box-heading">SECURITY</h3>
+     			<p className="info-box-text">SSL server</p>
+     			<button className="info-button">SECTIGO</button>
+     		</div>
+     		<img className="screen-icon" src={screenIconSix} alt="computer screen icon"/>
      	</section>
 
      	{/* ========================== Options View ================ */}
