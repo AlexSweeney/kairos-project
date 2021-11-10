@@ -8,6 +8,7 @@ import chevron from './imgs/chevron-icon.svg';
 import screenIconOne from './imgs/screen-icon-1.svg';
 import screenIconTwo from './imgs/screen-icon-2.svg';
 import screenIconThree from './imgs/screen-icon-3.svg';
+import screenIconFour from './imgs/screen-icon-4.svg';
 
 function App() {
   return (
@@ -100,12 +101,12 @@ function App() {
 
      	{/* ========================== Accounting view =================== */}
      	<section className="accounting-view icon-view grey-background"> 
-	     		<div className="info-box">
-	     			<h3 className="info-box-heading">ACCOUNTING</h3>
-	     			<p className="info-box-text">Accounting</p>
-	     			<button className="info-button">G-Book</button>
-	     		</div>
-	     		<img className="screen-icon" src={screenIconTwo} alt="computer screen icon"/>
+     		<div className="info-box">
+     			<h3 className="info-box-heading">ACCOUNTING</h3>
+     			<p className="info-box-text">Accounting</p>
+     			<button className="info-button">G-Book</button>
+     		</div>
+     		<img className="screen-icon" src={screenIconTwo} alt="computer screen icon"/>
      	</section>
 
      	{/* ========================== HR Admin View =================== */}
@@ -142,7 +143,13 @@ function App() {
 
      	{/* ========================== Sales View =================== */}
      	<section className="sales-view icon-view grey-background">
-
+     		<div className="info-box">
+     			<h3 className="info-box-heading">SALES</h3>
+     			<p className="info-box-text">Create Homepage</p>
+     			<p className="info-box-text">Youtube & Instagram</p>
+     			<button className="info-button">Fieldmake</button>
+     		</div>
+     		<img className="screen-icon" src={screenIconFour} alt="computer screen icon"/>
      	</section>
 
      	{/* ========================== Customer View ================ */}

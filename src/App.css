@@ -269,8 +269,18 @@
 
 .hr-admin-view .info-box-row-2 {
 	margin-top: 18.15px;
+} 
+
+/* === Sales View */
+.sales-view {
+	padding-left: 328.56px;
 }
 
+.sales-view .info-box {
+	align-self: flex-start;
+	padding-right: 315.56px;
+	margin-top: 88px;
+}
 
 /* ================= Options-view =========== */
 .options-view {
