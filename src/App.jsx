@@ -24,21 +24,21 @@ function App() {
   };
 
   const navLinkLeftStyle = {
-    'font-family': 'Noto Sans',
-    'font-size': '14px',
-    'font-style': 'normal',
-    'font-weight': '700',
-    'line-height': '19px', 
-    'letter-spacing': '0em', 
+    'fontFamily': 'Noto Sans',
+    'fontSize': '14px',
+    'fontStyle': 'normal',
+    'fontWeight': '700',
+    'lineHeight': '19px', 
+    'letterSpacing': '0em', 
     'color': '#181949',
   };
 
   const navLinkRightStyle = {
-    'font-family': 'Noto Sans', 
+    /*'font-family': 'Noto Sans', 
     'font-size': '14px',
     'font-style': 'normal',
     'font-weight': '400',
-    'line-height': '19px', 
+    'line-height': '19px', */
   };
 
   return (

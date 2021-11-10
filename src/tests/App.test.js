@@ -6,6 +6,16 @@ import App from './../App.jsx';
 let container;
 const navLinkNames = ['Home', 'Auto Homepage', 'Sales', 'CRM', 'Electronic office', 'Cloud ERP', 'SSL'];
 
+function hexToRGB(hex) {
+	hex = hex.replace('#', '');
+	const aRgbHex = hex.match(/.{1,2}/g);
+	const a =  parseInt(aRgbHex[0], 16);
+	const b =  parseInt(aRgbHex[1], 16);
+  const c = parseInt(aRgbHex[2], 16);
+
+  return `rgb(${a}, ${b}, ${c})`;
+}
+
 beforeEach(() => {
 	container = document.createElement('div');
 	document.body.appendChild(container)
@@ -17,6 +27,7 @@ afterEach(() => {
 })
 
 test.todo('check font loads')
+test.todo('test hexToRGB fn')
 
 describe('<App/>', () => {
 	describe('<Header/>', () => {
@@ -47,10 +58,12 @@ describe('<App/>', () => {
 				const homeIcon = container.querySelector('.home-icon');
 				expect(homeIcon).not.toEqual(null)
 			})  
+
 			it('home icon should have "width" : "16.03px" ', () => {
 				const homeIcon = container.querySelector('.home-icon');
 				expect(homeIcon.style.width).toEqual('16.03px')
 			})
+
 			it('home icon should have "height" : "16.72px" ', () => {
 				const homeIcon = container.querySelector('.home-icon');
 				expect(homeIcon.style.height).toEqual('16.72px')
@@ -63,43 +76,38 @@ describe('<App/>', () => {
 				expect(navLinks.length).toEqual(navLinkNames.length)
 			})
 
-			describe('should have styles specified in figma project', () => {
-				describe('left nav link', () => {
+			describe('nav links', () => {
+				describe.only('left nav link', () => {
 					it('left nav link should have "font-family" : "Noto Sans"', () => {
-						const navLinks = container.querySelectorAll('.nav-link-left');
-						navLinks.forEach(navLink => {
-							expect(navLink.style['font-family']).toEqual('Noto Sans')
-						})
+						const navLink = container.querySelector('.nav-link-left');
+						expect(navLink.style.fontFamily).toEqual('Noto Sans')
 					}) 
+
 					it('left nav link should have "font-style" : "normal"', () => {
-						const navLinks = container.querySelectorAll('.nav-link-left');
-						navLinks.forEach(navLink => {
-							expect(navLink.style['font-style']).toEqual('normal')
-						})
+						const navLink = container.querySelector('.nav-link-left');
+						expect(navLink.style.fontStyle).toEqual('normal')
 					})
+
 					it('left nav link should have "font-weight" : "700"', () => {
-						const navLinks = container.querySelectorAll('.nav-link-left');
-						navLinks.forEach(navLink => {
-							expect(navLink.style['font-weight']).toEqual('700')
-						})
+						const navLink = container.querySelector('.nav-link-left');
+						expect(navLink.style.fontWeight).toEqual('700')
 					})
+
 					it('left nav link should have "line-height" : "19px"', () => {
-						const navLinks = container.querySelectorAll('.nav-link-left');
-						navLinks.forEach(navLink => {
-							expect(navLink.style['line-height']).toEqual('19px')
-						})
+						const navLink = container.querySelector('.nav-link-left');
+						expect(navLink.style.lineHeight).toEqual('19px')
 					}) 
+
 					it('left nav link should have "letter-spacing" : "0em"', () => {
-						const navLinks = container.querySelectorAll('.nav-link-left');
-						navLinks.forEach(navLink => {
-							expect(navLink.style['letter-spacing']).toEqual('0em')
-						})
-					})    
+						const navLink = container.querySelector('.nav-link-left');
+						expect(navLink.style.letterSpacing).toEqual('0em')
+					})   
+
 					it('left nav link should have "color" : "#181949"', () => {
-						const navLinks = container.querySelectorAll('.nav-link-left');
-						navLinks.forEach(navLink => {
-							expect(navLink.style['color']).toEqual('#181949')
-						})
+						const navLink = container.querySelector('.nav-link-left');
+						console.log(navLink.style)
+						const res = hexToRGB('#181949');
+						expect(navLink.style.color).toEqual(res)
 					})      
 				})
 
