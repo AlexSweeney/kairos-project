@@ -3,8 +3,6 @@
 	box-sizing: border-box;
 }
 
-/*image-rendering: crisp-edges;*/
-
 /* ================= Colors ================= */
 .white-background {
 	background: #FFFFFF;
@@ -60,6 +58,7 @@
 .main-view-right {
 	width: 914.8px;
 	background-image: url('./imgs/background-image.jpg');
+	background-size: cover;
 	z-index: 0;
 	padding-top: 100px;
 } 
