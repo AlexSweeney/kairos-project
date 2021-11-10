@@ -25,7 +25,7 @@ describe('<App/>', () => {
 			expect(header).not.toEqual(null)
 		}) 
 
-		describe.only('logo', () => {
+		describe('logo', () => {
 			it('should render logo', () => {
 				const logo = container.querySelector('.logo');
 				expect(logo).not.toEqual(null)
@@ -42,6 +42,21 @@ describe('<App/>', () => {
 			})
 		})
 
+		describe('home icon', () => {
+			it('home icon should render', () => {
+				const homeIcon = container.querySelector('.home-icon');
+				expect(homeIcon).not.toEqual(null)
+			})  
+			it('home icon should have "width" : "16.03px" ', () => {
+				const homeIcon = container.querySelector('.home-icon');
+				expect(homeIcon.style.width).toEqual('16.03px')
+			})
+			it('home icon should have "height" : "16.72px" ', () => {
+				const homeIcon = container.querySelector('.home-icon');
+				expect(homeIcon.style.height).toEqual('16.72px')
+			})
+		})
+
 		describe('nav links', () => {
 			it('should render all nav links', () => {
 				const navLinks = container.querySelectorAll('.nav-link');
@@ -50,11 +65,6 @@ describe('<App/>', () => {
 
 			describe('should have styles specified in figma project', () => {
 				describe('left nav link', () => {
-					it.only('nav link left should have home icon', () => {
-						const homeIcon = container.querySelector('.home-icon');
-						console.log(homeIcon)
-						expect(homeIcon).not.toEqual(null)
-					}) 
 					it('left nav link should have "font-family" : "Noto Sans"', () => {
 						const navLinks = container.querySelectorAll('.nav-link-left');
 						navLinks.forEach(navLink => {

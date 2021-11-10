@@ -18,6 +18,11 @@ function App() {
     'height': '30px', 
   };  
 
+  const homeIconStyle = {
+    'width' : '16.03px',
+    'height': '16.72px',
+  };
+
   const navLinkLeftStyle = {
     'font-family': 'Noto Sans',
     'font-size': '14px',
@@ -48,7 +53,7 @@ function App() {
      					<ul>
 	     					<li><img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/></li>
 	     					<li className="home-container">
-	     						<img className="home-icon" src={home} alt="home icon"/>
+	     						<img className="home-icon" style={homeIconStyle} src={home} alt="home icon"/>
 	     						<a className="home-text nav-link nav-link-left" style={navLinkLeftStyle}>Home</a>
 	     					</li>
      					</ul>
