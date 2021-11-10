@@ -161,7 +161,7 @@
 
 .icon-view-wide {
 	padding-left: 209px;
-  padding-right: 360px;
+ 	padding-right: 264px;
 }
 
 .icon-view-slim {  
@@ -179,6 +179,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 350px;
 }
 
 .info-box-heading {
