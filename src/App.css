@@ -362,6 +362,62 @@
 
 /* ================= Offices-view =========== */
 .offices-view {
-	border-top: 1px solid #999999;
-	height: 320px;
+  height: 320px;
+  display: flex;
+}
+
+.address-box {
+	height: 100%;
+	width: 33.3333333333%;
+	border-top: 1px solid #99999975;
+	border-right: 2px solid #99999975;
+	display: flex;
+	flex-direction: column;
+	padding-top: 33.03px;
+	padding-right: 36px;
+	padding-left: 36px;
+}
+
+.address-box-one {
+	align-items: flex-end;
+}
+
+.address-box-two {
+	align-items: center;
+}
+
+.address-box-three {
+	align-items: flex-start;
+}
+
+.address-box:last-child {
+	border-right: none;
+}
+
+.address-heading {
+	font-family: Noto Sans;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: -0.30000001192092896px;
+	text-align: left;
+	color: #181949;
+}
+
+.address-text {
+	font-family: Noto Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 19px;
+	letter-spacing: -0.20454545319080353px;
+	text-align: left;
+	color: #666666;
+	margin: 19px 0;
+}
+
+.address-row {
+	display: inline;
+	margin-right: 28px; 
 }
