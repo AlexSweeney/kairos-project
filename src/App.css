@@ -1,6 +1,9 @@
+/* ================= Globals ================= */
 * {
 	box-sizing: border-box;
 }
+
+/*image-rendering: crisp-edges;*/
 
 /* ================= Colors ================= */
 .white-background {

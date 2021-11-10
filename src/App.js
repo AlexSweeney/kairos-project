@@ -91,8 +91,7 @@ function App() {
      		</div> 
      	</section>
 
-     	<section className="accounting-view icon-view grey-background">
-     		
+     	<section className="accounting-view icon-view grey-background"> 
 	     		<div className="info-box">
 	     			<h3 className="info-box-heading">ACCOUNTING</h3>
 	     			<p className="info-box-text">Accounting</p>
