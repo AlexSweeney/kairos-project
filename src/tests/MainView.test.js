@@ -2,13 +2,17 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { hexToRGB, containsTextContent, getAllChildren } from './../utils/testUtils.js';
+import MainView from './../components/MainView.jsx';
+
+// =================================== Consts & Vars =================================== //
+let container;
 
 // .main-view-left
 const mainViewLeftText = 'Asia IT Market Place';
 
 // .main-view-right
-const optionsButtonsText = ['Now', 'Future'];
-const optionsInfoText = [
+const mainViewButtonsText = ['Now', 'Future'];
+const mainViewInfoText = [
 	{number: '6', text: 'different IT Software Networks'},
 	{number: '32', text: 'partners'},
 	{number: '4', text: 'countries'}
@@ -19,10 +23,11 @@ const alertBarText = 'You are now viewing an IT Software that has been verified 
 const alertBarTextNonBold = ['You are now viewing an ', 'that has been verified by '];
 const alertBarTextBold = ['IT Software', 'over 1 million users.'];
 
+// =================================== Setup / Teardown ================================= //
 beforeEach(() => {
 	container = document.createElement('div');
 	document.body.appendChild(container)
-	act(() => { render(<App/>, container)}) 
+	act(() => { render(<MainView/>, container)}) 
 })
 
 afterEach(() => {
@@ -39,7 +44,8 @@ describe('.main-view-left', () => {
 			expect(mainViewLeft.style.background).toEqual(res)
 		})
 	})
-}) describe('.main-view-left text', () => {
+
+	describe('text', () => {
 		it(`should have text ${mainViewLeftText}`, () => {
 			const header = document.querySelector('.main-view-left-header');
 			expect(header.textContent).toEqual(mainViewLeftText)
@@ -81,6 +87,7 @@ describe('.main-view-left', () => {
 			expect(header.style.color).toEqual(res)
 		})
 	})
+}) 
 
 /* ==================== Main View Right */
 describe('.main-view-right', () => {
@@ -98,12 +105,12 @@ describe('.main-view-right', () => {
 		})
 	}) 
 
-	describe('options-buttons', () => {
-		it(`options-buttons should have text "${optionsButtonsText}"`, () => {
+	describe('main-view-buttons', () => {
+		it(`main-view-buttons should have text "${mainViewButtonsText}"`, () => {
 			const mainViewButtons = document.querySelectorAll('.main-view-button');
-			expect(mainViewButtons.length).toEqual(optionsButtonsText.length)
+			expect(mainViewButtons.length).toEqual(mainViewButtonsText.length)
 
-			optionsButtonsText.forEach(mainViewButtonText => {
+			mainViewButtonsText.forEach(mainViewButtonText => {
 				const res = containsTextContent(mainViewButtons, mainViewButtonText)
 				expect(res).toEqual(true)
 			})
@@ -202,25 +209,26 @@ describe('.main-view-right', () => {
 		})
 	})
 
-	describe('options-info', () => {
-		it(`options-info should have number and text pairings : "${optionsInfoText.map(option => {
-			return `${option.number} : ${option.text}`;
+	describe('.main-view-info-container', () => {
+		it(`main-view-info-container should have number and text pairings : "${mainViewInfoText.map(info => {
+			return `${info.number} : ${info.text}`;
 		})}"`, () => {
-			const optionInfoDivs = document.querySelectorAll('.option-info');
-			expect(optionInfoDivs.length).toEqual(optionsInfoText.length)
+			const mainViewInfoDivs = document.querySelectorAll('.main-view-info');
+			expect(mainViewInfoDivs.length).toEqual(mainViewInfoText.length)
 
-			optionInfoDivs.forEach((optionInfoDiv, i) => {
-				const number = optionInfoDiv.querySelector('.option-number').textContent;
-				const text = optionInfoDiv.querySelector('.option-text').textContent;
+			mainViewInfoDivs.forEach((mainViewInfoDiv, i) => {
+				console.log(mainViewInfoDiv)
+				const number = mainViewInfoDiv.querySelector('.main-view-info-number').textContent;
+				const text = mainViewInfoDiv.querySelector('.main-view-info-text').textContent;
 
-				expect(number).toEqual(optionsInfoText[i].number)
-				expect(text).toEqual(optionsInfoText[i].text)
+				expect(number).toEqual(mainViewInfoText[i].number)
+				expect(text).toEqual(mainViewInfoText[i].text)
 			})
 		})
 
 		describe('number', () => { 
 			it('should have "fontFamily: Noto Sans, sans-serif"', () => {
-				const numbers = document.querySelectorAll('.option-number');
+				const numbers = document.querySelectorAll('.main-view-info-number');
 
 				numbers.forEach(number => {
 					expect(number.style.fontFamily).toEqual('Noto Sans, sans-serif')
@@ -228,7 +236,7 @@ describe('.main-view-right', () => {
 			})
 
 			it('should have "fontSize: 64px"', () => {
-				const numbers = document.querySelectorAll('.option-number');
+				const numbers = document.querySelectorAll('.main-view-info-number');
 
 				numbers.forEach(number => {
 					expect(number.style.fontSize).toEqual('64px')
@@ -236,7 +244,7 @@ describe('.main-view-right', () => {
 			}) 
 
 			it('should have "fontStyle: normal"', () => {
-				const numbers = document.querySelectorAll('.option-number');
+				const numbers = document.querySelectorAll('.main-view-info-number');
 
 				numbers.forEach(number => {
 					expect(number.style.fontStyle).toEqual('normal')
@@ -244,7 +252,7 @@ describe('.main-view-right', () => {
 			}) 
 
 			it('should have "fontWeight: 700"', () => {
-				const numbers = document.querySelectorAll('.option-number');
+				const numbers = document.querySelectorAll('.main-view-info-number');
 
 				numbers.forEach(number => {
 					expect(number.style.fontWeight).toEqual('700')
@@ -252,7 +260,7 @@ describe('.main-view-right', () => {
 			})    
 
 			it('should have "lineHeight: 87px"', () => {
-				const numbers = document.querySelectorAll('.option-number');
+				const numbers = document.querySelectorAll('.main-view-info-number');
 
 				numbers.forEach(number => {
 					expect(number.style.lineHeight).toEqual('87px')
@@ -260,7 +268,7 @@ describe('.main-view-right', () => {
 			})
 
 			it('should have "color: #CFE5FF"', () => {
-				const numbers = document.querySelectorAll('.option-number');
+				const numbers = document.querySelectorAll('.main-view-info-number');
 				const res = hexToRGB('#CFE5FF')
 
 				numbers.forEach(number => {
@@ -271,58 +279,58 @@ describe('.main-view-right', () => {
 
 		describe('text', () => {
 			it('should have "fontFamily: Noto Sans, sans-serif', () => {
-				const optionText = document.querySelectorAll('.option-text');
+				const mainViewText = document.querySelectorAll('.main-view-info-text');
 
-				optionText.forEach(el => {
+				mainViewText.forEach(el => {
 					expect(el.style.fontFamily).toEqual('Noto Sans, sans-serif')
 				})
 			})
 
 			it('should have "fontSize: 20px', () => {
-				const optionText = document.querySelectorAll('.option-text');
+				const mainViewText = document.querySelectorAll('.main-view-info-text');
 
-				optionText.forEach(el => {
+				mainViewText.forEach(el => {
 					expect(el.style.fontSize).toEqual('20px')
 				})
 			})
 
 			it('should have "fontStyle: normal', () => {
-				const optionText = document.querySelectorAll('.option-text');
+				const mainViewText = document.querySelectorAll('.main-view-info-text');
 
-				optionText.forEach(el => {
+				mainViewText.forEach(el => {
 					expect(el.style.fontStyle).toEqual('normal')
 				})
 			})
 
 			it('should have "fontWeight: 400', () => {
-				const optionText = document.querySelectorAll('.option-text');
+				const mainViewText = document.querySelectorAll('.main-view-info-text');
 
-				optionText.forEach(el => {
+				mainViewText.forEach(el => {
 					expect(el.style.fontWeight).toEqual('400')
 				})
 			})
 
 			it('should have "lineHeight: 27px', () => {
-				const optionText = document.querySelectorAll('.option-text');
+				const mainViewText = document.querySelectorAll('.main-view-info-text');
 
-				optionText.forEach(el => {
+				mainViewText.forEach(el => {
 					expect(el.style.lineHeight).toEqual('27px')
 				})
 			})
 
 			it('should have "textAlign: center', () => {
-				const optionText = document.querySelectorAll('.option-text');
+				const mainViewText = document.querySelectorAll('.main-view-info-text');
 
-				optionText.forEach(el => {
+				mainViewText.forEach(el => {
 					expect(el.style.textAlign).toEqual('center')
 				})
 			})
 
 			it('should have "color: #FFFFFF', () => {
-				const optionText = document.querySelectorAll('.option-text');
+				const mainViewText = document.querySelectorAll('.main-view-info-text');
 				const res = hexToRGB('#FFFFFF');
 
-				optionText.forEach(el => {
+				mainViewText.forEach(el => {
 					expect(el.style.color).toEqual(res)
 				})
 			})

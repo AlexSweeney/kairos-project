@@ -15,7 +15,7 @@ import {
 } from './../styles/MainView.js';
 
 export default function MainView({leftWidth, headerHeight}) { 
-  mainViewLeftStyle.width = leftWidth;
+  const thisMainViewLeftStyle = {...mainViewLeftStyle, width : leftWidth};
 
   return (
     <>
@@ -23,7 +23,7 @@ export default function MainView({leftWidth, headerHeight}) {
         <Header leftWidth={leftWidth} height={headerHeight}/>
 
         {/* ======== Main View Left ====== */}
-        <div className="main-view-left" style={mainViewLeftStyle}>
+        <div className="main-view-left" style={thisMainViewLeftStyle}>
           <h2 className="main-view-left-header" style={mainViewLeftHeaderStyle}>Asia IT Market Place</h2>
         </div>
 
