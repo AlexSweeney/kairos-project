@@ -5,21 +5,16 @@
 } 
 
 /* ======= Main View Left */
-.main-view-left {
-	width: 525.12px;
+.main-view-left { 
 	padding-top: 236.29px;
 	padding-left: 86.53px;
 }
 
-.main-view-left-header {
-	width: 400px;
-}
-
 /* ======= Main View Right */
-.main-view-right {
-	width: 914.8px;
+.main-view-right { 
 	z-index: 0;
 	padding-top: 100px;
+	flex-grow: 1;
 } 
 
 /* Buttons */
@@ -29,18 +24,18 @@
   justify-content: center;
 }
 
-.option-button {
+.main-view-button {
 	border: none;
 	display: flex;
 	justify-content: center;  
 } 
 
-.option-button:hover {
+.main-view-button:hover {
 	cursor: pointer;
 }
 
 /* Option Info */
-.options-info {
+.main-view-info-container {
 	margin-left: 180px;
 	margin-right: 180px;
 	margin-top: 62.36px;
@@ -49,8 +44,12 @@
   align-items: flex-start;
 }
 
-.option-info {
+.main-view-info {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.main-view-info-text {
+	width: 140px; 
 }

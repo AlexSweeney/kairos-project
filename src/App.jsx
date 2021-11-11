@@ -7,75 +7,15 @@ import screenIconFour from './imgs/screen-icon-4.svg';
 import screenIconFive from './imgs/screen-icon-5.svg';
 import screenIconSix from './imgs/screen-icon-6.svg';
 
-import Header from './components/Header.jsx';
+// import Header from './components/Header.jsx';
+import MainView from './components/MainView.jsx';
 
 import './styles/reset.css';
 import './styles/fonts.css';
 import './styles/App.css'; 
  
 function App() { 
-  // ==================== Main-View left Styles */
-  /*const mainViewLeftStyle = {
-    background: whiteBackground,
-  };
-
-  const mainViewLeftHeaderStyle = {
-    fontFamily: 'Noto Sans, sans-serif',
-    fontSize: '56px',
-    fontStyle: 'normal',
-    fontWeight: '700',
-    lineHeight: '76px',
-    letterSpacing: '0.01em',
-    color: darkBlueText,
-  };   */
-
-  // ==================== Main-View Right Styles */
-  /*const mainViewRightStyle = {
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'cover',
-  };
-
-  const optionButtonStyle = {
-    background: 'transparent',
-    width: '124.42px',
-    paddingBottom: '16px',
-    fontFamily: 'Noto Sans, sans-serif',
-    fontStyle: 'SemiBold',
-    fontSize: '22px',
-    fontWeight: '600',
-    lineHeight: '30px',
-    color: whiteText,
-  };
-
-  const optionButtonSelectedStyle = {
-    ...optionButtonStyle,
-    opacity: 1,
-    borderBottom: `1.5px solid ${lightBlueText}`,
-  };
-
-  const optionButtonDeselectedStyle = {
-    ...optionButtonStyle,
-    opacity: 0.5,
-  }; 
-
-  const optionNumberStyle = {
-    fontFamily: 'Noto Sans, sans-serif',
-    fontStyle: 'normal',
-    fontSize: '64px',
-    fontWeight: '700',
-    lineHeight: '87px',
-    color: lightBlueText,
-  }; 
-
-  const optionTextStyle = {
-    fontFamily: 'Noto Sans, sans-serif',
-    fontSize: '20px',
-    fontStyle: 'normal',
-    fontWeight: '400',
-    lineHeight: '27px', 
-    textAlign: 'center',
-    color: whiteBackground,
-  };*/
+  
 
   // ==================== Alert Bar Styles */
   /*const alertBarStyle = {
@@ -139,13 +79,14 @@ function App() {
     width: '280px',
     height: '235px',
   }; */
- 
+  
+  const mainViewLeftWidth = '36.5%';
+  const headerHeight = '100px';
+
   return (
   	<div className="background">
       <div className="container"> 
-      	<section className="main-view"> 
-      		<Header/>
-        </section>
+      	<MainView leftWidth={mainViewLeftWidth} headerHeight={headerHeight}/>
       </div>
     </div>
   );
@@ -154,33 +95,7 @@ function App() {
 export default App;
 
 
-        {/* ======== Main View Left ====== */}
-        {/*<div className="main-view-left" style={mainViewLeftStyle}>
-          <h2 className="main-view-left-header" style={mainViewLeftHeaderStyle}>Asia IT Market Place</h2>
-        </div>
-*/}
-        {/* ======== Main View Right ====== */}
-        {/*<div className="main-view-right" style={mainViewRightStyle}>
-          <div className="main-view-buttons">
-            <button className="option-button option-button-selected" style={optionButtonSelectedStyle}>Now</button>
-            <button className="option-button option-button-deselected" style={optionButtonDeselectedStyle}>Future</button>
-          </div> 
-          <div className="options-info">
-            <div className="option-info">
-              <h3 className="option-number" style={optionNumberStyle}>6</h3>
-              <h3 className="option-text" style={optionTextStyle}>different IT Software Networks</h3>
-            </div>
-            <div className="option-info">
-              <h3 className="option-number" style={optionNumberStyle}>32</h3>
-              <h3 className="option-text" style={optionTextStyle}>partners</h3>
-            </div>
-            <div className="option-info">
-              <h3 className="option-number" style={optionNumberStyle}>4</h3>
-              <h3 className="option-text" style={optionTextStyle}>countries</h3>
-            </div>
-          </div>
-        </div> 
-      </section>*/}
+       
 
       {/* ========================== Alert Bar ========================== */}
       {/*<section className="alert-bar" style={alertBarStyle}>

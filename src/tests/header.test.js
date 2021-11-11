@@ -36,6 +36,49 @@ describe('<Header/>', () => {
 		}) 
 	})
 
+	describe('header', () => {
+		it(`should have text ${mainViewLeftText}`, () => {
+			const header = document.querySelector('.main-view-left-header');
+			expect(header.textContent).toEqual(mainViewLeftText)
+		})
+
+		it('should have "fontFamily": "Noto Sans, sans-serif"', () => {
+			const header = document.querySelector('.main-view-left-header');
+			expect(header.style.fontFamily).toEqual('Noto Sans, sans-serif')
+		})
+
+		it('should have "fontSize": "56px"', () => {
+			const header = document.querySelector('.main-view-left-header');
+			expect(header.style.fontSize).toEqual('56px')
+		})
+
+		it('should have "fontStyle": "normal"', () => {
+			const header = document.querySelector('.main-view-left-header');
+			expect(header.style.fontStyle).toEqual('normal')
+		})
+
+		it('should have "fontWeight": "700"', () => {
+			const header = document.querySelector('.main-view-left-header');
+			expect(header.style.fontWeight).toEqual('700')
+		})
+
+		it('should have "lineHeight": "76px"', () => {
+			const header = document.querySelector('.main-view-left-header');
+			expect(header.style.lineHeight).toEqual('76px')
+		})
+
+		it('should have "letterSpacing": "0.01em"', () => {
+			const header = document.querySelector('.main-view-left-header');
+			expect(header.style.letterSpacing).toEqual('0.01em')
+		})
+
+		it('should have "color": "#181949"', () => {
+			const header = document.querySelector('.main-view-left-header');
+			const res = hexToRGB('#181949');
+			expect(header.style.color).toEqual(res)
+		})
+	})
+
 	/* ======================================= Header Right ================================ */
 	describe('header-right', () => {
 		it('should have "background": "transparent"', () => {
