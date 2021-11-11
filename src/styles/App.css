@@ -61,8 +61,8 @@
 /* Option Buttons */
 .option-buttons {
 	display: flex;
-	margin-left: 315.88px;
-	margin-top: 55.37px;
+  margin-top: 55.37px;
+  justify-content: center;
 }
 
 .option-button {
@@ -79,7 +79,7 @@
 .options-info {
 	margin-left: 180px;
 	margin-right: 180px;
-	margin-top: 29.36px;
+	margin-top: 62.36px;
 	display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -90,15 +90,7 @@
 	flex-direction: column;
 	align-items: center;
 }
-
-.option-number {
-	font-family: Noto-Sans, sans-serif;
-	font-style: bold;
-	font-size: 64px;
-	line-height: 87px;
-	color: #CFE5FF;
-} 
-
+ 
 .option-text {
 	font-family: Noto-Sans, sans-serif;
 	font-style: regular;

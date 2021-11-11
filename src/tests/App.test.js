@@ -4,8 +4,23 @@ import { act } from 'react-dom/test-utils';
 import App from './../App.jsx';
 
 let container;
+// header
 const navLinkNames = ['Home', 'Auto Homepage', 'Sales', 'CRM', 'Electronic office', 'Cloud ERP', 'SSL'];
 const optionNames = ['EN', 'Company', 'Partner Market Place'];
+
+// .main-view-left
+const mainViewLeftText = 'Asia IT Market Place';
+
+// .main-view-right
+const optionsButtonsText = ['Now', 'Future'];
+const optionsInfoText = [
+	{number: '6', text: 'different IT Software Networks'},
+	{number: '32', text: 'partners'},
+	{number: '4', text: 'countries'}
+];
+
+// .alert-bar
+const alertBarText = 'You are now viewing an IT Software that has been verified by over 1 million users.';
 
 function hexToRGB(hex) {
 	hex = hex.replace('#', '');
@@ -35,6 +50,7 @@ test.todo('check font loads')
 test.todo('test hexToRGB fn')
 test.todo('test elements ordered correctly')
 test.todo('test containsTextContent')
+test.todo('page loading options - prevent jerky background picture load')
 
 describe('<App/>', () => {
 	/* ======================================= Header ======================================= */
@@ -285,6 +301,11 @@ describe('<App/>', () => {
 		})
 
 		describe('header', () => {
+			it(`should have text ${mainViewLeftText}`, () => {
+				const header = document.querySelector('.main-view-left-header');
+				expect(header.textContent).toEqual(mainViewLeftText)
+			})
+
 			it('should have "fontFamily": "Noto Sans, sans-serif"', () => {
 				const header = document.querySelector('.main-view-left-header');
 				expect(header.style.fontFamily).toEqual('Noto Sans, sans-serif')
@@ -340,6 +361,16 @@ describe('<App/>', () => {
 		}) 
 
 		describe('options-buttons', () => {
+			it(`options-buttons should have text "${optionsButtonsText}"`, () => {
+				const optionButtons = document.querySelectorAll('.option-button');
+				expect(optionButtons.length).toEqual(optionsButtonsText.length)
+
+				optionsButtonsText.forEach(optionButtonText => {
+					const res = containsTextContent(optionButtons, optionButtonText)
+					expect(res).toEqual(true)
+				})
+			})
+
 			it('should have "fontFamily" : "Noto Sans, sans-serif" ', () => {
 				const optionButtons = document.querySelectorAll('.option-button');
 
@@ -434,7 +465,22 @@ describe('<App/>', () => {
 		})
 
 		describe('options-info', () => {
-			describe('number', () => {
+			it(`options-info should have number and text pairings : "${optionsInfoText.map(option => {
+				return `${option.number} : ${option.text}`;
+			})}"`, () => {
+				const optionInfoDivs = document.querySelectorAll('.option-info');
+				expect(optionInfoDivs.length).toEqual(optionsInfoText.length)
+
+				optionInfoDivs.forEach((optionInfoDiv, i) => {
+					const number = optionInfoDiv.querySelector('.option-number').textContent;
+					const text = optionInfoDiv.querySelector('.option-text').textContent;
+
+					expect(number).toEqual(optionsInfoText[i].number)
+					expect(text).toEqual(optionsInfoText[i].text)
+				})
+			})
+
+			describe('number', () => { 
 				it('should have "fontFamily: Noto Sans, sans-serif"', () => {
 					const numbers = document.querySelectorAll('.option-number');
 
@@ -536,14 +582,38 @@ describe('<App/>', () => {
 
 				it('should have "color: #FFFFFF', () => {
 					const optionText = document.querySelectorAll('.option-text');
+					const res = hexToRGB('#FFFFFF');
 
 					optionText.forEach(el => {
-						expect(el.style.color).toEqual('#FFFFFF')
+						expect(el.style.color).toEqual(res)
 					})
 				})
 			}) 
 		})
-	})
-
+	}) 
 	/* ======================================= Alert Bar ==================================== */
+	describe('.alert-bar', () => {
+		describe('background', () => {
+			it('should have "background: #FFD1E8"', () => {
+				const alertBar = document.querySelector('.alert-bar');
+				const res = hexToRGB('#FFD1E8');
+
+				expect(alertBar.style.background).toEqual(res)
+			})
+		})
+
+		describe('text', () => {
+			it(`should have heading ${alertBarText}`, () => {
+
+			})
+
+			describe('non bold', () => {
+				
+			})
+
+			describe('non bold styles', () => {
+
+			})
+		})
+	})
 })

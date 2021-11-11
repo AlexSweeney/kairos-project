@@ -131,7 +131,7 @@ function App() {
     fontSize: '64px',
     fontWeight: '700',
     lineHeight: '87px',
-    color: '#CFE5FF',
+    color: lightBlueText,
   }; 
 
   const optionTextStyle = {
@@ -141,7 +141,12 @@ function App() {
     fontWeight: '400',
     lineHeight: '27px', 
     textAlign: 'center',
-    color: '#FFFFFF',
+    color: whiteBackground,
+  };
+
+  // ==================== Alert Bar Styles */
+  const alertBarStyle = {
+    background: '#FFD1E8',
   };
 
   return (
@@ -206,7 +211,7 @@ function App() {
      			<div className="options-info">
      				<div className="option-info">
      					<h3 className="option-number" style={optionNumberStyle}>6</h3>
-     					<h3 className="option-text" style={optionTextStyle}>different<br/>IT Software<br/>Networks</h3>
+     					<h3 className="option-text" style={optionTextStyle}>different IT Software Networks</h3>
      				</div>
      				<div className="option-info">
      					<h3 className="option-number" style={optionNumberStyle}>32</h3>
@@ -221,7 +226,7 @@ function App() {
      	</section>
 
      	{/* ========================== Alert Bar ========================== */}
-     	<section className="alert-bar pink-background" alt="background-image">
+     	<section className="alert-bar" style={alertBarStyle}>
      		<p>You are now viewing an <em>IT Software</em> that has been verified by <em>over 1 million users.</em></p>
      	</section>
 
