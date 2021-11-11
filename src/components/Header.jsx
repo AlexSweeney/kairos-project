@@ -13,14 +13,14 @@ import {
   chevronIconStyle,
   navLinkLeftStyle,
   navLinkRightStyle,
-} from './../styles/header.js'; 
-import './../styles/header.css'; 
+} from './../styles/Header.js'; 
+import './../styles/Header.css'; 
 
-export default function Header({leftWidth = '36.5%', height='100px'}) {  
+export default function Header({leftWidth = '36.5%'}) {  
   const thisHeaderLeftStyle = { ...headerLeftStyle, width : leftWidth};
 
   return (
-    <header className="header" style={{height: height}}>
+    <header className="header">
       {/* ========================= Header Left ========================= */}
       <div className="header-left" style={thisHeaderLeftStyle}>
         <img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/>
