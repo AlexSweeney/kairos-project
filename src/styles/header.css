@@ -1,11 +1,9 @@
 /* =============================== Header ================================= */
-header {
+.header {
 	display: flex;
 	flex-direction: row; 
-	position: absolute;
-	background: transparent;
-	width: 100%;
-  height: 100px; 
+	position: absolute; 
+	width: 100%; 
   z-index: 2; 
 }
 
@@ -17,6 +15,14 @@ header {
 /* =============================== Header Left ============================ */
 .header-left {
 	padding-top: 36px;
+	width: 525.12px;
+}
+
+/* ======== Logo */
+.logo { 
+	left: 81.6px;
+	top: 51.5px;
+	position: absolute; 
 }
 
 /* ======== Nav Left */
@@ -31,13 +37,6 @@ header {
 	display: flex; 
 	height: 100%;
 }  
-
-/* ======== Logo */
-.logo { 
-	left: 81.6px;
-	top: 51.5px;
-	position: absolute; 
-}
 
 /* ======== Home */
 .home-container {
@@ -64,9 +63,14 @@ header {
 }
 
 /* =============================== Header Right ============================ */
+.header-right {
+	width: 914.8px;
+	height: 100%; 
+	position: relative;
+}
+
 /* ======== Options bar */
 .options-bar {
-	background: #181949;
 	width: 100%;
 	height: 36px;
 	display: flex;
@@ -86,25 +90,11 @@ header {
 	margin-right: 82px;
 }
 
-.option-heading { 
-	font-family: Roboto, sans-serif;
-	font-size: 14px;
-	line-height: 16.41px;
-	font-weight: 400;
-	color: #CFE5FF;
-}
-
 .options-heading:hover {
 	cursor: pointer; 
 }
 
-/* ======== Header Right */
-.header-right {
-	width: 914.8px;
-	height: 100%; 
-	position: relative;
-}
-
+/* ======== Nav Right */
 .nav-right { 
   margin-left: 33.88px;
   margin-top: 24px; 

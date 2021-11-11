@@ -1,0 +1,56 @@
+/* ================= Main-view ============== */
+.main-view {
+	height: 655.22px;
+	display: flex;
+} 
+
+/* ======= Main View Left */
+.main-view-left {
+	width: 525.12px;
+	padding-top: 236.29px;
+	padding-left: 86.53px;
+}
+
+.main-view-left-header {
+	width: 400px;
+}
+
+/* ======= Main View Right */
+.main-view-right {
+	width: 914.8px;
+	z-index: 0;
+	padding-top: 100px;
+} 
+
+/* Buttons */
+.main-view-buttons {
+	display: flex;
+  margin-top: 55.37px;
+  justify-content: center;
+}
+
+.option-button {
+	border: none;
+	display: flex;
+	justify-content: center;  
+} 
+
+.option-button:hover {
+	cursor: pointer;
+}
+
+/* Option Info */
+.options-info {
+	margin-left: 180px;
+	margin-right: 180px;
+	margin-top: 62.36px;
+	display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.option-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

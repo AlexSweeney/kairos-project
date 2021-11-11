@@ -34,92 +34,6 @@
 	position: relative;
 }
 
-/* ================= Main-view ============== */
-.main-view {
-	height: 655.22px;
-	display: flex;
-} 
-
-/* ======= Main View Left */
-.main-view-left {
-	width: 525.12px;
-	padding-top: 236.29px;
-	padding-left: 86.53px;
-}
-
-.main-view-left-header {
-	width: 400px;
-}
-
-/* ======= Main View Right */
-.main-view-right {
-	width: 914.8px;
-	z-index: 0;
-	padding-top: 100px;
-} 
-
-/* Option Buttons */
-.option-buttons {
-	display: flex;
-  margin-top: 55.37px;
-  justify-content: center;
-}
-
-.option-button {
-	border: none;
-	display: flex;
-	justify-content: center;  
-} 
-
-.option-button:hover {
-	cursor: pointer;
-}
-
-/* Option Info */
-.options-info {
-	margin-left: 180px;
-	margin-right: 180px;
-	margin-top: 62.36px;
-	display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.option-info {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
- 
-.option-text {
-	font-family: Noto-Sans, sans-serif;
-	font-style: regular;
-	font-size: 20px;
-	line-height: 27px;
-	color: #FFFFFF;
-	text-align: center;
-	width: 113px;
-}
-  
-/* ================= Alert-view ============= */
-.alert-bar {
-	height: 112px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.alert-bar p {
-	font-family: Noto-Sans, sans-serif;
-	font-size: 24px;
-	line-height: 33px; 
-	color: #181949;
-}
-
-.alert-bar p em {
-	font-weight: 600;
-}
-
 /* ================= Icon-views ============= */
 .icon-view {
 	display: flex; 
@@ -154,34 +68,11 @@
 }
 
 .info-box-heading {
-	font-family: Manrope, sans-serif;
-	font-weight: 700;
- 	font-size: 32px;
- 	line-height: 44px; 
-	color: #181949;
 	margin-bottom: 16px;
 }
 
 .info-box-text {
-	font-family: Noto-Sans, sans-serif;
-	font-size: 16px; 
-	line-height: 22px; 
-	color: #666666;
 	margin-bottom: 16px;
-}
-
-.info-button {
-	width: 89px;
-	height: 32px;
-	border-radius: 8px;
-	background: #181949;
-	border: none;
-
-	font-family: Noto-Sans-Semi-Bold, sans-serif;
-	font-weight: 600;
-	font-size: 16px;
-	line-height: 16px; 
-	color: #FFFFFF;
 }
 
 .info-box-container {
