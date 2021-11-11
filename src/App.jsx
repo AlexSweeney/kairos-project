@@ -14,29 +14,7 @@ import './styles/reset.css';
 import './styles/fonts.css';
 import './styles/App.css'; 
  
-function App() { 
-  
-
-  // ==================== Alert Bar Styles */
-  /*const alertBarStyle = {
-    background: pinkBackground,
-  };
-
-  const alertBarTextStyle = {
-    fontFamily: 'Noto Sans, sans-serif',
-    fontSize: '24px',
-    fontStyle: 'normal',
-    fontWeight: '400',
-    lineHeight: '33px',
-    letterSpacing: '0em',
-    textAlign: 'center',
-  };
-
-  const alertBarTextBoldStyle = {
-    ...alertBarTextStyle,
-    fontWeight: '700',
-  };*/
-
+function App() {  
   // ==================== Icon View Styles */
   /*const infoBoxHeadingStyle = {
     fontFamily: 'Manrope, sans-serif',
@@ -93,15 +71,7 @@ function App() {
 }
 
 export default App;
-
-
-       
-
-      {/* ========================== Alert Bar ========================== */}
-      {/*<section className="alert-bar" style={alertBarStyle}>
-        <h3 className="alert-bar-heading" style={alertBarTextStyle}>You are now viewing an <em style={alertBarTextBoldStyle}>IT Software</em> that has been verified by <em style={alertBarTextBoldStyle}>over 1 million users.</em></h3>
-      </section>*/}
-
+ 
       {/* ========================== IT cloud view ====================== */}
       {/*<section className="it-cloud-view white-background">
         <div className="icon-view-title-container">
