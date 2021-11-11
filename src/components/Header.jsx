@@ -16,13 +16,13 @@ import {
 } from './../styles/header.js'; 
 import './../styles/header.css'; 
 
-export default function Header({leftWidth = '36.5%', height='100px'}) { 
-  headerLeftStyle.width = leftWidth;
+export default function Header({leftWidth = '36.5%', height='100px'}) {  
+  const thisHeaderLeftStyle = { ...headerLeftStyle, width : leftWidth};
 
   return (
     <header className="header" style={{height: height}}>
       {/* ========================= Header Left ========================= */}
-      <div className="header-left" style={headerLeftStyle}>
+      <div className="header-left" style={thisHeaderLeftStyle}>
         <img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/>
 
         {/* ======================= Nav Left ========================== */}
