@@ -2,9 +2,11 @@
 .header {
 	display: flex;
 	flex-direction: row; 
+	align-items: flex-end;
 	position: absolute; 
 	width: 100%; 
   z-index: 2; 
+  padding-bottom: 18.5px;
 }
 
 /* =============================== Nav links ============================== */
@@ -14,34 +16,18 @@
 
 /* =============================== Header Left ============================ */
 .header-left {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 	padding-top: 36px;
 	width: 525.12px;
+	padding-left: 82px; 
+	padding-right: 38px;
 }
-
-/* ======== Logo */
-.logo { 
-	left: 81.6px;
-	top: 51.5px;
-	position: absolute; 
-}
-
-/* ======== Nav Left */
-.nav-left {
-	display: flex;
-	align-items: center;
-	width: 525.12px;
-	height: 100%;  
-}
-
-.nav-left .nav-link {
-	display: flex; 
-	height: 100%;
-}  
 
 /* ======== Home */
 .home-container {
-	display: flex;
-	align-items: center;
+	display: flex; 
 }
 
 .home-container:hover {
@@ -49,24 +35,15 @@
 }
 
 .home-icon {
-	position: absolute;
-	left: 416.97px;
-	top: 61.14px;
-	width: 16.03px;
-	height: 16.72px;
+	margin-right: 12px;
 }
-
-.home-text {
-	position: absolute;
-	left: 445px;
-	top: 60px;
-}
-
 /* =============================== Header Right ============================ */
-.header-right {
-	width: 914.8px;
-	height: 100%; 
-	position: relative;
+.header-right { 
+	height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-grow: 1;
 }
 
 /* ======== Options bar */
@@ -95,9 +72,16 @@
 }
 
 /* ======== Nav Right */
+.nav-right-container {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  padding-left: 34px;
+  align-items: flex-end;
+}
+
 .nav-right { 
-  margin-left: 33.88px;
-  margin-top: 24px; 
+	display: flex;
 }
 
 .nav-right ul {

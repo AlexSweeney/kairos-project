@@ -17,14 +17,17 @@ import {
 import './../styles/header.css'; 
 
 export default function Header({leftWidth = '36.5%', height='100px'}) { 
+  headerLeftStyle.width = leftWidth;
+
   return (
     <header className="header" style={{height: height}}>
       {/* ========================= Header Left ========================= */}
       <div className="header-left" style={headerLeftStyle}>
+        <img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/>
+
         {/* ======================= Nav Left ========================== */}
-        <nav className="nav-left" style={{width: leftWidth}}>
+        <nav className="nav-left">
           <ul>
-            <li><img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/></li>
             <li className="home-container">
               <img className="home-icon" style={homeIconStyle} src={home} alt="home icon"/>
               <a className="home-text nav-link nav-link-left" style={navLinkLeftStyle}>Home</a>
@@ -55,8 +58,8 @@ export default function Header({leftWidth = '36.5%', height='100px'}) {
         </div> 
 
         {/* ======================= Nav Right ========================== */}
-        <nav className="nav-right">
-          <ul>
+        <nav className="nav-right-container">
+          <ul className="nav-right">
             <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Auto Homepage</a></li>
             <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Sales</a></li>
             <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>CRM</a></li>
