@@ -149,6 +149,21 @@ function App() {
     background: '#FFD1E8',
   };
 
+  const alertBarTextStyle = {
+    fontFamily: 'Noto Sans, sans-serif',
+    fontSize: '24px',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: '33px',
+    letterSpacing: '0em',
+    textAlign: 'center',
+  };
+
+  const alertBarTextBoldStyle = {
+    ...alertBarTextStyle,
+    fontWeight: '700',
+  };
+
   return (
   	<div className="background">
      <div className="container">
@@ -227,7 +242,7 @@ function App() {
 
      	{/* ========================== Alert Bar ========================== */}
      	<section className="alert-bar" style={alertBarStyle}>
-     		<p>You are now viewing an <em>IT Software</em> that has been verified by <em>over 1 million users.</em></p>
+     		<h3 className="alert-bar-heading" style={alertBarTextStyle}>You are now viewing an <em style={alertBarTextBoldStyle}>IT Software</em> that has been verified by <em style={alertBarTextBoldStyle}>over 1 million users.</em></h3>
      	</section>
 
      	{/* ========================== IT cloud view ====================== */}
