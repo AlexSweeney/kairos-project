@@ -1,7 +1,7 @@
 import { 
   whiteBackground, 
   darkBlueBackground, 
-  pinkBackground, 
+  lightPinkBackground, 
   darkBlueText, 
   lightBlueText, 
   whiteText, 
@@ -76,7 +76,7 @@ export const mainViewInfoTextStyle = {
 
 // ==================== Alert Bar  */
 export const alertBarStyle = {
-  background: pinkBackground,
+  background: lightPinkBackground,
 };
 
 export const alertBarTextStyle = {

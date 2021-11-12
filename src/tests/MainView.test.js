@@ -216,8 +216,7 @@ describe('.main-view-right', () => {
 			const mainViewInfoDivs = document.querySelectorAll('.main-view-info');
 			expect(mainViewInfoDivs.length).toEqual(mainViewInfoText.length)
 
-			mainViewInfoDivs.forEach((mainViewInfoDiv, i) => {
-				console.log(mainViewInfoDiv)
+			mainViewInfoDivs.forEach((mainViewInfoDiv, i) => { 
 				const number = mainViewInfoDiv.querySelector('.main-view-info-number').textContent;
 				const text = mainViewInfoDiv.querySelector('.main-view-info-text').textContent;
 

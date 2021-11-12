@@ -1,6 +1,8 @@
 import { 
   lightBlueBackground,
   greyBorder,
+  greyText,
+  darkBlueText,
 } from './colors.js';
 
 export const officeAddressViewStyle = {
@@ -20,7 +22,7 @@ export const officeAddressBoxHeadingStyle = {
 	lineHeight: '30px',
 	letterSpacing: '-0.3px',
 	textAlign: 'left',
-	color: '#181949',
+	color: darkBlueText,
 };
 
 export const officeAddressTextStyle = {
@@ -31,5 +33,5 @@ export const officeAddressTextStyle = {
 	lineHeight: '19px',
 	letterSpacing: '-0.2px',
 	textAlign: 'left',
-	color: '#666666',
+	color: greyText,
 };

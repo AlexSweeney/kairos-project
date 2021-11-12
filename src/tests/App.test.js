@@ -4,10 +4,7 @@ import { act } from 'react-dom/test-utils';
 import { hexToRGB, containsTextContent, getAllChildren } from './../utils/testUtils.js';
 import App from './../App.jsx';
 
-let container;
-// header
-const navLinkNames = ['Home', 'Auto Homepage', 'Sales', 'CRM', 'Electronic office', 'Cloud ERP', 'SSL'];
-const optionNames = ['EN', 'Company', 'Partner Market Place'];
+let container; 
 
 beforeEach(() => {
 	container = document.createElement('div');
@@ -20,7 +17,6 @@ afterEach(() => {
 })
 
 test.todo('check font loads')
-test.todo('test hexToRGB fn')
-test.todo('test elements ordered correctly')
-test.todo('test containsTextContent')
+test.todo('test testUtils.js')
+test.todo('test components ordered correctly') 
 test.todo('page loading options - prevent jerky background picture load')

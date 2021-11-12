@@ -41,7 +41,6 @@ const boxFour = {
 
 const boxes = [boxOne, boxTwo, boxThree, boxFour];
 
-
 /* ======================================= Setup / Teardown ============================= */
 beforeEach(() => {
 	container = document.createElement('div');
