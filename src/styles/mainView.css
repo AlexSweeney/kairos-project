@@ -1,12 +1,16 @@
 /* ================= Main-view ============== */
 .main-view-container {
 	height: 100%;
-	width: 100%;
-	min-height: 610px;
-	min-width: 540px;
+	width: 100%; 
 	display: flex;
-	background: darkblue;
+	background: darkblue; 
 } 
+
+.main-view {
+	display: flex;
+  width: 100%;
+  background: pink;
+}
 
 /* ======= Main View Left */
 /* 
@@ -16,6 +20,7 @@
 .main-view-left { 
 	padding-top: 220.29px;
 	padding-left: 63.53px;
+	min-width: 295px;
 }
 
 /* ======= Main View Right */

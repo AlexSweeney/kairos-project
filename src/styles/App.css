@@ -12,4 +12,6 @@
 	width: 100vw;
 	height: 100vh;
 	background: yellow;
+	min-width: 1149px;
+	min-height: 302px;
 }

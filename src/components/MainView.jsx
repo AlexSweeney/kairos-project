@@ -22,7 +22,7 @@ export default function MainView({leftWidth}) {
       <section className="main-view-container"> 
         <Header leftWidth={leftWidth}/>
 
-        {/*<section className=""> 
+        {/*<section className="main-view"> 
           <div className="main-view-left" style={thisMainViewLeftStyle}>
             <h2 className="main-view-left-header" style={mainViewLeftHeaderStyle}>Asia IT Market Place</h2>
           </div>
@@ -45,9 +45,9 @@ export default function MainView({leftWidth}) {
                 <h3 className="main-view-info-number" style={mainViewInfoNumberStyle}>4</h3>
                 <h3 className="main-view-info-text" style={mainViewInfoTextStyle}>countries</h3>
               </div>
-            </div> 
+            </div>
           </div> 
-        </section> */}
+        </section>  */}
         {/*<section className="alert-bar" style={alertBarStyle}>
           <h3 className="alert-bar-heading" style={alertBarTextStyle}>You are now viewing an <em style={alertBarTextBoldStyle}>IT Software</em> that has been verified by <em style={alertBarTextBoldStyle}>over 1 million users.</em></h3>
         </section>*/}
