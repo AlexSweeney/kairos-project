@@ -24,13 +24,13 @@ export default function MainView() {
           <div className="main-view-left" style={mainViewLeftStyle}>   
             <h2 className="main-view-left-header" style={mainViewLeftHeaderStyle}>Asia IT Market Place</h2>
           </div>
-        </section> 
-           {/*<div className="main-view-right" style={mainViewRightStyle}>
-            <div className="main-view-buttons">
+         
+          <div className="main-view-right" style={mainViewRightStyle}>
+           <div className="main-view-buttons">
               <button className="main-view-button main-view-button-selected" style={mainViewButtonSelectedStyle}>Now</button>
               <button className="main-view-button main-view-button-deselected" style={mainViewButtonDeselectedStyle}>Future</button>
             </div> 
-            <div className="main-view-info-container">
+             <div className="main-view-info-container">
               <div className="main-view-info">
                 <h3 className="main-view-info-number" style={mainViewInfoNumberStyle}>6</h3>
                 <h3 className="main-view-info-text" style={mainViewInfoTextStyle}>different IT Software Networks</h3>
@@ -46,7 +46,7 @@ export default function MainView() {
             </div>
           </div> 
         </section>  
-        <section className="alert-bar" style={alertBarStyle}>
+        {/*<section className="alert-bar" style={alertBarStyle}>
           <h3 className="alert-bar-heading" style={alertBarTextStyle}>You are now viewing an <em style={alertBarTextBoldStyle}>IT Software</em> that has been verified by <em style={alertBarTextBoldStyle}>over 1 million users.</em></h3>
         </section>*/}
       </section>
