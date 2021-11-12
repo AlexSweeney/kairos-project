@@ -1,26 +1,38 @@
 /* ================= Main-view ============== */
 .main-view-container {
-	height: 100%;
+	height: 100vh;
 	width: 100%; 
 	display: flex;
+	flex-direction: column;
 	background: darkblue; 
+	min-width: 1265px;
 } 
 
 .main-view {
 	display: flex;
   width: 100%;
+  height: 100%;
   background: pink;
+  /*min-width: 1200px;*/
 }
 
-/* ======= Main View Left */
+/* ======= Main View Left */ 
 /* 
-*  use inline style in App.jsx to change header left width 
-*  -> to keep header-left and main-view-left same width
+	If want to change width of main-view-left 
+		=> must also change width of  header left 
+		=> must adjust min-width of both
+		=> check at all widths
 */
 .main-view-left { 
-	padding-top: 220.29px;
-	padding-left: 63.53px;
-	min-width: 295px;
+	/*padding-top: 220.29px;*/
+	padding-left: 6%;
+	padding-right: 3%;
+	background: red; 
+	min-width: 484px;
+	width: 39%; 
+	display: flex;
+  align-items: center;
+  min-height: 540px;
 }
 
 /* ======= Main View Right */

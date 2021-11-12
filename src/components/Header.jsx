@@ -16,14 +16,12 @@ import {
 } from './../styles/Header.js'; 
 import './../styles/Header.css'; 
 
-export default function Header({leftWidth = '36.5%'}) {  
-  const thisHeaderLeftStyle = { ...headerLeftStyle, width : leftWidth};
-
+export default function Header() {  
   return (
     <header className="header">
       <div className="options-bar-background" style={optionsBarStyle}></div> 
       
-      <div className="header-left" style={thisHeaderLeftStyle}>
+      <div className="header-left" style={headerLeftStyle}>
         <img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/>
 
         <nav className="nav-left">
