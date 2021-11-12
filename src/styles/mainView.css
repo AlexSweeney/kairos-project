@@ -5,6 +5,10 @@
 } 
 
 /* ======= Main View Left */
+/* 
+*  use inline style in App.jsx to change header left width 
+*  -> to keep header-left and main-view-left same width
+*/
 .main-view-left { 
 	padding-top: 220.29px;
 	padding-left: 63.53px;

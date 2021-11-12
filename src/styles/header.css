@@ -16,6 +16,10 @@
 }
 
 /* =============================== Header Left ============================ */
+/* 
+*  use inline style in App.jsx to change header left width 
+*  -> to keep header-left and main-view-left same width
+*/
 .header-left {
 	display: flex;
 	justify-content: space-between;

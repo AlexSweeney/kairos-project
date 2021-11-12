@@ -1,6 +1,7 @@
 import React from 'react';
 import MainView from './components/MainView.jsx';
 import ServicesView from './components/ServicesView.jsx';
+import PriceOptionsView from './components/PriceOptionsView.jsx';
 import './styles/reset.css';
 import './styles/fonts.css';
 import './styles/App.css'; 
@@ -13,6 +14,7 @@ function App() {
       <div className="container"> 
       	<MainView leftWidth={mainViewLeftWidth}/>
         <ServicesView/>
+        <PriceOptionsView/>
       </div>
     </div>
   );
@@ -21,69 +23,7 @@ function App() {
 export default App;
  
 
-      {/* ========================== Options View ================ */}
-     {/*  <section className="options-view blue-background">
-        <div className="option-box">
-          <div className="option-box-row-1">
-            <h3 className="option-box-heading" style={infoBoxHeadingStyle}>Free Test</h3>
-            <h5 className="option-box-sub-heading">Organize across all apps by hand</h5>
-          </div>
-          <div className="option-box-row-2">  
-            <div className="price-left-col">
-              <h3 className="price-zero">0</h3>
-            </div>
-            <div className="price-right-col">
-              <h3 className="price-dollar">$</h3>
-              <h5 className="price-text">Per Month</h5>
-            </div>
-          </div> 
-        </div>
-        <div className="option-box">
-          <div className="option-box-row-1">
-            <h3 className="option-box-heading" style={infoBoxHeadingStyle}>Low Price</h3>
-            <h5 className="option-box-sub-heading">Monthly Fixed Amount</h5>
-          </div>
-          <div className="option-box-row-2">  
-            <div className="price-left-col">
-              <h3 className="price-number">200.000</h3>
-            </div>
-            <div className="price-right-col">
-              <h3 className="price-dollar">$</h3>
-              <h5 className="price-text">Per Month</h5>
-            </div>
-          </div> 
-        </div>
-        <div className="option-box option-box-border">
-          <div className="option-box-row-1">
-            <h3 className="option-box-heading" style={infoBoxHeadingStyle}>Easy Using Methods</h3>
-            <h5 className="option-box-sub-heading">Various Manuals</h5>
-          </div>
-          <div className="option-box-row-2">  
-            <div className="price-left-col">
-              <h3 className="price-number">200.000</h3>
-            </div>
-            <div className="price-right-col">
-              <h3 className="price-dollar">$</h3>
-              <h5 className="price-text">Per Month</h5>
-            </div>
-          </div> 
-        </div>
-        <div className="option-box option-box-highlight">
-          <div className="option-box-row-1">
-            <h3 className="option-box-heading" style={infoBoxHeadingStyle}>Verified IT Service</h3>
-            <h5 className="option-box-sub-heading">On sale in 4 countries</h5>
-          </div>
-          <div className="option-box-row-2">  
-            <div className="price-left-col">
-              <h3 className="price-number">300.000</h3>
-            </div>
-            <div className="price-right-col">
-              <h3 className="price-dollar">$</h3>
-              <h5 className="price-text">Per Month</h5>
-            </div>
-          </div> 
-        </div>
-      </section>*/}
+     
 
       {/* ========================== Offices View ================ */}
       {/*<section className="offices-view blue-background">
