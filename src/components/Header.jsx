@@ -18,12 +18,10 @@ import './../styles/Header.css';
 
 export default function Header() {  
   return (
-    <header className="header">
-      <div className="options-bar-background" style={optionsBarStyle}></div> 
+    <header className="header"> 
       
       <div className="header-left" style={headerLeftStyle}>
         <img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/>
-
         <nav className="nav-left">
           <ul>
             <li className="home-container">
@@ -35,25 +33,26 @@ export default function Header() {
       </div>
 
       <div className="header-right" style={headerRightStyle}>  
-        <div className="header-right-content-container">
-          <ul className="options-container">
-            <li className="option">
-              <h3 className="option-heading" style={optionHeadingStyle}>EN</h3>
-              <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
-            </li>
-            <li className="option">
-              <h3 className="option-heading" style={optionHeadingStyle}>Company</h3>
-              <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
-            </li>
-            <li className="option">
-              <h3 className="option-heading" style={optionHeadingStyle}>Partner Market Place</h3>
-              <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
-            </li>
-          </ul> 
-
+       {/* <div className="header-right-content-container">*/}
+          <div className="options-bar-background" style={optionsBarStyle}>
+            <ul className="options-container">
+              <li className="option">
+                <h3 className="option-heading" style={optionHeadingStyle}>EN</h3>
+                <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
+              </li>
+              <li className="option">
+                <h3 className="option-heading" style={optionHeadingStyle}>Company</h3>
+                <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
+              </li>
+              <li className="option">
+                <h3 className="option-heading" style={optionHeadingStyle}>Partner Market Place</h3>
+                <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
+              </li>
+            </ul> 
+          </div> 
           <nav className="nav-right-container">
             <ul className="nav-right">
-              <li><a className="nav-link nav-link-right-first" style={navLinkRightStyle}>Auto Homepage</a></li>
+              <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Auto Homepage</a></li>
               <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Sales</a></li>
               <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>CRM</a></li>
               <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Electronic office</a></li>
@@ -61,7 +60,7 @@ export default function Header() {
               <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>SSL</a></li>
             </ul>
           </nav>
-        </div>
+        {/*</div>*/}
       </div>
     </header>
   )

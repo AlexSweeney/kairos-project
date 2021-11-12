@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './components/Header.jsx';
 import MainView from './components/MainView.jsx';
 import AlertBar from './components/AlertBar.jsx';
 import ServicesView from './components/ServicesView.jsx';
@@ -11,11 +12,12 @@ import './styles/App.css';
 function App() {   
   return (
   	<div className="container"> 
-    	<MainView/>
-      <AlertBar/>
+      <Header/>
+    	{/*<MainView/>*/}
+      {/*<AlertBar/>
       <ServicesView/>
       <PriceOptionsView/>
-      <OfficeAddressView/>
+      <OfficeAddressView/>*/}
     </div>
   );
 }

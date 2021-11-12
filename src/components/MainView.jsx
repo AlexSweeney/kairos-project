@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header.jsx';
 import './../styles/MainView.css';
 import {
   mainViewLeftStyle, 
@@ -15,8 +14,7 @@ export default function MainView() {
   return (
     <>
       <section className="main-view-container"> 
-        <Header/>
-        
+       
         <section className="main-view"> 
           <div className="main-view-left" style={mainViewLeftStyle}>   
             <h2 className="main-view-left-header" style={mainViewLeftHeaderStyle}>Asia IT Market Place</h2>
