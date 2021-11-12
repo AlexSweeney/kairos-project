@@ -8,16 +8,14 @@ import './styles/fonts.css';
 import './styles/App.css'; 
  
 function App() {  
-  const mainViewLeftWidth = '36.5%'; 
+  const mainViewLeftWidth = '38.5%'; 
 
   return (
-  	<div className="background">
-      <div className="container"> 
-      	<MainView leftWidth={mainViewLeftWidth}/>
-        <ServicesView/>
-        <PriceOptionsView/>
-        <OfficeAddressView/>
-      </div>
+  	<div className="container"> 
+    	<MainView leftWidth={mainViewLeftWidth}/>
+      {/*<ServicesView/>
+      <PriceOptionsView/>
+      <OfficeAddressView/>*/}
     </div>
   );
 }

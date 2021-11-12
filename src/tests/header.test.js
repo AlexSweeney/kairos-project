@@ -71,14 +71,14 @@ describe('home icon', () => {
 		expect(homeIcon).not.toEqual(null)
 	})  
 
-	it('home icon should have "width" : "16.03px" ', () => {
+	it('home icon should have "width" : "18px" ', () => {
 		const homeIcon = container.querySelector('.home-icon');
-		expect(homeIcon.style.width).toEqual('16.03px')
+		expect(homeIcon.style.width).toEqual('18px')
 	})
 
-	it('home icon should have "height" : "16.72px" ', () => {
+	it('home icon should have "height" : "18px" ', () => {
 		const homeIcon = container.querySelector('.home-icon');
-		expect(homeIcon.style.height).toEqual('16.72px')
+		expect(homeIcon.style.height).toEqual('18px')
 	})
 })
 

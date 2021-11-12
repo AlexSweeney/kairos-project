@@ -1,7 +1,10 @@
 /* ================= Main-view ============== */
-.main-view {
-	height: 655.22px;
+.main-view-container {
+	/*height: 655.22px;*/
+	height: 100vh;
+	min-width: 100vw;
 	display: flex;
+	background: red;
 } 
 
 /* ======= Main View Left */
@@ -64,4 +67,5 @@
 	justify-content: center;
 	align-items: center;
 	height: 112px;
+	flex-grow: 1;
 }

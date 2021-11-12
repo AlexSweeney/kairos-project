@@ -4,10 +4,10 @@
 	flex-direction: row; 
 	align-items: flex-end;
 	position: absolute; 
-	width: 100%; 
+	width: 100vw; 
   z-index: 2; 
-  padding-bottom: 18.5px;
-  height: 100px;
+  min-height: 80px;
+	height: 5rem;
 }
 
 /* =============================== Nav links ============================== */
@@ -23,16 +23,17 @@
 .header-left {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
-	padding-top: 36px;
-	width: 525.12px;
-	padding-left: 82px; 
-	padding-right: 38px;
+	align-items: flex-end;  
+	min-width: 463.703px;
+	padding-left: 6%;
+	padding-right: 3%;
+	height: 100%;
 }
 
 /* ======== Home */
 .home-container {
-	display: flex; 
+	display: flex;
+  align-items: center;
 }
 
 .home-container:hover {
@@ -40,8 +41,9 @@
 }
 
 .home-icon {
-	margin-right: 12px;
+	margin-right: 10px;
 }
+
 /* =============================== Header Right ============================ */
 .header-right { 
 	height: 100%;
