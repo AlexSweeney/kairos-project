@@ -4,16 +4,16 @@
 	flex-direction: row; 
 	align-items: flex-end;
 	position: absolute;
-  width: 100%;
-  min-height: 80px;
-	height: 5rem;
+ 	width: 100vw;
+  height: 5rem;
 	z-index: 2; 
+	background: lightpink;
 }
 
 .options-bar-background {
 	position: absolute;
   z-index: -2;
-  height: 36px;
+  height: 2.25rem;
   width: 100%;
   top: 0;
 }
@@ -36,7 +36,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;  
-	min-width: 463.703px;
+	min-width: 29rem;
 	padding-left: 6%;
 	padding-right: 3%;
 	height: 100%;
@@ -71,7 +71,7 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	height: 36px;
+	height: 2.25rem;
 }
 
 .option {
