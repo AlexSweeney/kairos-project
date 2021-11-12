@@ -7,7 +7,7 @@
   height: 5rem;
 	z-index: 2;  
 	position: absolute; 
-	min-width: 1265px; 
+	min-width: 1265px;  
 }
 
 .options-bar-background {
@@ -43,6 +43,7 @@
 	padding-left: 6%;
 	padding-right: 3%;
 	height: 100%;
+	position: absolute;
 }
 
 /* ======== Home */
@@ -64,7 +65,7 @@
 	height: 100%;
 	flex-grow: 1;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-end; 
 }  
 
 .header-right-content-container {
@@ -96,7 +97,7 @@
 .nav-right-container {
   display: flex;
   align-items: flex-end;
-  padding-right: 6%;
+  padding-right: 3%;
 }
  
 .nav-right { 
@@ -114,4 +115,14 @@
 
 .chevron-icon {
 	margin-left: 4.18px;
+}
+
+@media screen and (min-width: 1800px) {
+	.options-container {  
+		padding-right: 9%;
+	}
+
+	.nav-right-container {
+    padding-right: 9%;
+	}
 }

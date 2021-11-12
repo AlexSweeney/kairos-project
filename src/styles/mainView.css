@@ -1,18 +1,11 @@
 /* ================= Main-view ============== */
-.main-view-container {
+.main-view {
 	height: 100vh;
 	width: 100%; 
 	display: flex;
-	flex-direction: column; 
 	min-width: 1265px;
 	min-height: 540px;
 } 
-
-.main-view {
-	display: flex;
-  width: 100%;
-  height: 100%; 
-}
 
 /* ======= Main View Left */ 
 /* 
@@ -27,7 +20,7 @@
   padding-right: 3%;
   min-width: 484px;
   width: 39%;
-  height: 100%;
+  height: 100%; 
 }
 
 /* ======= Main View Right */
@@ -60,7 +53,7 @@
 	margin: 0 152px;
 	margin-top: 62px;
 	display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
 }
 
@@ -68,8 +61,15 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 0 3%;
 }
 
 .main-view-info-text {
 	width: 140px; 
+}
+
+/* Very large screens */
+
+@media screen and (min-width: ) {
+
 }
