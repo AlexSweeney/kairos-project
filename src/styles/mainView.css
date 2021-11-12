@@ -24,12 +24,11 @@
 		=> check at all widths
 */
 .main-view-left {  
-	display: flex;
-  align-items: center;
-	padding-left: 6%;
-	padding-right: 3%;
-	min-width: 484px;
-	width: 39%; 
+	padding-top: 220px;
+  padding-left: 6%;
+  padding-right: 3%;
+  min-width: 484px;
+  width: 39%;
   height: 100%;
 }
 
