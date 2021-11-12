@@ -6,6 +6,7 @@ export const lightPinkBackground = '#FFD1E8';
 export const pinkBackground = '#E6367E'; 
 
 export const lightGreyBorder = '#DEDEDE';
+export const greyBorder = 'rgba(153, 153, 153, 0.46)';
 export const pinkBorder = '#E6367E';
 
 export const darkBlueText = '#181949';
