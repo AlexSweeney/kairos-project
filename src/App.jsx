@@ -14,8 +14,8 @@ function App() {
     	<MainView/>
       <AlertBar/>
       <ServicesView/>
-      {/*<PriceOptionsView/>
-      <OfficeAddressView/>*/}
+      <PriceOptionsView/>
+      {/*<OfficeAddressView/>*/}
     </div>
   );
 }
