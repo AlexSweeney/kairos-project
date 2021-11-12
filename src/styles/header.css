@@ -1,0 +1,103 @@
+/* =============================== Header ================================= */
+.header {
+	display: flex;
+	flex-direction: row; 
+	align-items: flex-end;
+	position: absolute; 
+	width: 100%; 
+  z-index: 2; 
+  padding-bottom: 18.5px;
+  height: 100px;
+}
+
+/* =============================== Nav links ============================== */
+.nav-link:hover {
+	cursor: pointer;
+}
+
+/* =============================== Header Left ============================ */
+/* 
+*  use inline style in App.jsx to change header left width 
+*  -> to keep header-left and main-view-left same width
+*/
+.header-left {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-top: 36px;
+	width: 525.12px;
+	padding-left: 82px; 
+	padding-right: 38px;
+}
+
+/* ======== Home */
+.home-container {
+	display: flex; 
+}
+
+.home-container:hover {
+	cursor: pointer;
+}
+
+.home-icon {
+	margin-right: 12px;
+}
+/* =============================== Header Right ============================ */
+.header-right { 
+	height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+/* ======== Options bar */
+.options-bar {
+	width: 100%;
+	height: 36px;
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 350px;
+	padding-top: 8px;
+	z-index: 2;
+}  
+
+.options-container { 
+	display: flex;
+}
+
+.option {
+	display: flex;
+	align-items: center;
+	margin-right: 82px;
+}
+
+.options-heading:hover {
+	cursor: pointer; 
+}
+
+/* ======== Nav Right */
+.nav-right-container {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  padding-left: 34px;
+  align-items: flex-end;
+}
+
+.nav-right { 
+	display: flex;
+}
+
+.nav-right ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.nav-link-right {
+	margin-right: 72px;
+}
+
+.chevron-icon {
+	margin-left: 4.18px;
+}

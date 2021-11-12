@@ -1,0 +1,67 @@
+/* ================= Main-view ============== */
+.main-view {
+	height: 655.22px;
+	display: flex;
+} 
+
+/* ======= Main View Left */
+/* 
+*  use inline style in App.jsx to change header left width 
+*  -> to keep header-left and main-view-left same width
+*/
+.main-view-left { 
+	padding-top: 220.29px;
+	padding-left: 63.53px;
+}
+
+/* ======= Main View Right */
+.main-view-right { 
+	z-index: 0;
+	padding-top: 100px;
+	flex-grow: 1;
+} 
+
+/* Buttons */
+.main-view-buttons {
+	display: flex;
+  margin-top: 55.37px;
+  justify-content: center;
+}
+
+.main-view-button {
+	border: none;
+	display: flex;
+	justify-content: center;  
+} 
+
+.main-view-button:hover {
+	cursor: pointer;
+}
+
+/* Option Info */
+.main-view-info-container {
+	margin-left: 180px;
+	margin-right: 180px;
+	margin-top: 62.36px;
+	display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-view-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-view-info-text {
+	width: 140px; 
+}
+
+/* ================= Alert-bar ============== */
+.alert-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 112px;
+}

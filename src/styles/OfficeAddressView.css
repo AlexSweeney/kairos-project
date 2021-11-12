@@ -1,0 +1,44 @@
+/* ================= Offices-view =========== */
+.offices-address-view {
+  height: 287px;
+  display: flex;
+}
+
+.office-address-box {
+	height: 100%;
+	width: 33.3333333333%;
+	display: flex;
+	flex-direction: column;
+	padding-top: 33px;
+	padding-right: 36px;
+	padding-left: 36px;
+}
+
+.office-address-box-one {
+	align-items: flex-end;
+}
+
+.office-address-box-two {
+	align-items: center;
+}
+
+.office-address-box-three {
+	align-items: flex-start;
+}
+
+.office-address-box-text-container {
+	width: 320px;
+}
+ 
+.address-heading {
+	margin-bottom: 4px;
+} 
+
+.address-text {
+	margin: 16px 0;
+}
+
+.address-row {
+	display: inline;
+	margin-right: 28px; 
+}
