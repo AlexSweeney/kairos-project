@@ -76,12 +76,3 @@
 .main-view-info-text {
 	width: 140px; 
 }
-
-/* ================= Alert-bar ============== */
-.alert-bar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 112px;
-	flex-grow: 1;
-}

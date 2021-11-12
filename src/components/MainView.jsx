@@ -8,10 +8,7 @@ import {
   mainViewButtonSelectedStyle,
   mainViewButtonDeselectedStyle,
   mainViewInfoNumberStyle,
-  mainViewInfoTextStyle,
-  alertBarStyle,
-  alertBarTextStyle,
-  alertBarTextBoldStyle,
+  mainViewInfoTextStyle, 
 } from './../styles/MainView.js';
 
 export default function MainView() {  
@@ -46,9 +43,6 @@ export default function MainView() {
             </div>
           </div> 
         </section>  
-        {/*<section className="alert-bar" style={alertBarStyle}>
-          <h3 className="alert-bar-heading" style={alertBarTextStyle}>You are now viewing an <em style={alertBarTextBoldStyle}>IT Software</em> that has been verified by <em style={alertBarTextBoldStyle}>over 1 million users.</em></h3>
-        </section>*/}
       </section>
     </>
   )
