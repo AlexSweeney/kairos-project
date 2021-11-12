@@ -2,6 +2,7 @@
 .offices-address-view {
   height: 287px;
   display: flex;
+  min-width: 1265px;
 }
 
 .office-address-box {
