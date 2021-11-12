@@ -31,7 +31,7 @@ export const headerLeftStyle = {
 };
 
 export const headerRightStyle = {
-  background : 'transparent',
+  /*background : 'transparent',*/
 };
 
 // ==================== Option Styles */

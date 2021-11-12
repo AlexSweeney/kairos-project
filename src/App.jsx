@@ -8,7 +8,7 @@ import './styles/fonts.css';
 import './styles/App.css'; 
  
 function App() {  
-  const mainViewLeftWidth = '38.5%'; 
+  const mainViewLeftWidth = '38%'; 
 
   return (
   	<div className="container"> 
