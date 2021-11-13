@@ -12,11 +12,11 @@ import './styles/App.css';
 function App() {   
   return (
   	<div className="container"> 
-      <Header/>
+      {/*<Header/>
     	<MainView/>
-      {/*<AlertBar/>
+      <AlertBar/>*/}
       <ServicesView/>
-      <PriceOptionsView/>
+      {/*<PriceOptionsView/>
       <OfficeAddressView/>*/}
     </div>
   );
