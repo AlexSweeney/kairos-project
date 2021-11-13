@@ -26,7 +26,9 @@ export default function ServicesView() {
 
 			{/* ========================== IT cloud view ====================== */}
 			<section className="service-view service-view-wide it-cloud-view" style={whiteServiceViewStyle}>
-        <img className="service-icon" src={itCloudIcon} style={serviceIconStyle} alt="it cloud icon"/>
+        <div className="service-icon-container">
+          <img className="service-icon" src={itCloudIcon} style={serviceIconStyle} alt="it cloud icon"/>
+        </div>
         <div className="service-info-box">
           <h3 className="service-info-box-heading" style={serviceInfoBoxHeadingStyle}>ASSETS</h3>
           <p className="service-info-box-text" style={serviceInfoBoxTextStyle}>Inventory Management</p>
@@ -41,12 +43,16 @@ export default function ServicesView() {
           <p className="service-info-box-text" style={serviceInfoBoxTextStyle}>Accounting</p>
           <button className="service-info-button" style={serviceInfoBoxButtonStyle}>G-Book</button>
         </div>
-        <img className="service-icon" src={accountingIcon} style={serviceIconStyle} alt="accounting icon"/>
+        <div className="service-icon-container">
+          <img className="service-icon" src={accountingIcon} style={serviceIconStyle} alt="accounting icon"/>
+        </div>
       </section> 
 
       {/* ========================== HR Admin View =================== */}
       <section className="service-view service-view-wide hr-admin-view" style={whiteServiceViewStyle}>
-        <img className="service-icon" src={hrAdminIcon} style={serviceIconStyle} alt="hr and admin icon"/>
+        <div className="service-icon-container">
+          <img className="service-icon" src={hrAdminIcon} style={serviceIconStyle} alt="hr and admin icon"/>
+        </div>
         <div className="service-info-box">
           <h3 className="service-info-box-heading" style={serviceInfoBoxHeadingStyle}>HR & ADMIN</h3>
           <div className="rows-container">
@@ -86,12 +92,16 @@ export default function ServicesView() {
           <p className="service-info-box-text" style={serviceInfoBoxTextStyle}>Youtube & Instagram</p>
           <button className="service-info-button" style={serviceInfoBoxButtonStyle}>Fieldmake</button>
         </div>
-        <img className="service-icon" src={salesIcon} style={serviceIconStyle} alt="sale icon"/>
+        <div className="service-icon-container">
+          <img className="service-icon" src={salesIcon} style={serviceIconStyle} alt="sale icon"/>
+        </div>
       </section>
 
       {/* ========================== Customer View ================ */}
       <section className="service-view service-view-wide customer-view" style={whiteServiceViewStyle}>
-        <img className="service-icon" src={customerIcon} style={serviceIconStyle} alt="customer icon"/>
+        <div className="service-icon-container">
+          <img className="service-icon" src={customerIcon} style={serviceIconStyle} alt="customer icon"/>
+        </div>
         <div className="service-info-box">
           <h3 className="service-info-box-heading" style={serviceInfoBoxHeadingStyle}>CUSTOMER</h3>
           <p className="service-info-box-text" style={serviceInfoBoxTextStyle}>Customer Request Management</p>
@@ -106,7 +116,9 @@ export default function ServicesView() {
           <p className="service-info-box-text" style={serviceInfoBoxTextStyle}>SSL server</p>
           <button className="service-info-button" style={serviceInfoBoxButtonStyle}>SECTIGO</button>
         </div>
-        <img className="service-icon" src={securityIcon} style={serviceIconStyle} alt="security icon"/>
+        <div className="service-icon-container">
+          <img className="service-icon" src={securityIcon} style={serviceIconStyle} alt="security icon"/>
+        </div>
       </section>
     </section>
 	)
