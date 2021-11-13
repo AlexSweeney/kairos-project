@@ -15,8 +15,8 @@ export const logoStyle = {
 };  
 
 export const homeIconStyle = {
-  width : '1.125rem',
-  height: '1.125rem',
+  width : '18px',
+  height: '18px',
 };
 
 export const chevronIconStyle = {
@@ -31,7 +31,7 @@ export const headerLeftStyle = {
 };
 
 export const headerRightStyle = {
-  /*background : 'transparent',*/
+  background : 'transparent',
 };
 
 // ==================== Option Styles */
@@ -54,7 +54,7 @@ export const navLinkLeftStyle = {
   fontSize: '0.875rem',
   fontStyle: 'normal',
   fontWeight: '700',
-  lineHeight: '1.1875rem',  
+  lineHeight: '19px',  
   color: darkBlueText,
 };
 

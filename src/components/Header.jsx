@@ -33,8 +33,7 @@ export default function Header() {
       </div>
 
       <div className="header-right" style={headerRightStyle}>  
-       {/* <div className="header-right-content-container">*/}
-          <div className="options-bar-background" style={optionsBarStyle}>
+          <div className="options-bar" style={optionsBarStyle}>
             <ul className="options-container">
               <li className="option">
                 <h3 className="option-heading" style={optionHeadingStyle}>EN</h3>
@@ -60,7 +59,6 @@ export default function Header() {
               <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>SSL</a></li>
             </ul>
           </nav>
-        {/*</div>*/}
       </div>
     </header>
   )
