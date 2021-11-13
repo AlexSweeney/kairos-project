@@ -13,8 +13,8 @@ function App() {
   return (
   	<div className="container"> 
       <Header/>
-    	{/*<MainView/>
-      <AlertBar/>
+    	<MainView/>
+      {/*<AlertBar/>
       <ServicesView/>
       <PriceOptionsView/>
       <OfficeAddressView/>*/}

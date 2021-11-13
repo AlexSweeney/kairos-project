@@ -94,4 +94,4 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
 		  </div>
 		</li>
 	)
-} {/*  */}
+}
