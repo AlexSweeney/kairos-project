@@ -5,6 +5,7 @@
   height: 80px;  
 	position: absolute;
   z-index: 2;
+  background: yellow;
 }
  
 /* =============================== Nav links ============================== */
@@ -14,6 +15,21 @@
 
 .nav-link:hover {
 	cursor: pointer;
+	color: #4250ff !important;
+}
+
+.nav-link:active {
+	color: #2b0e72 !important;
+}
+
+/* filter = changes svg line colors */
+/* get filter value from hex here: https://codepen.io/sosuke/pen/Pjoqqp; */
+.nav-link-hover { 
+	filter: invert(42%) sepia(99%) saturate(6157%) hue-rotate(234deg) brightness(103%) contrast(101%);
+}
+
+.nav-link-down {
+	filter: invert(10%) sepia(84%) saturate(2921%) hue-rotate(252deg) brightness(96%) contrast(111%);
 }
 
 /* =============================== Header Left ============================ */
@@ -41,7 +57,7 @@
 }
 
 .home-container:hover {
-	cursor: pointer;
+	cursor: pointer; 
 }
 
 .home-icon {

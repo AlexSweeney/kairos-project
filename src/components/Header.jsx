@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './../imgs/logo-icon.png';
 import home from './../imgs/home-icon.svg';
 import chevron from './../imgs/chevron-icon.svg';
@@ -16,16 +16,42 @@ import {
 } from './../styles/Header.js'; 
 import './../styles/Header.css'; 
 
-export default function Header() {  
+export default function Header() {   
+  const [homeContainerClass, setHomeContainerClass] = useState('');
+  const [isOverHome, setIsOverHome] = useState(false);
+
+  function onOverHome() {
+    setIsOverHome(true)
+    setHomeContainerClass('nav-link-hover')
+  }
+
+  function onOutHome() {
+    setIsOverHome(false)
+    setHomeContainerClass('')
+  }
+
+  function onDownHome() {
+    setHomeContainerClass('nav-link-down')
+  }
+
+  function onUpHome() {
+    if(isOverHome)  setHomeContainerClass('nav-link-hover')
+    if(!isOverHome) setHomeContainerClass('')
+  }
+
   return (
     <header className="header">  
       <div className="header-left" style={headerLeftStyle}>
         <img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/>
         <nav className="nav-left">
           <ul>
-            <li className="home-container">
-              <img className="home-icon" style={homeIconStyle} src={home} alt="home icon"/>
-              <a className="home-text nav-link nav-link-left" style={navLinkLeftStyle}>Home</a>
+            <li className={`home-container`} 
+                onMouseOver={onOverHome} 
+                onMouseOut={onOutHome}
+                onMouseDown={onDownHome}
+                onMouseUp={onUpHome}>
+              <img className={`home-icon ${homeContainerClass}`} style={homeIconStyle} src={home} alt="home icon"/>
+              <a className={`home-text nav-link nav-link-left ${homeContainerClass}`} style={navLinkLeftStyle}>Home</a>
             </li>
           </ul>
         </nav> 
