@@ -18,19 +18,19 @@
 } 
 
 .service-view-wide .service-icon {
-	margin: 0 20%;
+	margin: 0 10%;
 }
 
 .service-view-wide .service-info-box {
-	margin: 0 20%;
+	margin: 0 10%;
 }
 
 .service-view-slim .service-icon {
-	margin: 0 10%;
+	margin: 0 5%;
 }
 
 .service-view-slim .service-info-box {
-	margin: 0 10%;
+	margin: 0 5%;
 }
 
 /* =================== Info Box ================== */
