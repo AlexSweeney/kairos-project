@@ -43,3 +43,17 @@
 	display: inline;
 	margin-right: 28px; 
 }
+
+@media screen and (min-width: 1800px) {
+	.office-address-box-one {
+	align-items: center;
+}
+
+.office-address-box-two {
+	align-items: center;
+}
+
+.office-address-box-three {
+	align-items: center;
+}
+}

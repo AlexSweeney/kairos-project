@@ -15,9 +15,9 @@ function App() {
       {/*<Header/>
     	<MainView/>
       <AlertBar/>*/}
-      <ServicesView/>
-      {/*<PriceOptionsView/>
-      <OfficeAddressView/>*/}
+     {/* <ServicesView/>*/}
+      {/*<PriceOptionsView/>*/}
+      <OfficeAddressView/>
     </div>
   );
 }
