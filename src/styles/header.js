@@ -27,11 +27,11 @@ export const chevronIconStyle = {
 
 // ==================== Header Styles */
 export const headerLeftStyle = {
-  background : whiteBackground,
+  /*background : whiteBackground,*/
 };
 
 export const headerRightStyle = {
-  background : 'transparent',
+ /* background : 'transparent',*/
 };
 
 // ==================== Option Styles */
@@ -51,7 +51,7 @@ export const optionHeadingStyle = {
 // ==================== Nav Styles */
 export const navLinkLeftStyle = {
   fontFamily: 'Noto Sans, sans-serif',
-  fontSize: '0.875rem',
+  fontSize: '14px',
   fontStyle: 'normal',
   fontWeight: '700',
   lineHeight: '19px',  

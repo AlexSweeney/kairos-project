@@ -1,23 +1,11 @@
 /* =============================== Header ================================= */
 .header {
-	display: flex;
-	flex-direction: row; 
-	align-items: flex-end; 
+	display: flex; 
  	width: 100%;
-  height: 80px;
-	z-index: 2;  
-	position: absolute; 
-	min-width: 1265px;  
+  height: 80px; 
+	min-width: 1265px;    
 }
-
-.options-bar {
-	position: absolute;
-  z-index: -2;
-  height: 36px;
-  top: 0;
-  width: 100%;  
-}
-
+ 
 /* =============================== Nav links ============================== */
 .nav-link {
 	white-space: nowrap;
@@ -42,8 +30,7 @@
 	width: 39%;
 	padding-left: 6%;
 	padding-right: 3%;
-	height: 100%;
-	position: absolute;
+	height: 100%;  
 }
 
 /* ======== Home */
@@ -65,7 +52,9 @@
 	height: 100%;
 	flex-grow: 1;
 	display: flex;
-	justify-content: flex-end; 
+	flex-direction: column;
+	justify-content: flex-end;  
+	background: firebrick;
 }  
 
 .header-right-content-container {
@@ -73,6 +62,12 @@
 	display: inline-flex;
 	flex-direction: column; 
   margin-right: 17%;
+}
+
+.options-bar { 
+  height: 36px;
+  top: 0;
+  width: 100%;   
 }
 
 .options-container { 
@@ -97,7 +92,9 @@
 .nav-right-container {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   padding-right: 3%;
+  height: 100%;
 }
  
 .nav-right { 
@@ -117,6 +114,7 @@
 	margin-left: 4.18px;
 }
 
+/* ======== Large Screen */
 @media screen and (min-width: 1800px) {
 	.options-container {  
 		padding-right: 9%;

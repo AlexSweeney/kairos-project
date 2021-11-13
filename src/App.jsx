@@ -13,11 +13,11 @@ function App() {
   return (
   	<div className="container"> 
       <Header/>
-    	<MainView/>
+    	{/*<MainView/>
       <AlertBar/>
       <ServicesView/>
       <PriceOptionsView/>
-      <OfficeAddressView/>
+      <OfficeAddressView/>*/}
     </div>
   );
 }
