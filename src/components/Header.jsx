@@ -16,29 +16,65 @@ import {
 } from './../styles/Header.js'; 
 import './../styles/Header.css'; 
 
-export default function Header() {   
-  const [homeContainerClass, setHomeContainerClass] = useState('');
-  const [isOverHome, setIsOverHome] = useState(false);
+export default function Header() { 
+  /* =========================================== Consts ===================================== */ 
+  const [homeIconClass, setHomeIconClass] = useState('');
+  const [homeHeadingClass, setHomeHeadingClass] = useState('');
+  const [optionClass, setOptionClass] = useState('');
 
+  const [isOverHome, setIsOverHome] = useState(false);
+  const [isOverOption, setIsOverOption] = useState(false);
+
+  /* =========================================== Event handlers ============================= */ 
+  /* ============ Home */
   function onOverHome() {
     setIsOverHome(true)
-    setHomeContainerClass('nav-link-hover')
+    setHomeIconClass('home-icon-hover')
+    setHomeHeadingClass('home-heading-hover')
   }
 
   function onOutHome() {
     setIsOverHome(false)
-    setHomeContainerClass('')
+    setHomeIconClass('')
+    setHomeHeadingClass('')
   }
 
   function onDownHome() {
-    setHomeContainerClass('nav-link-down')
+    setHomeIconClass('home-icon-down')
+    setHomeHeadingClass('home-heading-down')
   }
 
   function onUpHome() {
-    if(isOverHome)  setHomeContainerClass('nav-link-hover')
-    if(!isOverHome) setHomeContainerClass('')
+    if(isOverHome)  {
+      setHomeIconClass('home-icon-hover')
+      setHomeHeadingClass('home-heading-hover')
+    }  
+    if(!isOverHome) {
+      setHomeIconClass('')
+      setHomeHeadingClass('')
+    }
+  }
+    
+  /* ============ Options */ 
+  function onOverOption() {
+    setIsOverOption(true)
+    setOptionClass('option-hover')
   }
 
+  function onOutOption() {
+    setIsOverHome(false)
+    setOptionClass('')
+  }
+
+  function onDownOption() {
+    setOptionClass('option-down')
+  }
+
+  function onUpOption() {
+    if(isOverOption)  setOptionClass('option-hover')
+    if(!isOverOption) setOptionClass('')
+  }
+  /* =========================================== Output ============================= */ 
   return (
     <header className="header">  
       <div className="header-left" style={headerLeftStyle}>
@@ -50,8 +86,8 @@ export default function Header() {
                 onMouseOut={onOutHome}
                 onMouseDown={onDownHome}
                 onMouseUp={onUpHome}>
-              <img className={`home-icon ${homeContainerClass}`} style={homeIconStyle} src={home} alt="home icon"/>
-              <a className={`home-text nav-link nav-link-left ${homeContainerClass}`} style={navLinkLeftStyle}>Home</a>
+              <div className={`home-icon ${homeIconClass}`} style={homeIconStyle}></div> 
+              <a className={`home-text nav-link nav-link-left ${homeHeadingClass}`} style={navLinkLeftStyle}>Home</a>
             </li>
           </ul>
         </nav> 
@@ -60,9 +96,13 @@ export default function Header() {
       <div className="header-right" style={headerRightStyle}>  
         <div className="options-bar" style={optionsBarStyle}>
           <ul className="options-container">
-            <li className="option">
-              <h3 className="option-heading" style={optionHeadingStyle}>EN</h3>
-              <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
+            <li className="option"
+              onMouseOver={onOverOption} 
+              onMouseOut={onOutOption}
+              onMouseDown={onDownOption}
+              onMouseUp={onUpOption}> 
+              <h3 className={`option-heading`} style={optionHeadingStyle}>EN</h3>
+              <img className={`chevron-icon ${optionClass}`} style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
             </li>
             <li className="option">
               <h3 className="option-heading" style={optionHeadingStyle}>Company</h3>

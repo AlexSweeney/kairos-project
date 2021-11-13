@@ -4,8 +4,7 @@
  	width: 100%;
   height: 80px;  
 	position: absolute;
-  z-index: 2;
-  background: yellow;
+  z-index: 2; 
 }
  
 /* =============================== Nav links ============================== */
@@ -21,17 +20,7 @@
 .nav-link:active {
 	color: #2b0e72 !important;
 }
-
-/* filter = changes svg line colors */
-/* get filter value from hex here: https://codepen.io/sosuke/pen/Pjoqqp; */
-.nav-link-hover { 
-	filter: invert(42%) sepia(99%) saturate(6157%) hue-rotate(234deg) brightness(103%) contrast(101%);
-}
-
-.nav-link-down {
-	filter: invert(10%) sepia(84%) saturate(2921%) hue-rotate(252deg) brightness(96%) contrast(111%);
-}
-
+ 
 /* =============================== Header Left ============================ */
 /* 
 	If want to change width of header left 
@@ -61,7 +50,28 @@
 }
 
 .home-icon {
-	margin-right: 10px;
+	margin-right: 10px; 
+	mask-size: contain;
+	mask-position: center;
+	mask-image: url('./../imgs/home-icon.svg');
+	mask-repeat: no-repeat; 
+	background: #181949;
+}
+
+.home-heading-hover {
+	color: #4250ff !important;
+}
+
+.home-heading-down {
+	color: #2b0e72 !important;
+}
+
+.home-icon-hover {
+	background: #4250ff;
+}
+
+.home-icon-down {
+	background: #2b0e72;
 }
 
 /* =============================== Header Right ============================ */
@@ -81,6 +91,7 @@
   margin-right: 17%;
 }
 
+/* =============================== Option bar ================================== */
 .options-bar { 
   height: 36px;
   top: 0;
@@ -101,8 +112,14 @@
 	margin-left: 5.125rem;
 }
 
-.options-heading:hover {
+.option-heading:hover {
+	cursor: pointer;
+	color: #4250ff !important; 
+}
+
+.option-heading:active {
 	cursor: pointer; 
+	color: #2b0e72 !important;
 }
 
 /* ======== Nav Right */
