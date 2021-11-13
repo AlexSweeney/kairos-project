@@ -16,16 +16,11 @@ import {
 } from './../styles/Header.js'; 
 import './../styles/Header.css'; 
 
-export default function Header({leftWidth = '36.5%'}) {  
-  const thisHeaderLeftStyle = { ...headerLeftStyle, width : leftWidth};
-
+export default function Header() {  
   return (
-    <header className="header">
-      {/* ========================= Header Left ========================= */}
-      <div className="header-left" style={thisHeaderLeftStyle}>
+    <header className="header">  
+      <div className="header-left" style={headerLeftStyle}>
         <img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/>
-
-        {/* ======================= Nav Left ========================== */}
         <nav className="nav-left">
           <ul>
             <li className="home-container">
@@ -36,10 +31,7 @@ export default function Header({leftWidth = '36.5%'}) {
         </nav> 
       </div>
 
-      {/* ========================= Header Right ========================= */}
-      <div className="header-right" style={headerRightStyle}>
-
-        {/* ======================= Options Bar ========================== */}
+      <div className="header-right" style={headerRightStyle}>  
         <div className="options-bar" style={optionsBarStyle}>
           <ul className="options-container">
             <li className="option">
@@ -54,10 +46,8 @@ export default function Header({leftWidth = '36.5%'}) {
               <h3 className="option-heading" style={optionHeadingStyle}>Partner Market Place</h3>
               <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
             </li>
-          </ul>
+          </ul> 
         </div> 
-
-        {/* ======================= Nav Right ========================== */}
         <nav className="nav-right-container">
           <ul className="nav-right">
             <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Auto Homepage</a></li>

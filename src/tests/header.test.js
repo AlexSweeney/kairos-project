@@ -9,6 +9,9 @@ let container;
 const navLinkNames = ['Home', 'Auto Homepage', 'Sales', 'CRM', 'Electronic office', 'Cloud ERP', 'SSL'];
 const optionNames = ['EN', 'Company', 'Partner Market Place'];
 
+const navLinkLeftNames = ['Home'];
+const navLinkRightNames = ['Auto Homepage', 'Sales', 'CRM', 'Electronic office', 'Cloud ERP', 'SSL'];
+
 /* ======================================= Setup / Teardown ============================= */
 beforeEach(() => {
 	container = document.createElement('div');
@@ -30,11 +33,10 @@ describe('<Header/>', () => {
 
 /* ======================================= Header Left ================================= */
 describe('header-left', () => { 
-	it('should have "background": "#FFFFFF"', () => {
-		const optionsBar = document.querySelector('.header-left');
-		const res = hexToRGB('#FFFFFF');
+	it('should have "background": "transparent"', () => {
+		const optionsBar = document.querySelector('.header-left'); 
 
-		expect(optionsBar.style.background).toEqual(res)
+		expect(optionsBar.style.background).toEqual('transparent')
 	})  
 })
 
@@ -71,14 +73,14 @@ describe('home icon', () => {
 		expect(homeIcon).not.toEqual(null)
 	})  
 
-	it('home icon should have "width" : "16.03px" ', () => {
+	it('home icon should have "width" : "18px" ', () => {
 		const homeIcon = container.querySelector('.home-icon');
-		expect(homeIcon.style.width).toEqual('16.03px')
+		expect(homeIcon.style.width).toEqual('18px')
 	})
 
-	it('home icon should have "height" : "16.72px" ', () => {
+	it('home icon should have "height" : "18px" ', () => {
 		const homeIcon = container.querySelector('.home-icon');
-		expect(homeIcon.style.height).toEqual('16.72px')
+		expect(homeIcon.style.height).toEqual('18px')
 	})
 })
 
@@ -96,6 +98,11 @@ describe('nav links', () => {
 
 	describe('nav links', () => {
 		describe('left nav link', () => {  
+			it('should render left nav link', () => {
+				const navLink = container.querySelectorAll('.nav-link-left');
+				expect(navLink.length).toEqual(navLinkLeftNames.length)
+			})
+
 			it('left nav link should have "fontFamily" : "Noto Sans, sans-serif"', () => {
 				const navLink = container.querySelector('.nav-link-left');
 				expect(navLink.style.fontFamily).toEqual('Noto Sans, sans-serif')
@@ -124,6 +131,11 @@ describe('nav links', () => {
 		})
  
 		describe('right nav links', () => {
+			it('should render', () => {
+				const navLinks = container.querySelectorAll('.nav-link-right');
+				expect(navLinks.length).toEqual(navLinkRightNames.length)
+			})
+
 			it('right nav links should have "fontFamily" : "Noto Sans, sans-serif"', () => {
 				const navLinks = container.querySelectorAll('.nav-link-right');
 				navLinks.forEach(navLink => {

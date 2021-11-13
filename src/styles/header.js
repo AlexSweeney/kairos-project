@@ -15,8 +15,8 @@ export const logoStyle = {
 };  
 
 export const homeIconStyle = {
-  width : '16.03px',
-  height: '16.72px',
+  width : '18px',
+  height: '18px',
 };
 
 export const chevronIconStyle = {
@@ -27,7 +27,7 @@ export const chevronIconStyle = {
 
 // ==================== Header Styles */
 export const headerLeftStyle = {
-  background : whiteBackground,
+  background : 'transparent',
 };
 
 export const headerRightStyle = {

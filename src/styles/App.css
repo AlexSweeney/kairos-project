@@ -3,33 +3,9 @@
 	box-sizing: border-box;
 }
 
-/* ================= Colors ================= */
-/*.white-background {
-	background: #FFFFFF;
-}
-
-.pink-background {
-	background: #FFD1E8;
-}
-
-.grey-background {
-	background: #F4F4F4;
-}
-
-.blue-background {
-	background: #F3F9FF;
-}*/
-
 /* ================= Layout ================= */
-.background {
-	width: 100vw;
-	height: 100%;
-	background: #838080;
-}
-
-.container {
-	width: 1440px; 
+.container { 
 	display: flex;
-	flex-direction: column; 
+	flex-direction: column;  
 	position: relative;
 }

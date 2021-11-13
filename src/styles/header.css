@@ -1,38 +1,44 @@
 /* =============================== Header ================================= */
 .header {
-	display: flex;
-	flex-direction: row; 
-	align-items: flex-end;
-	position: absolute; 
-	width: 100%; 
-  z-index: 2; 
-  padding-bottom: 18.5px;
-  height: 100px;
+	display: flex; 
+ 	width: 100%;
+  height: 80px; 
+	min-width: 1280px;
+	position: absolute;
+  z-index: 2;
+}
+ 
+/* =============================== Nav links ============================== */
+.nav-link {
+	white-space: nowrap;
 }
 
-/* =============================== Nav links ============================== */
 .nav-link:hover {
 	cursor: pointer;
 }
 
 /* =============================== Header Left ============================ */
 /* 
-*  use inline style in App.jsx to change header left width 
-*  -> to keep header-left and main-view-left same width
+	If want to change width of header left 
+		=> must also change width of main-view-left 
+		=> must adjust min-width of both
+		=> check at all widths
 */
 .header-left {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
-	padding-top: 36px;
-	width: 525.12px;
-	padding-left: 82px; 
-	padding-right: 38px;
+	align-items: flex-end;  
+	min-width: 500px;
+	width: 30%;
+	padding-left: 6%;
+	padding-right: 3%;
+	height: 100%;  
 }
 
 /* ======== Home */
 .home-container {
-	display: flex; 
+	display: flex;
+  align-items: center;
 }
 
 .home-container:hover {
@@ -40,36 +46,44 @@
 }
 
 .home-icon {
-	margin-right: 12px;
-}
-/* =============================== Header Right ============================ */
-.header-right { 
-	height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  flex-grow: 1;
+	margin-right: 10px;
 }
 
-/* ======== Options bar */
-.options-bar {
-	width: 100%;
-	height: 36px;
+/* =============================== Header Right ============================ */
+.header-right {   
+	height: 100%;
+	flex-grow: 1;
 	display: flex;
-	justify-content: flex-start;
-	padding-left: 350px;
-	padding-top: 8px;
-	z-index: 2;
+	flex-direction: column;
+	justify-content: flex-end;    
+	min-width: 780px;
 }  
+
+.header-right-content-container {
+	height: 100%;
+	display: inline-flex;
+	flex-direction: column; 
+  margin-right: 17%;
+}
+
+.options-bar { 
+  height: 36px;
+  top: 0;
+  width: 100%;   
+}
 
 .options-container { 
 	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 36px;
+	padding-right: 3%;
 }
 
 .option {
 	display: flex;
 	align-items: center;
-	margin-right: 82px;
+	margin-left: 5.125rem;
 }
 
 .options-heading:hover {
@@ -78,13 +92,13 @@
 
 /* ======== Nav Right */
 .nav-right-container {
-  width: 100%;
   display: flex;
-  flex-grow: 1;
-  padding-left: 34px;
   align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 3%;
+  height: 100%;
 }
-
+ 
 .nav-right { 
 	display: flex;
 }
@@ -93,11 +107,22 @@
 	display: flex;
 	flex-direction: row;
 }
-
+ 
 .nav-link-right {
-	margin-right: 72px;
-}
+	margin-left: 72px;
+} 
 
 .chevron-icon {
 	margin-left: 4.18px;
+}
+
+/* ======== Large Screen */
+@media screen and (min-width: 1800px) {
+	.options-container {  
+		padding-right: 9%;
+	}
+
+	.nav-right-container {
+    padding-right: 9%;
+	}
 }

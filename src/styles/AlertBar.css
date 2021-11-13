@@ -1,0 +1,7 @@
+.alert-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 112px;
+	min-width: 1265px;
+}
