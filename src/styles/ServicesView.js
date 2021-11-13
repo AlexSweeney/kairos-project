@@ -1,5 +1,3 @@
-// add border: 'none', button to test
-
 import { 
   whiteBackground, 
   greyBackground,

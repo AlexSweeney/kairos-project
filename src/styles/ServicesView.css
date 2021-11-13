@@ -5,6 +5,7 @@
 /* =================== Heading =================== */
 .services-view-heading-container {
 	padding-top: 78px;
+	cursor: default;
 }
 
 /* =================== Service View ============== */
@@ -49,10 +50,12 @@
 
 .service-info-box-heading {
 	margin-bottom: 16px;
+	cursor: default;
 }
 
 .service-info-box-text {
 	margin-bottom: 16px;
+	cursor: default;
 }
 
 .service-info-button-container { 
@@ -64,6 +67,18 @@
 
 .service-info-button-container:last-child {
 	margin-right: 0;
+}
+
+.service-info-button {
+	cursor: pointer;
+}
+
+.service-info-button:hover {
+	background: #383abc !important;
+}
+
+.service-info-button:active {
+	background: #282a8c !important;
 }
 
 .rows-container {
