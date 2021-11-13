@@ -27,11 +27,11 @@ export const chevronIconStyle = {
 
 // ==================== Header Styles */
 export const headerLeftStyle = {
-  /*background : whiteBackground,*/
+  background : 'transparent',
 };
 
 export const headerRightStyle = {
- /* background : 'transparent',*/
+  background : 'transparent',
 };
 
 // ==================== Option Styles */
