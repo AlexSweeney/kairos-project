@@ -34,10 +34,9 @@ describe('<Header/>', () => {
 /* ======================================= Header Left ================================= */
 describe('header-left', () => { 
 	it('should have "background": "transparent"', () => {
-		const optionsBar = document.querySelector('.header-left');
-		const res = hexToRGB('transparent');
+		const optionsBar = document.querySelector('.header-left'); 
 
-		expect(optionsBar.style.background).toEqual(res)
+		expect(optionsBar.style.background).toEqual('transparent')
 	})  
 })
 

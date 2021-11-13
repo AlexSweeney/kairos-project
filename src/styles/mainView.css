@@ -4,8 +4,7 @@
 	width: 100%; 
 	display: flex;
 	min-width: 1280px;
-	min-height: 540px;
-	background: yellow; 
+	min-height: 540px; 
 } 
 
 /* ======= Main View Left */ 

@@ -14,10 +14,10 @@ function App() {
   	<div className="container"> 
       <Header/>
     	<MainView/>
-      {/*<AlertBar/>
+      <AlertBar/>
       <ServicesView/>
       <PriceOptionsView/>
-      <OfficeAddressView/>*/}
+      <OfficeAddressView/>
     </div>
   );
 }
