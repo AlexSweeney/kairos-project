@@ -10,6 +10,7 @@
 /* =============================== Nav links ============================== */
 .nav-link {
 	white-space: nowrap;
+	text-decoration: none;
 }
 
 .nav-link:hover {
@@ -75,7 +76,7 @@
 }
 
 .home-icon-down {
-	background: #2b0e72;
+	background: #3033b4;
 }
 
 /* =============================== Header Right ============================ */

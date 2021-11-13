@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from './../imgs/logo-icon.png';  
 import backgroundImage from './../imgs/background-image.jpg';
 import {
@@ -67,7 +68,7 @@ export default function Header() {
                 onMouseDown={onDownHome}
                 onMouseUp={onUpHome}>
               <div className={`home-icon ${homeIconClass}`} style={homeIconStyle}></div> 
-              <a className={`home-text nav-link nav-link-left ${homeHeadingClass}`} style={navLinkLeftStyle}>Home</a>
+              <Link to="/" className={`home-text nav-link nav-link-left ${homeHeadingClass}`} style={navLinkLeftStyle}>Home</Link>
             </li>
           </ul>
         </nav> 
@@ -78,28 +79,20 @@ export default function Header() {
           <ul className="options-container">
             <OptionMenu options={languageOptions}/>
             <OptionMenu options={companyOptions}/>
-            <OptionMenu options={partnerOptions}/>
-           {/* <li className="option">
-              <h3 className="option-heading" style={optionHeadingStyle}>Company</h3>
-              <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
-            </li>
-            <li className="option">
-              <h3 className="option-heading" style={optionHeadingStyle}>Partner Market Place</h3>
-              <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
-            </li>*/}
+            <OptionMenu options={partnerOptions}/> 
           </ul> 
         </div> 
         <nav className="nav-right-container">
           <ul className="nav-right">
-            <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Auto Homepage</a></li>
-            <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Sales</a></li>
-            <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>CRM</a></li>
-            <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Electronic office</a></li>
-            <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>Cloud ERP</a></li>
-            <li><a className="nav-link nav-link-right" style={navLinkRightStyle}>SSL</a></li>
+            <li><Link to="/auto_home" className="nav-link nav-link-right" style={navLinkRightStyle}>Auto Homepage</Link></li>
+            <li><Link to="/sales" className="nav-link nav-link-right" style={navLinkRightStyle}>Sales</Link></li>
+            <li><Link to="/crm" className="nav-link nav-link-right" style={navLinkRightStyle}>CRM</Link></li>
+            <li><Link to="/electronic_office" className="nav-link nav-link-right" style={navLinkRightStyle}>Electronic office</Link></li>
+            <li><Link to="/cloud_erp" className="nav-link nav-link-right" style={navLinkRightStyle}>Cloud ERP</Link></li>
+            <li><Link to="/ssl" className="nav-link nav-link-right" style={navLinkRightStyle}>SSL</Link></li> 
           </ul>
         </nav>
-      </div>
+      </div> 
     </header>
   )
 }

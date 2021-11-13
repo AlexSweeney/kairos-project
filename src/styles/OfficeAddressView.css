@@ -3,6 +3,7 @@
   height: 287px;
   display: flex;
   min-width: 1282px;
+  cursor: default;
 }
 
 .office-address-box {
