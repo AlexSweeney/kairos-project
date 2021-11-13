@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
 import { hexToRGB, containsTextContent, getAllChildren } from './../utils/testUtils.js';
 import Header from './../components/Header.jsx';
@@ -12,11 +13,22 @@ const optionNames = ['EN', 'Company', 'Partner Market Place'];
 const navLinkLeftNames = ['Home'];
 const navLinkRightNames = ['Auto Homepage', 'Sales', 'CRM', 'Electronic office', 'Cloud ERP', 'SSL'];
 
+/* ======================================= Fns ========================================== */
+function HeaderWrapper() {
+	return (
+		<>
+			<BrowserRouter>
+				<Header/>
+			</BrowserRouter>
+		</>
+	)
+}
+
 /* ======================================= Setup / Teardown ============================= */
 beforeEach(() => {
 	container = document.createElement('div');
 	document.body.appendChild(container)
-	act(() => { render(<Header/>, container)}) 
+	act(() => { render(<HeaderWrapper/>, container)}) 
 })
 
 afterEach(() => {
@@ -32,7 +44,7 @@ describe('<Header/>', () => {
 })
 
 /* ======================================= Header Left ================================= */
-describe('header-left', () => { 
+describe('.header-left', () => { 
 	it('should have "background": "transparent"', () => {
 		const optionsBar = document.querySelector('.header-left'); 
 
@@ -41,7 +53,7 @@ describe('header-left', () => {
 })
 
 /* ======================================= Header Right ================================ */
-describe('header-right', () => {
+describe('.header-right', () => {
 	it('should have "background": "transparent"', () => {
 		const optionsBar = document.querySelector('.header-right'); 
 		expect(optionsBar.style.background).toEqual('transparent')
@@ -49,7 +61,7 @@ describe('header-right', () => {
 })
 
 /* ======================================= Logo ======================================= */
-describe('logo', () => {
+describe('.logo', () => {
 	it('should render logo', () => {
 		const logo = container.querySelector('.logo');
 		expect(logo).not.toEqual(null)
@@ -85,7 +97,7 @@ describe('home icon', () => {
 })
 
 /* ======================================= Nav Links =================================== */
-describe('nav links', () => {
+describe('.nav-link', () => {
 	it('should render all nav links', () => {
 		const navLinks = container.querySelectorAll('.nav-link');
 		expect(navLinks.length).toEqual(navLinkNames.length) 
@@ -175,15 +187,15 @@ describe('nav links', () => {
 })  
 
 /* ======================================= Options Bar ================================ */
-describe('options-bar', () => {
+describe('.options-bar', () => {
 	it('should render all options', () => {
-		const options = document.querySelectorAll('.option');
+		const options = document.querySelectorAll('.option-container');
 		expect(options.length).toEqual(optionNames.length) 
 
-		optionNames.forEach(optionName => {
-			const check = containsTextContent(options, optionName);
-			expect(check).toEqual(true)
-		}) 
+		options.forEach((option, i) => {
+			const heading = option.querySelector('.option-heading');
+			expect(heading.textContent).toEqual(optionNames[i])
+		})
 	})
 
 	describe('background', () => {
@@ -238,7 +250,7 @@ describe('options-bar', () => {
 	})
 	
 	it('options should have chevron-icon', () => {
-		const options = document.querySelectorAll('.option');
+		const options = document.querySelectorAll('.option-container');
 		
 		options.forEach(option => {
 			const check = option.querySelector('.chevron-icon');
@@ -248,7 +260,7 @@ describe('options-bar', () => {
 })
 
 /* ======================================= Chevron Icons ================================ */
-describe('chevron-icons', () => {
+describe('.chevron-icon', () => {
 	it('chevron-icon should have "width" : "8px"', () => {
 		const chevronIcons = document.querySelectorAll('.chevron-icon');
 
@@ -270,7 +282,7 @@ describe('chevron-icons', () => {
 		const target = hexToRGB('#CFE5FF');
 
 		chevronIcons.forEach(chevronIcon => {
-			expect(chevronIcon.style.color).toEqual(target)
+			expect(chevronIcon.style.background).toEqual(target)
 		})
 	})
 }) 

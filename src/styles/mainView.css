@@ -4,7 +4,8 @@
 	width: 100%; 
 	display: flex;
 	min-width: 1280px;
-	min-height: 540px; 
+	min-height: 540px;  
+	background: #011f68; 
 } 
 
 /* ======= Main View Left */ 

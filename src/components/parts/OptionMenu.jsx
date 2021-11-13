@@ -76,8 +76,8 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
 			  onMouseLeave={onLeaveHead}>
 		   	<h3 className={`option-heading ${optionHeadingClass}`}
 		    		style={optionHeadingStyle}>{selectedOption}</h3>
-		     <div className={`chevron-icon ${chevronIconClass}`} 
-		    			style={chevronIconStyle}></div> 
+		    <div className={`chevron-icon ${chevronIconClass}`} 
+		    		style={chevronIconStyle}></div> 
 		  </div> 
 		  <div className={`option-menu ${optionBodyClass}`} 
 		  		onMouseEnter={onEnterMenu}
@@ -85,7 +85,8 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
 		  	{
 		  		options.map(option => {
 		  			if(option !== selectedOption) {
-		  				return (<h4 className="option option-menu-open" 
+		  				return (<h4 className="option option-menu-open"
+                          key={option} 
 	  											style={optionHeadingStyle} 
 	  											onClick={() => { onOptionClick(option)}}>{option}</h4>)
 		  			} 

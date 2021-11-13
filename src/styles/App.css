@@ -14,18 +14,4 @@ html {
 	flex-direction: column;  
 	position: relative;
 	overflow: hidden;
-}
-
-.dark-blue-background {
-	background: blue;
-	height: 100vh;
-	widows: 100vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.dark-blue-background h2 {
-	font-size: 32px;
-	font-family: Noto Sans, sans-serif;
-}
+} 
