@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import logo from './../imgs/logo-icon.png';
-import home from './../imgs/home-icon.svg';
-import chevron from './../imgs/chevron-icon.svg';
+import logo from './../imgs/logo-icon.png';  
 import backgroundImage from './../imgs/background-image.jpg';
 import {
   headerLeftStyle, 
@@ -9,24 +7,25 @@ import {
   homeIconStyle, 
   headerRightStyle, 
   optionsBarStyle,
-  optionHeadingStyle,
   chevronIconStyle,
   navLinkLeftStyle,
   navLinkRightStyle,
 } from './../styles/Header.js'; 
+import OptionMenu from './parts/OptionMenu.jsx';
 import './../styles/Header.css'; 
 
 export default function Header() { 
+  const languageOptions = ['EN', 'KO', 'VN']; 
+  const companyOptions = ['Company', 'option-2', 'option-3'];
+  const partnerOptions = ['Partner Market Place', 'option-2', 'option-3'];
+
   /* =========================================== Consts ===================================== */ 
   const [homeIconClass, setHomeIconClass] = useState('');
   const [homeHeadingClass, setHomeHeadingClass] = useState('');
-  const [optionClass, setOptionClass] = useState('');
-
+  
   const [isOverHome, setIsOverHome] = useState(false);
-  const [isOverOption, setIsOverOption] = useState(false);
 
   /* =========================================== Event handlers ============================= */ 
-  /* ============ Home */
   function onOverHome() {
     setIsOverHome(true)
     setHomeIconClass('home-icon-hover')
@@ -54,26 +53,7 @@ export default function Header() {
       setHomeHeadingClass('')
     }
   }
-    
-  /* ============ Options */ 
-  function onOverOption() {
-    setIsOverOption(true)
-    setOptionClass('option-hover')
-  }
-
-  function onOutOption() {
-    setIsOverHome(false)
-    setOptionClass('')
-  }
-
-  function onDownOption() {
-    setOptionClass('option-down')
-  }
-
-  function onUpOption() {
-    if(isOverOption)  setOptionClass('option-hover')
-    if(!isOverOption) setOptionClass('')
-  }
+     
   /* =========================================== Output ============================= */ 
   return (
     <header className="header">  
@@ -96,22 +76,17 @@ export default function Header() {
       <div className="header-right" style={headerRightStyle}>  
         <div className="options-bar" style={optionsBarStyle}>
           <ul className="options-container">
-            <li className="option"
-              onMouseOver={onOverOption} 
-              onMouseOut={onOutOption}
-              onMouseDown={onDownOption}
-              onMouseUp={onUpOption}> 
-              <h3 className={`option-heading`} style={optionHeadingStyle}>EN</h3>
-              <img className={`chevron-icon ${optionClass}`} style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
-            </li>
-            <li className="option">
+            <OptionMenu options={languageOptions}/>
+            <OptionMenu options={companyOptions}/>
+            <OptionMenu options={partnerOptions}/>
+           {/* <li className="option">
               <h3 className="option-heading" style={optionHeadingStyle}>Company</h3>
               <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
             </li>
             <li className="option">
               <h3 className="option-heading" style={optionHeadingStyle}>Partner Market Place</h3>
               <img className="chevron-icon" style={chevronIconStyle} src={chevron} alt="downward pointing chevron"/>
-            </li>
+            </li>*/}
           </ul> 
         </div> 
         <nav className="nav-right-container">

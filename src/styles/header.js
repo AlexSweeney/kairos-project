@@ -19,12 +19,6 @@ export const homeIconStyle = {
   height: '18px',
 };
 
-export const chevronIconStyle = {
-  width: '8px',
-  height: '6px',
-  color: lightBlueText,
-}; 
-
 // ==================== Header Styles */
 export const headerLeftStyle = {
   background : 'transparent',
@@ -34,19 +28,11 @@ export const headerRightStyle = {
   background : 'transparent',
 };
 
-// ==================== Option Styles */
+
+// ==================== Option bar Style */
 export const optionsBarStyle = {
   background : darkBlueBackground,
 };
-
-export const optionHeadingStyle = {
-  fontFamily: 'Roboto, sans-serif',
-  fontSize: '14px',
-  fontStyle: 'normal',
-  fontWeight: '400',
-  lineHeight: '16px',
-  color: lightBlueText,
-}; 
 
 // ==================== Nav Styles */
 export const navLinkLeftStyle = {

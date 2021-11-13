@@ -1,0 +1,79 @@
+.option-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 82px;
+	position: relative;
+	height: 100%; 
+}
+
+.option-head { 
+  height: 100%; 
+  padding: 4px 12px; 
+  display: flex;
+  align-items: center; 
+}
+
+.option-head:hover {
+	cursor: pointer;
+}
+
+.option-heading { 
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.option-heading-hover {
+	cursor: pointer;
+	color: #4250ff !important; 
+}
+
+.option-menu { 
+  z-index: 3; 
+  background: #272424;
+  width: 100%;
+} 
+
+.option-menu-open { 
+}
+
+.option-menu-closed {
+	visibility: hidden;
+}
+
+.option {
+	padding: 4px 12px;
+	display: flex; 
+	justify-content: center;
+	color: white !important;
+}
+
+.option:hover {
+	cursor: pointer;
+	background: #3b3b3b;
+	color: #cfe5ff !important;
+}
+
+.option:active {
+	cursor: pointer; 
+	color: #3173c0 !important;
+} 
+
+.chevron-icon {
+	margin-left: 4.18px;
+	mask-size: contain;
+	mask-position: center;
+	mask-image: url('./../imgs/chevron-icon.svg');
+	mask-repeat: no-repeat;  
+}
+
+.chevron-icon-hover {
+	cursor: pointer;
+	background: #4250ff !important; 
+}
+
+.chevron-icon-down {
+	cursor: pointer; 
+	background: #3173c0 !important;
+}

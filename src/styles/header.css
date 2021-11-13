@@ -106,22 +106,6 @@
 	padding-right: 3%;
 }
 
-.option {
-	display: flex;
-	align-items: center;
-	margin-left: 5.125rem;
-}
-
-.option-heading:hover {
-	cursor: pointer;
-	color: #4250ff !important; 
-}
-
-.option-heading:active {
-	cursor: pointer; 
-	color: #2b0e72 !important;
-}
-
 /* ======== Nav Right */
 .nav-right-container {
   display: flex;
@@ -143,11 +127,7 @@
 .nav-link-right {
 	margin-left: 72px;
 } 
-
-.chevron-icon {
-	margin-left: 4.18px;
-}
-
+ 
 /* ======== Large Screen */
 @media screen and (min-width: 1800px) {
 	.options-container {  
