@@ -1,7 +1,18 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
-import { act } from 'react-dom/test-utils';
-import { hexToRGB, containsTextContent, getAllChildren } from './../utils/testUtils.js';
+import { act, Simulate } from 'react-dom/test-utils'; 
+import { 
+  mainViewButtonSelectedStyle,
+  mainViewButtonDeselectedStyle, 
+} from './../styles/MainView.js';
+import { 
+	hexToRGB, 
+	containsTextContent, 
+	getAllChildren, 
+	getObjectFromStyle,
+	testObjectsForEquality,
+	makeObjectKeysLowerCase,
+} from './../utils/testUtils.js';
 import MainView from './../components/MainView.jsx';
 
 // =================================== Consts & Vars =================================== //
@@ -12,11 +23,19 @@ const mainViewLeftText = 'Asia IT Market Place';
 
 // .main-view-right
 const mainViewButtonsText = ['Now', 'Future'];
-const mainViewInfoText = [
-	{number: '6', text: 'different IT Software Networks'},
-	{number: '32', text: 'partners'},
-	{number: '4', text: 'countries'}
-];
+const mainViewInfoText = {
+	now: [
+		{number: '6', text: 'different IT Software Networks'},
+		{number: '32', text: 'partners'},
+		{number: '4', text: 'countries'}
+	],
+	future: [
+		{number: '7', text: 'different IT Software Networks'},
+		{number: '50', text: 'partners'},
+		{number: '6', text: 'countries'}
+	]
+};
+ 
 
 // =================================== Setup / Teardown ================================= //
 beforeEach(() => {
@@ -101,122 +120,252 @@ describe('.main-view-right', () => {
 	}) 
 
 	describe('main-view-buttons', () => {
-		it(`main-view-buttons should have text "${mainViewButtonsText}"`, () => {
-			const mainViewButtons = document.querySelectorAll('.main-view-button');
-			expect(mainViewButtons.length).toEqual(mainViewButtonsText.length)
+		describe('on render', () => {
+			it(`main-view-buttons should have text "${mainViewButtonsText}"`, () => {
+				const mainViewButtons = document.querySelectorAll('.main-view-button');
+				expect(mainViewButtons.length).toEqual(mainViewButtonsText.length)
 
-			mainViewButtonsText.forEach(mainViewButtonText => {
-				const res = containsTextContent(mainViewButtons, mainViewButtonText)
-				expect(res).toEqual(true)
-			})
-		})
-
-		it('should have "fontFamily" : "Noto Sans, sans-serif" ', () => {
-			const mainViewButtons = document.querySelectorAll('.main-view-button');
-
-			mainViewButtons.forEach(mainViewButton => {
-				expect(mainViewButton.style.fontFamily).toEqual('Noto Sans, sans-serif')
-			})
-		})
-
-		it('should have "fontSize" : "22px" ', () => {
-			const mainViewButtons = document.querySelectorAll('.main-view-button');
-
-			mainViewButtons.forEach(mainViewButton => {
-				expect(mainViewButton.style.fontSize).toEqual('22px')
-			})
-		})
-
-		it('should have "fontStyle" : "SemiBold" ', () => {
-			const mainViewButtons = document.querySelectorAll('.main-view-button');
-
-			mainViewButtons.forEach(mainViewButton => {
-				expect(mainViewButton.style.fontStyle).toEqual('SemiBold')
-			})
-		})  
-
-		it('should have "fontWeight" : "600" ', () => {
-			const mainViewButtons = document.querySelectorAll('.main-view-button');
-
-			mainViewButtons.forEach(mainViewButton => {
-				expect(mainViewButton.style.fontWeight).toEqual('600')
-			})
-		})   
-
-		it('should have "lineHeight" : "30px" ', () => {
-			const mainViewButtons = document.querySelectorAll('.main-view-button');
-
-			mainViewButtons.forEach(mainViewButton => {
-				expect(mainViewButton.style.lineHeight).toEqual('30px')
-			})
-		})  
-
-		it('should have "background" : "transparent" ', () => {
-			const mainViewButtons = document.querySelectorAll('.main-view-button');
-
-			mainViewButtons.forEach(mainViewButton => {
-				expect(mainViewButton.style.background).toEqual('transparent')
-			})
-		})  
-
-		it('should have "width" : "124.42px" ', () => {
-			const mainViewButtons = document.querySelectorAll('.main-view-button');
-
-			mainViewButtons.forEach(mainViewButton => {
-				expect(mainViewButton.style.width).toEqual('124.42px')
-			})
-		})  
-
-		it('should have "paddingBottom" : "16px" ', () => {
-			const mainViewButtons = document.querySelectorAll('.main-view-button');
-
-			mainViewButtons.forEach(mainViewButton => {
-				expect(mainViewButton.style.paddingBottom).toEqual('16px')
-			})
-		})  
-
-		describe('selected option button', () => {
-			it('should have "opacity": "1"', () => {
-				const mainViewButtons = document.querySelectorAll('.main-view-button-selected');
-
-				mainViewButtons.forEach(mainViewButton => {
-					expect(mainViewButton.style.opacity).toEqual('1')
+				mainViewButtonsText.forEach(mainViewButtonText => {
+					const res = containsTextContent(mainViewButtons, mainViewButtonText)
+					expect(res).toEqual(true)
 				})
 			})
 
-			it('should have "borderBottom": "1.5px solid #CFE5FF"', () => {
-				const mainViewButtons = document.querySelectorAll('.main-view-button-selected');
+			it('should have "fontFamily" : "Noto Sans, sans-serif" ', () => {
+				const mainViewButtons = document.querySelectorAll('.main-view-button');
 
 				mainViewButtons.forEach(mainViewButton => {
-					expect(mainViewButton.style.borderBottom).toEqual('1.5px solid #CFE5FF')
+					expect(mainViewButton.style.fontFamily).toEqual('Noto Sans, sans-serif')
+				})
+			})
+
+			it('should have "fontSize" : "22px" ', () => {
+				const mainViewButtons = document.querySelectorAll('.main-view-button');
+
+				mainViewButtons.forEach(mainViewButton => {
+					expect(mainViewButton.style.fontSize).toEqual('22px')
+				})
+			})
+
+			it('should have "fontStyle" : "SemiBold" ', () => {
+				const mainViewButtons = document.querySelectorAll('.main-view-button');
+
+				mainViewButtons.forEach(mainViewButton => {
+					expect(mainViewButton.style.fontStyle).toEqual('SemiBold')
+				})
+			})  
+
+			it('should have "fontWeight" : "600" ', () => {
+				const mainViewButtons = document.querySelectorAll('.main-view-button');
+
+				mainViewButtons.forEach(mainViewButton => {
+					expect(mainViewButton.style.fontWeight).toEqual('600')
+				})
+			})   
+
+			it('should have "lineHeight" : "30px" ', () => {
+				const mainViewButtons = document.querySelectorAll('.main-view-button');
+
+				mainViewButtons.forEach(mainViewButton => {
+					expect(mainViewButton.style.lineHeight).toEqual('30px')
+				})
+			})  
+
+			it('should have "background" : "transparent" ', () => {
+				const mainViewButtons = document.querySelectorAll('.main-view-button');
+
+				mainViewButtons.forEach(mainViewButton => {
+					expect(mainViewButton.style.background).toEqual('transparent')
+				})
+			})  
+
+			it('should have "width" : "124.42px" ', () => {
+				const mainViewButtons = document.querySelectorAll('.main-view-button');
+
+				mainViewButtons.forEach(mainViewButton => {
+					expect(mainViewButton.style.width).toEqual('124.42px')
+				})
+			})  
+
+			it('should have "paddingBottom" : "16px" ', () => {
+				const mainViewButtons = document.querySelectorAll('.main-view-button');
+
+				mainViewButtons.forEach(mainViewButton => {
+					expect(mainViewButton.style.paddingBottom).toEqual('16px')
+				})
+			})  
+
+			describe('selected option button', () => {
+				it('should have "opacity": "1"', () => {
+					const mainViewButtons = document.querySelectorAll('.main-view-button-selected');
+
+					mainViewButtons.forEach(mainViewButton => {
+						expect(mainViewButton.style.opacity).toEqual('1')
+					})
+				})
+
+				it('should have "borderBottom": "1.5px solid #CFE5FF"', () => {
+					const mainViewButtons = document.querySelectorAll('.main-view-button-selected');
+
+					mainViewButtons.forEach(mainViewButton => {
+						expect(mainViewButton.style.borderBottom).toEqual('1.5px solid #CFE5FF')
+					})
+				})
+			})
+
+			describe('unselected option button', () => {
+				it('should have "opacity": "0.5"', () => {
+					const mainViewButtons = document.querySelectorAll('.main-view-button-deselected');
+
+					mainViewButtons.forEach(mainViewButton => {
+						expect(mainViewButton.style.opacity).toEqual('0.5')
+					})
 				})
 			})
 		})
 
-		describe('unselected option button', () => {
-			it('should have "opacity": "0.5"', () => {
-				const mainViewButtons = document.querySelectorAll('.main-view-button-deselected');
+		describe('on click', () => {
+			describe('#now-button', () => {
+				it('should add mainViewButtonSelectedStyle to now button', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
 
-				mainViewButtons.forEach(mainViewButton => {
-					expect(mainViewButton.style.opacity).toEqual('0.5')
+					// click now
+					const nowButton = document.querySelector('#now-button');  
+					act(() => Simulate.click(nowButton))
+
+					// test now button
+					// get styles
+					const nowButtonStyle = getObjectFromStyle(nowButton.style); 
+					const selectedStyle = makeObjectKeysLowerCase(mainViewButtonSelectedStyle);
+					// test
+					const test = testObjectsForEquality(nowButtonStyle, selectedStyle);
+					expect(test).toEqual(true)
+				})
+
+				it('should add mainViewButtonDeselectedStyle to future button', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// click now
+					const nowButton = document.querySelector('#now-button');  
+					act(() => Simulate.click(nowButton))
+
+					// test future button
+					// get styles 
+					const futureButtonStyle = getObjectFromStyle(futureButton.style); 
+					const deSelectedStyle = makeObjectKeysLowerCase(mainViewButtonDeselectedStyle);
+
+					// test 
+					const test = testObjectsForEquality(futureButtonStyle, deSelectedStyle);
+					expect(test).toEqual(true) 
+				})
+
+				it('should update .main-view-info-numer', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// click now
+					const nowButton = document.querySelector('#now-button');  
+					act(() => Simulate.click(nowButton))
+
+					// test numbers
+					const numbers = document.querySelectorAll('.main-view-info-number');
+					numbers.forEach((number, i) => {
+						expect(number.textContent).toEqual(mainViewInfoText.now[i].number)
+					})
+				})
+
+				it('should update .main-view-info-text', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// click now
+					const nowButton = document.querySelector('#now-button');  
+					act(() => Simulate.click(nowButton))
+
+					// test text
+					const textElements = document.querySelectorAll('.main-view-info-text');
+					textElements.forEach((textElement, i) => {
+						expect(textElement.textContent).toEqual(mainViewInfoText.now[i].text)
+					})
+				})
+			})
+			
+			describe('#future-button', () => {
+				it('should add mainViewButtonSelectedStyle to future button', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// test future button
+					// get styles
+					const futureButtonStyle = getObjectFromStyle(futureButton.style); 
+					const selectedStyle = makeObjectKeysLowerCase(mainViewButtonSelectedStyle);
+					// test
+					const test = testObjectsForEquality(futureButtonStyle, selectedStyle);
+					expect(test).toEqual(true)
+				})
+
+				it('should add mainViewButtonDeselectedStyle to past button', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// test now button
+					// get styles
+					const nowButton = document.querySelector('#now-button');
+					const nowButtonStyle = getObjectFromStyle(nowButton.style); 
+					const deSelectedStyle = makeObjectKeysLowerCase(mainViewButtonDeselectedStyle);
+					// test
+					const test = testObjectsForEquality(nowButtonStyle, deSelectedStyle);
+					expect(test).toEqual(true)
+				})
+
+				it('should update .main-view-info-numer', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// test numbers
+					const numbers = document.querySelectorAll('.main-view-info-number');
+					numbers.forEach((number, i) => {
+						expect(number.textContent).toEqual(mainViewInfoText.future[i].number)
+					})
+				})
+
+				it('should update .main-view-info-text', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// test text
+					const textElements = document.querySelectorAll('.main-view-info-text');
+					textElements.forEach((textElement, i) => {
+						expect(textElement.textContent).toEqual(mainViewInfoText.future[i].text)
+					})
 				})
 			})
 		})
 	})
 
 	describe('.main-view-info-container', () => {
-		it(`main-view-info-container should have number and text pairings : "${mainViewInfoText.map(info => {
+		it(`main-view-info-container should have number and text pairings : "${mainViewInfoText.now.map(info => {
 			return `${info.number} : ${info.text}`;
 		})}"`, () => {
 			const mainViewInfoDivs = document.querySelectorAll('.main-view-info');
-			expect(mainViewInfoDivs.length).toEqual(mainViewInfoText.length)
+			expect(mainViewInfoDivs.length).toEqual(mainViewInfoText.now.length)
 
 			mainViewInfoDivs.forEach((mainViewInfoDiv, i) => { 
 				const number = mainViewInfoDiv.querySelector('.main-view-info-number').textContent;
 				const text = mainViewInfoDiv.querySelector('.main-view-info-text').textContent;
 
-				expect(number).toEqual(mainViewInfoText[i].number)
-				expect(text).toEqual(mainViewInfoText[i].text)
+				expect(number).toEqual(mainViewInfoText.now[i].number)
+				expect(text).toEqual(mainViewInfoText.now[i].text)
 			})
 		})
 

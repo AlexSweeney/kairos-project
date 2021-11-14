@@ -1,15 +1,7 @@
-/*import React from 'react';
-import { render, unmountComponentAtNode } from 'react-dom';
-import { act, Simulate } from 'react-dom/test-utils';
-import { hexToRGB, containsTextContent, getAllChildren } from './../utils/testUtils.js';
-import {createMemoryHistory} from 'history'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';*/
-
-import {render, screen} from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import { createMemoryHistory } from 'history'
-import React from 'react'
-import { BrowserRouter, MemoryRouter, Routes, Route } from 'react-router-dom'
+import React from 'react';
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event'; 
+import { BrowserRouter, MemoryRouter, Routes, Route } from 'react-router-dom';
 import '@testing-library/jest-dom'; 
 
 import Header from './../components/Header.jsx';
@@ -68,16 +60,16 @@ describe('<App/>', () => {
 			const header = document.querySelector('.header');
 			expect(header).not.toEqual(null)
 		})
+
+		it('should render <Home/>', () => {
+			// render 
+		  render(<App/>) 
+			expect(screen.getByText(/MockHome/)).toBeInTheDocument()
+		})
 	})
 
 	describe('routing', () => {
 		describe('<Home>', () => {
-			it('should route on render', () => {
-				// render 
-			  render(<App/>) 
-				expect(screen.getByText(/MockHome/)).toBeInTheDocument()
-			})
-
 			it('should route when link pressed', () => { 
 				// render 
 			  render(<App/>) 
@@ -255,11 +247,14 @@ describe('<App/>', () => {
 	})
 })
 
-test.todo('test routing')  
-test.todo('test main-view-button fns') 
+// some improvements to make -> prioritize meeting customer requirements by deadline
+// -> if time left can improve
+test.todo('test main-view-button fns')  
 test.todo('test option menu')
-test.todo('<Home/>')
+test.todo('<Home/>') 
 test.todo('test testUtils.js')
+test.todo('add authentication')
 test.todo('test font loads')
-test.todo('test components ordered correctly')  
+test.todo('e2e tests-')
+test.todo('ids vs class, different styles? ')
 test.todo('make min-width settings cleaner') 
