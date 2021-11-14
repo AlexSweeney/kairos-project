@@ -249,13 +249,14 @@ describe('<App/>', () => {
 
 // some improvements to make
 // -> prioritize meeting customer specifications and testing by deadline
-// -> improve and tidy code if time left 
-test.todo('<Home/>')  
+// -> improve and tidy code if time left  
 test.todo('add authentication')
 test.todo('test testUtils.js')
 test.todo('test font loads')
-test.todo('e2e tests-')
+test.todo('options test - use rtl make sure menu hidden when should be')
 test.todo('ids vs class, different styles? ')
 test.todo('make min-width settings cleaner') 
 test.todo('make main-info-button tests cleaner') 
+test.todo('router test with useHistory to move, components just name no <> ?')
+test.todo('use .? optional chaining')
 

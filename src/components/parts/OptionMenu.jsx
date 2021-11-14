@@ -80,15 +80,12 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
   	}
   }
 
-  function updateMenuClass(isOverHead, isOverMenu) {
-    // console.log('updateMenuClass')
-  	if(isOverMenu || isOverHead) {
-      // console.log('--> open')
+  function updateMenuClass(isOverHead, isOverMenu) { 
+  	if(isOverMenu || isOverHead) { 
   		setOptionBodyClass('option-menu-open')
   	}
 
-  	if(!isOverMenu && !isOverHead) {
-      // console.log('--> close')
+  	if(!isOverMenu && !isOverHead) { 
   		setOptionBodyClass('option-menu-closed')
   	}
   }
