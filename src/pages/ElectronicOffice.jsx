@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import UserStatus from './../components/UserStatus.jsx';
-import LoginFrame from './../pages/LoginFrame.jsx';
 import PrivateFrame from './../pages/PrivateFrame.jsx';
 import {
   mainViewLeftStyle, 
   mainViewLeftHeaderStyle,
   mainViewRightStyle,   
+  mainViewInfoTextStyle,
 } from './../styles/MainView.js';
+import { serviceInfoBoxButtonStyle } from './../styles/ServicesView.js';
 import './../styles/MainView.css';
+import './../styles/ElectronicOffice.css';
 
 export default function ElectronicOffice() {
   const {status, setStatus} = UserStatus();
@@ -19,8 +20,8 @@ export default function ElectronicOffice() {
     username: Mona_Kassulke14
     password: EECsjlVnWIXfeuA
   */
-  const [username, setUsername] = useState('Mona_Kassulke14');
-  const [password, setPassword] = useState('EECsjlVnWIXfeuA');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [isError, setIsError] = useState(false);
 
 
@@ -45,11 +46,10 @@ export default function ElectronicOffice() {
     })
 
     // handle results
+    console.log('targetUsername', targetUsername)
     if((username === targetUsername) && (password === targetPassword)) { 
-      console.log('logged in')
       setStatus(true)
-    } else { 
-      console.log('log in failed')
+    } else {  
       setStatus(false)
     }
   } 
@@ -64,11 +64,11 @@ export default function ElectronicOffice() {
 
   // tidy * 
 
-  // style
+  // style 
 
-  // fail feedback
+  // fail feedback 
 
-  // move to login frame 
+  // test 
 
   return (
     <section className="main-view"> 
@@ -78,21 +78,21 @@ export default function ElectronicOffice() {
      
       <div className="main-view-right" style={mainViewRightStyle}> 
         { 
-          status ? <PrivateFrame/> : 
+          (status === true) ? <PrivateFrame/> : 
           <div className='login-frame'>
             <p hidden={!isError}>Connection Error, please try logging in again</p>
-            <h3>Login</h3>
+            <h3 className="login-header" style={mainViewLeftHeaderStyle}>Login</h3>
             <form onSubmit={handleSubmit}>
               <label>
-                <p>UserName</p>
+                <p className="login-text" style={mainViewInfoTextStyle}>UserName</p>
                 <input type="text" onChange={onUsernameChange}/>
               </label>
               <label>
-                <p>Password</p>
+                <p className="login-text" style={mainViewInfoTextStyle}>Password</p>
                 <input type="password" onChange={onPasswordChange}/>
               </label>
-              <div>
-                <button type="submit">Submit</button>
+              <div className="submit-button-container">
+                <button type="submit" className="submit-button" style={serviceInfoBoxButtonStyle}>Submit</button>
               </div> 
             </form>
           </div>
