@@ -35,9 +35,6 @@
   width: 100%;
 } 
 
-.option-menu-open { 
-}
-
 .option-menu-closed {
 	visibility: hidden;
 }

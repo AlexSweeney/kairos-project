@@ -5,10 +5,32 @@ import {
 } from './../../styles/OptionMenu.js';
 import './../../styles/OptionMenu.css';
 
-export default function OptionMenu({options, handleOptionClick = () => {} }) {
-	const [selectedOption, setSelectedOption] = useState(options[0]);
+export default function OptionMenu({options, handleOptionClick = () => {} }) { 
+  /* 
+    * head shows selected option
+    * menu options = all other options
+
+    * on render
+      * set selected option as first option
+      * show selected option at head
+      * hide menu options
+
+    * on over 
+      * show menu options
+
+    * on out
+      * hide menu options
+
+    * on click
+      * set selection option at head to clicked option
+      * hide menu options
+
+  */
 
 	/* =========================================== Consts ===================================== */ 
+  const [selectedOption, setSelectedOption] = useState(options[0]);
+  const [menuOptions, setMenuOptions] = useState(options.slice(1));
+
   const [optionHeadingClass, setOptionHeadingClass] = useState('');
   const [chevronIconClass, setChevronIconClass] = useState('');
   const [optionBodyClass, setOptionBodyClass] = useState('option-body-open');
@@ -21,7 +43,7 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
   	setIsOverHead(true) 
   }
 
-  function onLeaveHead() { 
+  function onLeaveHead() {
   	setIsOverHead(false)
   }
 
@@ -37,6 +59,13 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
    	setIsOverMenu(false)
    	handleOptionClick(option)
    	setSelectedOption(option) 
+    updateMenuOptions(option)
+  }
+
+  /* =========================================== Option Updater ============================= */ 
+  function updateMenuOptions(selectedOption) {
+    const newMenuOptions = options.filter(option => option !== selectedOption).filter(el => el);
+    setMenuOptions(newMenuOptions)
   }
 
   /* =========================================== Class Updaters ============================= */ 
@@ -53,11 +82,14 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
   }
 
   function updateMenuClass(isOverHead, isOverMenu) {
+    // console.log('updateMenuClass')
   	if(isOverMenu || isOverHead) {
+      // console.log('--> open')
   		setOptionBodyClass('option-menu-open')
   	}
 
   	if(!isOverMenu && !isOverHead) {
+      // console.log('--> close')
   		setOptionBodyClass('option-menu-closed')
   	}
   }
@@ -83,13 +115,11 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
 		  		onMouseEnter={onEnterMenu}
 		  		onMouseLeave={onLeaveMenu}>
 		  	{
-		  		options.map(option => {
-		  			if(option !== selectedOption) {
-		  				return (<h4 className="option option-menu-open"
+		  		menuOptions.map(option => {
+		  				return (<h4 className="option"
                           key={option} 
 	  											style={optionHeadingStyle} 
 	  											onClick={() => onOptionClick(option)}>{option}</h4>)
-		  			} 
 		  		})
 		  	} 
 		  </div>

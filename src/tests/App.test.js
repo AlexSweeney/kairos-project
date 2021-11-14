@@ -247,13 +247,13 @@ describe('<App/>', () => {
 	})
 })
 
-// some improvements to make -> prioritize meeting customer requirements by deadline
-// -> if time left can improve
-test.todo('test main-view-button fns')  
+// some improvements to make
+// -> prioritize meeting customer specifications and testing by deadline
+// -> improve and tidy code if time left
 test.todo('test option menu')
-test.todo('<Home/>') 
-test.todo('test testUtils.js')
+test.todo('<Home/>')  
 test.todo('add authentication')
+test.todo('test testUtils.js')
 test.todo('test font loads')
 test.todo('e2e tests-')
 test.todo('ids vs class, different styles? ')
