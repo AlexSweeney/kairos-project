@@ -24,7 +24,6 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
     * on click
       * set selection option at head to clicked option
       * hide menu options
-
   */
 
 	/* =========================================== Consts ===================================== */ 

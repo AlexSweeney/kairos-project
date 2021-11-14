@@ -20,7 +20,7 @@ import './../styles/PriceOptionsView.css';
 
 export default function PriceOptionsView() {
 	return (
-		<section className="price-options-view blue-background" style={priceOptionsViewStyle}>
+		<section className="price-options-view" style={priceOptionsViewStyle}>
       <div className="price-option-box" style={priceOptionsBoxStyle}>
         <div className="price-option-box-row-1">
           <h3 className="price-option-box-heading" style={priceOptionBoxHeadingStyle}>Free Test</h3>
