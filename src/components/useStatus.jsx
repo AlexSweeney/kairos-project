@@ -4,19 +4,17 @@ export default function useStatus() {
 	const [status, setStatus] = useState(getStatus());
 
 	function getStatus() {
-		const storedStatus = sessionStorage.getItem('logged-in');
-		console.log('storedStatus', storedStatus)
-		return storedStatus || false;
+		const storedStatus = sessionStorage.getItem('logged-in'); 
+		return storedStatus;
 	}
 
-	function saveStatus(status) {
-		console.log('saveStatus', status)
+	function saveStatus(status) { 
 		sessionStorage.setItem('logged-in', status)
 		setStatus(status); 
 	}
 
 	return ({
-		setStatus: saveStatus,
-		status,
+		setLoggedIn: saveStatus,
+		loggedIn: status,
 	})
 }
