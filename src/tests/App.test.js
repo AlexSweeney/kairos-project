@@ -29,7 +29,7 @@ function getByTextContent(nodes, textContent) {
 	return Array.from(nodes).map(node => { 
 		if(node.textContent === textContent) return node;
 	}).filter(el => el) 
-}
+}-
 
 function MockApp({pathname}) {
 	return (
@@ -251,6 +251,10 @@ describe('<App/>', () => {
 // -> prioritize meeting customer specifications and testing by deadline
 // -> improve and tidy code if time left  
 test.todo('add authentication')
+test.todo('test useStatus')
+test.todo('test PrivateFrame')
+test.todo('test Login')
+test.todo('test Electronic Office')
 test.todo('test testUtils.js')
 test.todo('test font loads')
 test.todo('options test - use rtl make sure menu hidden when should be')

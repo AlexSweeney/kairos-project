@@ -2,11 +2,9 @@
 	width: 100%;
 	height: 100%;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	padding-bottom: 10%;
-	padding-top: 5%;
+	flex-direction: column;
+	padding-top: 140px;
 }
 
 .login-header {
@@ -18,6 +16,7 @@
 .login-text {
 	text-align: left !important;
 	padding-bottom: 10px;
+	padding-top: 5px;
 }
 
 .submit-button-container {
@@ -27,7 +26,7 @@
 }
 
 .submit-button {
-	margin-top: 16px;
+	margin-top: 35px;
 	background: #272bea !important;
 	cursor: pointer;
 }
@@ -38,4 +37,11 @@
 
 .submit-button:active {
 	background: #1f229a !important;
+}
+
+.feedback-messages {
+	font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+	margin: 37px 0;
+	color: #FFFFFF;
 }

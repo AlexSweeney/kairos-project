@@ -2,12 +2,34 @@
 	width: 100%;
 	height: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	padding-top: 5%;
 }
 
 .private-frame-header {
 	color: #FFFFFF !important;
 	cursor: default;
+}
+
+.logout-button-container {
+	width: 100%;
+	height: 100%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logout-button { 
+	background: #272bea !important;
+	cursor: pointer;
+} 
+
+.logout-button:hover {
+	background: #484cff !important;
+}
+
+.logout-button:active {
+	background: #1f229a !important;
 }
