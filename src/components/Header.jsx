@@ -85,7 +85,7 @@ export default function Header() {
         <nav className="nav-right-container">
           <ul className="nav-right">
             <li><Link to="/auto_home" className="nav-link nav-link-right" style={navLinkRightStyle}>Auto Homepage</Link></li>
-            <li><Link to="/sales" className="nav-link nav-link-right" style={navLinkRightStyle}>Sales</Link></li>
+            <li><Link to="/sales" className="nav-link nav-link-right" id="sales-link" style={navLinkRightStyle}>Sales</Link></li>
             <li><Link to="/crm" className="nav-link nav-link-right" style={navLinkRightStyle}>CRM</Link></li>
             <li><Link to="/electronic_office" className="nav-link nav-link-right" style={navLinkRightStyle}>Electronic office</Link></li>
             <li><Link to="/cloud_erp" className="nav-link nav-link-right" style={navLinkRightStyle}>Cloud ERP</Link></li>

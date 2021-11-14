@@ -88,7 +88,7 @@ export default function OptionMenu({options, handleOptionClick = () => {} }) {
 		  				return (<h4 className="option option-menu-open"
                           key={option} 
 	  											style={optionHeadingStyle} 
-	  											onClick={() => { onOptionClick(option)}}>{option}</h4>)
+	  											onClick={() => onOptionClick(option)}>{option}</h4>)
 		  			} 
 		  		})
 		  	} 
