@@ -5,7 +5,7 @@ import {
   darkBlueText, 
   lightBlueText, 
   whiteText, 
-  greyText 
+  greyText,
 } from './colors.js';
 import backgroundImage from './../imgs/background-image.jpg';
 
@@ -23,6 +23,28 @@ export const mainViewLeftHeaderStyle = {
   letterSpacing: '0.01em',
   color: darkBlueText,
 };   
+
+export const mainViewRightHeaderStyle = {
+  ...mainViewLeftHeaderStyle,
+  color: whiteText,
+};   
+
+export const mainViewRightButtonStyle = {
+  // button 
+  borderRadius: '8px',
+  padding: '8px',
+  background: darkBlueBackground, 
+
+  // text
+  fontFamily: 'Noto Sans, sans-serif',
+  fontSize: '16px',
+  fontStyle: 'normal',
+  fontWeight: '600',
+  lineHeight: '16px',
+  letterSpacing: '0px',
+  textAlign: 'center',
+  color: '#FFFFFF',
+}; 
 
 // ==================== Main-View Right */
 export const mainViewRightStyle = {

@@ -8,8 +8,7 @@
 	padding-top: 5%;
 }
 
-.private-frame-header {
-	color: #FFFFFF !important;
+.private-frame-header { 
 	cursor: default;
 }
 
@@ -21,8 +20,7 @@
 	align-items: center;
 }
 
-.logout-button { 
-	background: #272bea !important;
+.logout-button {  
 	cursor: pointer;
 } 
 
