@@ -4,7 +4,7 @@ import {
   mainViewRightButtonStyle,
 } from './../styles/MainView.js';
 import { serviceInfoBoxButtonStyle } from './../styles/ServicesView.js';
-import useStatus from './../components/useStatus.jsx';
+import useStatus from './../utils/useStatus.jsx';
 import './../styles/PrivateFrame.css';
 
 export default function PrivateFrame({setLoggedIn}) { 

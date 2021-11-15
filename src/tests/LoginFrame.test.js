@@ -12,6 +12,7 @@ import {
   mainViewInfoTextStyle,
 } from './../styles/MainView.js';
 
+// =========================================== Consts & Vars =========================================== // 
 let setLoggedIn;
 let submitButton;
 let inputs;
@@ -25,8 +26,10 @@ const correctPassword = "correct-password";
 const incorrectUserName = "incorrect-userName";
 const incorrectPassword = "incorrect-password";
 
+// =========================================== Mocks =================================================== // 
 jest.mock('./../utils/getData.js') 
 
+// =========================================== Setup / teardown ======================================== // 
 beforeEach(() => {
 	setLoggedIn = jest.fn();
 	render(<LoginFrame setLoggedIn={setLoggedIn}/>)
@@ -41,9 +44,12 @@ afterEach(() => {
 	inputs = null;
 	submitButton = null;
 	form = null;
+	labels = null;
+	feedbackMessages = null;
 	cleanup()
 })
 
+// =========================================== Tests ================================================== //
 describe('<LoginFrame/>', () => {
 	describe('on render', () => {
 		it('should render', () => {
@@ -308,8 +314,6 @@ describe('<LoginFrame/>', () => {
 
 		describe('connection error', () => {
 			it.skip('message "Connection problem, please try again." should not be hidden, all others should ', async () => {
-				console.log(window);
-
 				// set input values
 				fireEvent.change(inputs[0], { target: { value: correctUserName }})
 				fireEvent.change(inputs[1], { target: { value: incorrectPassword }})

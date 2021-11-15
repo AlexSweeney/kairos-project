@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import useStatus from './../components/useStatus.jsx';
+import useStatus from './../utils/useStatus.jsx';
 import LoginFrame from './../pages/LoginFrame.jsx';
 import PrivateFrame from './../pages/PrivateFrame.jsx';
 import {

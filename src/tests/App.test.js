@@ -250,10 +250,10 @@ describe('<App/>', () => {
 // some improvements to make
 // -> prioritize meeting customer specifications and testing by deadline
 // -> improve and tidy code if time left    
-test.todo('test Electronic Office')
-
+test.todo('test Electronic Office') 
 test.todo('test useStatus')
 test.todo('test testUtils.js') 
+test.todo('test getData')
 test.todo('axios error handling')
 test.todo('test font loads')
 test.todo('options test - use rtl make sure menu hidden when should be')
