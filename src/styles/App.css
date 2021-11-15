@@ -10,8 +10,5 @@ html {
 
 /* ================= Layout ================= */
 .container { 
-	display: flex;
-	flex-direction: column;  
-	position: relative;
-	overflow: hidden;
+	min-width: 1280px;
 } 

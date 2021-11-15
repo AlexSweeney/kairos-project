@@ -232,9 +232,4 @@ describe('<App/>', () => {
 	})
 })
 
-// -> prioritize meeting customer specifications and testing by deadline
-// -> improve and tidy code if time left 
-// refactor / improve
-test.todo('merge MainView.test.js and MainViewClick.test.js')
-test.todo('make min-width settings cleaner')  
-test.todo('make main-info-button tests cleaner')  
+test.todo('make min-width settings cleaner')   

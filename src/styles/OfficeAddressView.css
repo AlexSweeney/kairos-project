@@ -6,9 +6,16 @@
   cursor: default;
 }
 
+.office-address-box-container {
+	width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .office-address-box {
 	height: 100%;
 	width: 33.3333333333%;
+	max-width: 1000px;
 	display: flex;
 	flex-direction: column;
 	padding-top: 33px;
@@ -48,13 +55,13 @@
 @media screen and (min-width: 1800px) {
 	.office-address-box-one {
 	align-items: center;
-}
+	}
 
-.office-address-box-two {
-	align-items: center;
-}
+	.office-address-box-two {
+		align-items: center;
+	}
 
-.office-address-box-three {
-	align-items: center;
-}
+	.office-address-box-three {
+		align-items: center;
+	}
 }

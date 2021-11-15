@@ -58,7 +58,7 @@ export default function Header() {
   /* =========================================== Output ============================= */ 
   return (
     <header className="header">  
-      <div className="header-left" style={headerLeftStyle}>
+      <div className="header-left" style={headerLeftStyle}> 
         <img className="logo" style={logoStyle} src={logo} alt="daoukiwoom logo"/>
         <nav className="nav-left">
           <ul>

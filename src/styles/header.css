@@ -4,7 +4,7 @@
  	width: 100%;
   height: 80px;  
 	position: absolute;
-  z-index: 2; 
+  z-index: 2;   
 }
  
 /* =============================== Nav links ============================== */
@@ -38,9 +38,9 @@
 	justify-content: space-between;
 	align-items: flex-end;  
 	min-width: 500px;
-	width: 30%;
-	padding-left: 6%;
-	padding-right: 3%;
+	width: 39%;
+	padding-left: 80px;
+	padding-right: 40px;
 	height: 100%;  
 }
 
@@ -100,7 +100,6 @@
 /* =============================== Option bar ================================== */
 .options-bar { 
   height: 36px;
-  top: 0;
   width: 100%;   
 }
 
@@ -108,16 +107,17 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	height: 36px;
-	padding-right: 3%;
-}
+	height: 100%; 
+	width: 100%;
+	padding-right: 5%; 
+} 
 
 /* ======== Nav Right */
 .nav-right-container {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-right: 4.5%;
+  padding-right: 5%;
   height: 100%;
 }
  
@@ -137,10 +137,10 @@
 /* ======== Large Screen */
 @media screen and (min-width: 1800px) {
 	.options-container {  
-		padding-right: 9%;
+		padding-right: 10%;
 	}
 
 	.nav-right-container {
-    padding-right: 9.8%;
+    padding-right: 10%;
 	}
 }

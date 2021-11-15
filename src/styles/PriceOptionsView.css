@@ -2,8 +2,8 @@
 	height: 487.06px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	min-width: 1282px;
+	align-items: center; 
+	width: 100%;
 	cursor: default;
 }
 
