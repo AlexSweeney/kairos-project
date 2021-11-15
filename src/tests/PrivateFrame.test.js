@@ -41,6 +41,7 @@ beforeEach(() => {
 afterEach(() => {
 	setLoggedIn = null;
 	unmountComponentAtNode(container) 
+	container = null;
 })
 
 /* ======================================= Tests ==================================== */

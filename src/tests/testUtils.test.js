@@ -61,6 +61,7 @@ beforeEach(() => {
 
 afterEach(() => {
 	unmountComponentAtNode(container)
+	container = null;
 })
 
 /* ======================================= Tests ========================================== */

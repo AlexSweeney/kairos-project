@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {render, screen, cleanup} from '@testing-library/react';
 import userEvent from '@testing-library/user-event'; 
 import { BrowserRouter, MemoryRouter, Routes, Route } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
@@ -36,6 +36,10 @@ beforeEach(() => {
 	ElectronicOffice.mockImplementation(() => <p>MockElectronicOffice</p>);
 	SSL.mockImplementation(() => <p>MockSSL</p>);
 }) 
+
+afterEach(() => {
+	cleanup()
+})
 
 /* ======================================= Tests ================================================== */
 describe('<App/>', () => {

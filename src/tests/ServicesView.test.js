@@ -66,6 +66,7 @@ beforeEach(() => {
 
 afterEach(() => {
 	unmountComponentAtNode(container)
+	container = null;
 })
 
 /* ======================================= Services view Header ============================ */
