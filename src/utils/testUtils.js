@@ -21,7 +21,7 @@ export function getAllChildren(node) {
 	return children.slice(1);
 }	
 
-export function makeObjectKeysLowerCase(obj) {
+/*export function makeObjectKeysLowerCase(obj) {
 	let newObj = {};
 
 	Object.keys(obj).forEach(key => {
@@ -39,14 +39,14 @@ export function testObjectsForEquality(objOne, objTwo) {
 	const keysTwo = Object.keys(objTwo);
 
 	if(keysOne.length !== keysTwo.length) {
-		console.error(`testObjectsForEquality() failed: objOne.keys.length === ${keysOne.length}, objTwo.keys.length === ${keysTwo.length}`)
+		// console.error(`testObjectsForEquality() failed: objOne.keys.length === ${keysOne.length}, objTwo.keys.length === ${keysTwo.length}`)
 		return false; 
 	}
 
 	for(let i = 0; i < keysOne.length; i++) {
 		const key = keysOne[i];
 		if(keysTwo.indexOf(key) === -1) {
-			console.error(`testObjectsForEquality() failed: objOne[${key}] === ${objOne[key]}, objTwo[${key}] === ${objTwo[key]}`)
+			// console.error(`testObjectsForEquality() failed: objOne[${key}] === ${objOne[key]}, objTwo[${key}] === ${objTwo[key]}`)
 			return false;
 		}
 	} 
@@ -54,29 +54,29 @@ export function testObjectsForEquality(objOne, objTwo) {
 	// same values
 	for(let y = 0; y < keysOne.length; y++) {
 		const keyOne = keysOne[y];
-		const keyTwo = keysTwo[y];
- 
+		
 		const valueOne = objOne[keyOne];
-		const valueTwo = objTwo[keyTwo];
+		const valueTwo = objTwo[keyOne];
 
 		if(valueOne !== valueTwo) return false;
 	}  
  
 	return true;
-}
+}*/
 
-export function getObjectFromStyle(style) {
+/*export function getObjectFromStyle(style) {
 	const keys = Object.keys(style);
 	let obj = {};
-
-	keys.forEach(key => {
+	console.log('style', style)
+	keys.forEach(keyNum => {
 		// only add public key : vals 
-		if(key[0] !== '_') {
-			const thisKey = style.item(key).replace('-', '');
+		if(keyNum[0] !== '_') {
+			const thisKey = style[keyNum];
 			const thisVal = style[thisKey];
-			obj[thisKey] = thisVal;
+			const displayKey = thisKey.replace('-', '');
+			obj[displayKey] = thisVal; 
 		}
 	})
  
 	return obj;
-}
+}*/

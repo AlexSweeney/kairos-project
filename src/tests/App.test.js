@@ -231,11 +231,7 @@ describe('<App/>', () => {
 
 // -> prioritize meeting customer specifications and testing by deadline
 // -> improve and tidy code if time left 
-test.todo('test testUtils.js')  
-
 // refactor / improve
-test.todo('make min-width settings cleaner') 
-
-test.todo('options test - use rtl make sure menu hidden when should be') 
+test.todo('make min-width settings cleaner')  
 test.todo('make main-info-button tests cleaner') 
 

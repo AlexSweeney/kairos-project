@@ -36,6 +36,15 @@ const axiosResponse = {
 
 // =========================================== Mocks =================================================== //  
 jest.mock('axios')
+jest.mock('./../styles/MainView.js', () => {
+	return (
+		{
+			mainViewRightHeaderStyle: { color: 'red'},
+			mainViewRightButtonStyle: { color : 'green'},
+			mainViewInfoTextStyle: { color : 'yellow'}
+		}
+	) 
+})
 
 // =========================================== Setup / teardown ======================================== // 
 beforeEach(() => {
@@ -128,11 +137,8 @@ describe('<LoginFrame/>', () => {
 				it('should have "mainViewRightHeaderStyle" ', () => {
 					const heading = document.querySelector('.login-header');
 
-					const headingStyle = getObjectFromStyle(heading.style);
-					const targetStyle = makeObjectKeysLowerCase(mainViewRightHeaderStyle);
-
-					const test = testObjectsForEquality(headingStyle, targetStyle);
-					expect(test).toEqual(true) 
+					expect(heading.style.length).toEqual(1)
+					expect(heading.style.color).toEqual(mainViewRightHeaderStyle.color)
 				})
 			})
 
@@ -140,11 +146,8 @@ describe('<LoginFrame/>', () => {
 				it('should have "mainViewInfoTextStyle"', () => {
 					const textNode = labels[0].querySelector('.login-text');
 
-					const textStyle = getObjectFromStyle(textNode.style);
-					const targetStyle = makeObjectKeysLowerCase(mainViewInfoTextStyle);
-
-					const test = testObjectsForEquality(textStyle, targetStyle);
-					expect(test).toEqual(true) 
+					expect(textNode.style.length).toEqual(1)
+					expect(textNode.style.color).toEqual(mainViewInfoTextStyle.color)
 				})
 			})
 
@@ -152,32 +155,23 @@ describe('<LoginFrame/>', () => {
 				it('should have "mainViewInfoTextStyle"', () => {
 					const textNode = labels[1].querySelector('.login-text');
 
-					const textStyle = getObjectFromStyle(textNode.style);
-					const targetStyle = makeObjectKeysLowerCase(mainViewInfoTextStyle);
-
-					const test = testObjectsForEquality(textStyle, targetStyle);
-					expect(test).toEqual(true) 
+					expect(textNode.style.length).toEqual(1)
+					expect(textNode.style.color).toEqual(mainViewInfoTextStyle.color)
 				})
 			})
 
 			describe('submit button', () => {
-				it('should have "mainViewRightButtonStyle"', () => {
-					const submitButtonStyle = getObjectFromStyle(submitButton.style);
-					const targetStyle = makeObjectKeysLowerCase(mainViewRightButtonStyle);
-
-					const test = testObjectsForEquality(submitButtonStyle, targetStyle);
-					expect(test).toEqual(true) 
+				it('should have "mainViewRightButtonStyle"', () => { 
+					expect(submitButton.style.length).toEqual(1)
+					expect(submitButton.style.color).toEqual(mainViewRightButtonStyle.color)
 				})
 			})
 
 			describe('feedback-messages', () => {
 				it('should have "mainViewInfoTextStyle"', () => {
-					feedbackMessages.forEach(feedbackMessage => {
-						const feedbackMessageStyle = getObjectFromStyle(feedbackMessage.style);
-						const targetStyle = makeObjectKeysLowerCase(mainViewInfoTextStyle);
-
-						const test = testObjectsForEquality(feedbackMessageStyle, targetStyle);
-						expect(test).toEqual(true) 
+					feedbackMessages.forEach((feedbackMessage, i) => {
+						expect(feedbackMessage.style.length).toEqual(1)
+						expect(feedbackMessage.style.color).toEqual(mainViewInfoTextStyle.color) 
 					})
 				})
 			})
