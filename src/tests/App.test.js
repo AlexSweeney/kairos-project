@@ -231,8 +231,7 @@ describe('<App/>', () => {
 
 // some improvements to make
 // -> prioritize meeting customer specifications and testing by deadline
-// -> improve and tidy code if time left  
-test.todo('axios error handling')
+// -> improve and tidy code if time left   
 test.todo('test testUtils.js')  
 test.todo('getData()')
 

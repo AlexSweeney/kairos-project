@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { render, fireEvent, waitFor, cleanup} from '@testing-library/react';
 import ElectronicOffice from './../pages/ElectronicOffice.jsx';
 
@@ -6,16 +7,25 @@ import ElectronicOffice from './../pages/ElectronicOffice.jsx';
 const correctUserName = "correct-username";
 const correctPassword = "correct-password";
 
-// =========================================== Mocks =================================================== // 
-jest.mock('./../utils/getData.js') 
+const axiosResponse = { 
+	data : {
+		username: correctUserName,
+		password: correctPassword,
+	} 
+};
+
+// =========================================== Mocks =================================================== //  
+jest.mock('axios')
 
 // =========================================== Setup / teardown ======================================== // 
 beforeEach(() => {
 	render(<ElectronicOffice/>)
+	axios.get.mockImplementationOnce(() => Promise.resolve(axiosResponse));
 })
 
 afterEach(() => {
 	cleanup()
+	window.sessionStorage.clear()
 })
 
 // =========================================== Tests ================================================== //
