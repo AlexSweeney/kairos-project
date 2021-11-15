@@ -53,9 +53,11 @@ export function testObjectsForEquality(objOne, objTwo) {
 
 	// same values
 	for(let y = 0; y < keysOne.length; y++) {
-		const key = keysOne[y];
-		const valueOne = keysOne[key];
-		const valueTwo = keysTwo[key];
+		const keyOne = keysOne[y];
+		const keyTwo = keysTwo[y];
+ 
+		const valueOne = objOne[keyOne];
+		const valueTwo = objTwo[keyTwo];
 
 		if(valueOne !== valueTwo) return false;
 	}  

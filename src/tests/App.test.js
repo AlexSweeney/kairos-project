@@ -238,7 +238,4 @@ test.todo('make min-width settings cleaner')
 
 test.todo('options test - use rtl make sure menu hidden when should be') 
 test.todo('make main-info-button tests cleaner') 
-test.todo('use .? optional chaining')
-test.todo('use scss to pass highlight colors')
-test.todo('refactor tests - use react testing library')
 
