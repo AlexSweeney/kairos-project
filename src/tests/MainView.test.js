@@ -4,15 +4,12 @@ import { act, Simulate } from 'react-dom/test-utils';
 import MainView from './../components/MainView.jsx';
 import { 
   mainViewButtonSelectedStyle,
-  mainViewButtonDeselectedStyle, 
+  mainViewButtonDeselectedStyle,
 } from './../styles/MainView.js';
 import { 
-	hexToRGB, 
-	getAllChildren, 
-	getObjectFromStyle,
-	testObjectsForEquality,
-	makeObjectKeysLowerCase,
+	hexToRGB,
 } from './../utils/testUtils.js';
+
 
 // =================================== Consts & Vars =================================== //
 let container;
@@ -34,9 +31,31 @@ const mainViewInfoText = {
 		{number: '6', text: 'countries'}
 	]
 };
- 
+
+// ======================================= Mocks ======================================= //
+jest.mock('./../styles/MainView.js', () => {
+	const original = jest.requireActual('./../styles/MainView.js');
+
+	return {
+		...original,
+		mainViewButtonSelectedStyle: jest.fn(),
+		mainViewButtonDeselectedStyle: jest.fn(),
+	}
+})
+
 // =================================== Setup / Teardown ================================= //
 beforeEach(() => {
+	// default = use real styles, implement mocks for inidividual tests
+	mainViewButtonSelectedStyle.mockImplementation(() => { 
+		const original = jest.requireActual('./../styles/MainView.js');
+		return original.mainViewButtonSelectedStyle;
+	})
+	
+	mainViewButtonDeselectedStyle.mockImplementation(() => {
+		const original = jest.requireActual('./../styles/MainView.js');
+		return original.mainViewButtonDeselectedStyle;
+	})
+
 	container = document.createElement('div');
 	document.body.appendChild(container)
 	act(() => { render(<MainView/>, container)}) 
@@ -46,7 +65,7 @@ afterEach(() => {
 	unmountComponentAtNode(container)
 })
 
-/* ======================================= Main View ==================================== */
+/* ======================================= Tests ==================================== */
 /* ==================== Main View Left */
 describe('.main-view-left', () => {
 	describe('background', () => {
@@ -216,6 +235,129 @@ describe('.main-view-right', () => {
 
 					mainViewButtons.forEach(mainViewButton => {
 						expect(mainViewButton.style.opacity).toEqual('0.5')
+					})
+				})
+			})
+		})
+
+		describe('on click', () => {
+			describe('#now-button', () => {
+				it('should add mainViewButtonSelectedStyle to now button', () => {
+					// implement mocks
+					mainViewButtonSelectedStyle.mockImplementation(() => { return { color: 'red'}})
+					mainViewButtonDeselectedStyle.mockImplementation(() => { return { color: 'blue'}})
+
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// click now
+					const nowButton = document.querySelector('#now-button');  
+					act(() => Simulate.click(nowButton))
+
+					// test now button 
+					expect(nowButton.style.color).toEqual('red')
+				})
+
+				it('should add mainViewButtonDeselectedStyle to future button', () => {
+					// implement mocks
+					mainViewButtonSelectedStyle.mockImplementation(() => { return { color: 'red'}})
+					mainViewButtonDeselectedStyle.mockImplementation(() => { return { color: 'blue'}})
+
+					// click future
+					const futureButton = document.querySelector('#future-button');
+					act(() => Simulate.click(futureButton))  
+
+					// click now
+					const nowButton = document.querySelector('#now-button');  
+					act(() => Simulate.click(nowButton))
+
+					// test future button 
+					expect(futureButton.style.color).toEqual('blue')
+				})
+
+				it('should update .main-view-info-numer', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// click now
+					const nowButton = document.querySelector('#now-button');  
+					act(() => Simulate.click(nowButton))
+
+					// test numbers
+					const numbers = document.querySelectorAll('.main-view-info-number');
+					numbers.forEach((number, i) => {
+						expect(number.textContent).toEqual(mainViewInfoText.now[i].number)
+					})
+				})
+
+				it('should update .main-view-info-text', () => { 
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// click now
+					const nowButton = document.querySelector('#now-button');  
+					act(() => Simulate.click(nowButton))
+
+					// test text
+					const textElements = document.querySelectorAll('.main-view-info-text');
+					textElements.forEach((textElement, i) => {
+						expect(textElement.textContent).toEqual(mainViewInfoText.now[i].text)
+					})
+				})
+			})
+
+			describe('#future-button', () => {
+				it('should add mainViewButtonSelectedStyle to future button', () => {
+					// implement mocks
+					mainViewButtonSelectedStyle.mockImplementation(() => { return { color: 'red'}})
+					mainViewButtonDeselectedStyle.mockImplementation(() => { return { color: 'blue'}})
+
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// test future button 
+					expect(futureButton.style.color).toEqual('red')
+				})
+
+				it('should add mainViewButtonDeselectedStyle to now button', () => {
+					// implement mocks
+					mainViewButtonSelectedStyle.mockImplementation(() => { return { color: 'red'}})
+					mainViewButtonDeselectedStyle.mockImplementation(() => { return { color: 'blue'}})
+
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// test now button
+					const nowButton = document.querySelector('#now-button'); 
+					expect(nowButton.style.color).toEqual('blue')
+				})
+
+				it('should update .main-view-info-number', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// test numbers
+					const numbers = document.querySelectorAll('.main-view-info-number');
+					numbers.forEach((number, i) => {
+						expect(number.textContent).toEqual(mainViewInfoText.future[i].number)
+					})
+				})
+
+				it('should update .main-view-info-text', () => {
+					// click future
+					const futureButton = document.querySelector('#future-button');  
+					act(() => Simulate.click(futureButton))
+
+					// test text
+					const textElements = document.querySelectorAll('.main-view-info-text');
+					textElements.forEach((textElement, i) => {
+						expect(textElement.textContent).toEqual(mainViewInfoText.future[i].text)
 					})
 				})
 			})
