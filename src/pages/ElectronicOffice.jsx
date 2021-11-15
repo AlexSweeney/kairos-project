@@ -16,12 +16,12 @@ export default function ElectronicOffice() {
   return (
     <section className="main-view"> 
       <div className="main-view-left" style={mainViewLeftStyle}>   
-        { loggedIn === true && <h2 className="main-view-left-header" style={mainViewLeftHeaderStyle}>Electronic Office</h2> }
+        { loggedIn !== true && <h2 className="main-view-left-header" style={mainViewLeftHeaderStyle}>Electronic Office</h2> }
       </div>
      
       <div className="main-view-right" style={mainViewRightStyle}> 
         { 
-          (loggedIn === true) ?
+          (loggedIn !== true) ?
             <LoginFrame setLoggedIn={setLoggedIn}/>
           : <PrivateFrame setLoggedIn={setLoggedIn}/>
         }

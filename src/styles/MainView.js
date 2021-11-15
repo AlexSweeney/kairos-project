@@ -34,6 +34,7 @@ export const mainViewRightButtonStyle = {
   borderRadius: '8px',
   padding: '8px',
   background: darkBlueBackground, 
+  border: '0px transparent',
 
   // text
   fontFamily: 'Noto Sans, sans-serif',
