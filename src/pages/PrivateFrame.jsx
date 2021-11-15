@@ -1,10 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { 
   mainViewRightHeaderStyle,  
   mainViewRightButtonStyle,
 } from './../styles/MainView.js';
-import { serviceInfoBoxButtonStyle } from './../styles/ServicesView.js';
-import useStatus from './../utils/useStatus.jsx';
 import './../styles/PrivateFrame.css';
 
 export default function PrivateFrame({setLoggedIn}) { 

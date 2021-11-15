@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from './../imgs/logo-icon.png';  
-import backgroundImage from './../imgs/background-image.jpg';
+import logo from './../imgs/logo-icon.png';   
 import {
   headerLeftStyle, 
   logoStyle, 
   homeIconStyle, 
   headerRightStyle, 
-  optionsBarStyle,
-  chevronIconStyle,
+  optionsBarStyle, 
   navLinkLeftStyle,
   navLinkRightStyle,
 } from './../styles/Header.js'; 

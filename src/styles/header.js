@@ -1,11 +1,7 @@
 import { 
   whiteBackground, 
   darkBlueBackground, 
-  pinkBackground, 
   darkBlueText, 
-  lightBlueText, 
-  whiteText, 
-  greyText 
 } from './colors.js';
 
 // ==================== Icon Styles */

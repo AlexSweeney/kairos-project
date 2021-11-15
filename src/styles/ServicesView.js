@@ -1,11 +1,7 @@
 import { 
   whiteBackground, 
   greyBackground,
-  darkBlueBackground, 
-  pinkBackground, 
   darkBlueText, 
-  lightBlueText, 
-  whiteText, 
   greyText 
 } from './colors.js';
 

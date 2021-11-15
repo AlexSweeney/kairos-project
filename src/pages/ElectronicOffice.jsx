@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import useStatus from './../utils/useStatus.jsx';
 import LoginFrame from './../pages/LoginFrame.jsx';
 import PrivateFrame from './../pages/PrivateFrame.jsx';
@@ -6,7 +6,6 @@ import {
   mainViewLeftStyle, 
   mainViewLeftHeaderStyle,
   mainViewRightStyle,   
-  mainViewInfoTextStyle,
 } from './../styles/MainView.js';
 import './../styles/MainView.css';
 

@@ -1,5 +1,4 @@
 import { 
-  darkBlueBackground, 
   lightBlueText, 
 } from './colors.js';
 
