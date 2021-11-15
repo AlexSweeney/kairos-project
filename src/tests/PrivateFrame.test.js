@@ -12,10 +12,25 @@ import {
   mainViewRightButtonStyle,
 } from './../styles/MainView.js';
 
-
+// =================================== Consts & Vars =================================== //
 let container;
 let setLoggedIn;
 
+// ======================================= Mocks ======================================= //
+jest.mock('./../styles/MainView.js', () => {
+	const original = jest.requireActual('./../styles/MainView.js');
+
+	return {
+		mainViewRightHeaderStyle: {
+			color: 'red',
+		},
+		mainViewRightButtonStyle: {
+			color: 'blue',
+		}
+	}
+}) 
+
+// =================================== Setup / Teardown ================================= //
 beforeEach(() => {
 	setLoggedIn = jest.fn();
 	container = document.createElement('div');
@@ -28,6 +43,7 @@ afterEach(() => {
 	unmountComponentAtNode(container) 
 })
 
+/* ======================================= Tests ==================================== */
 describe('<PrivateFrame/>', () => {
 	describe('on render', () => {
 		it('should render', () => {
@@ -56,23 +72,17 @@ describe('<PrivateFrame/>', () => {
 				it('should have mainViewRightHeaderStyle style', () => {
 					const heading = document.querySelector('.private-frame-header');
 					
-					const headingStyle = getObjectFromStyle(heading.style);
-					const targetStyle = makeObjectKeysLowerCase(mainViewRightHeaderStyle);
-
-					const test = testObjectsForEquality(headingStyle, targetStyle);
-					expect(test).toEqual(true) 
+					expect(heading.style.length).toEqual(1)
+					expect(heading.style.color).toEqual(mainViewRightHeaderStyle.color) 
 				})
 			})
 
 			describe('button', () => {
 				it('should have mainViewRightButtonStyle style', () => {
 					const button = document.querySelector('.logout-button');
-
-					const buttonStyle = getObjectFromStyle(button.style);
-					const targetStyle = makeObjectKeysLowerCase(mainViewRightButtonStyle);
- 
-					const test = testObjectsForEquality(buttonStyle, targetStyle);
-					expect(test).toEqual(true) 
+					
+					expect(button.style.length).toEqual(1)
+					expect(button.style.color).toEqual(mainViewRightButtonStyle.color)
 				})
 			})
 		})

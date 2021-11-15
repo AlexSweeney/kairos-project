@@ -3,9 +3,11 @@ import { render, unmountComponentAtNode } from 'react-dom';
 import { act, Simulate } from 'react-dom/test-utils';
 import OptionMenu from './../components/parts/OptionMenu.jsx';
  
+/* ======================================= Consts / Vars ================================ */
 let container;
 const options = ['option-1', 'option-2', 'options-3', 'options-4'];
- 
+
+/* ======================================= Setup / Teardown ============================= */
 beforeEach(() => {
 	container = document.createElement('div');
 	document.body.appendChild(container)
@@ -16,6 +18,7 @@ afterEach(() => {
 	unmountComponentAtNode(container)
 })
 
+/* ======================================= Tests ======================================== */
 describe('<OptionMenu/>', () => {
 	describe('on render', () => {
 		it('should show "option-1" in .option-head', () => {

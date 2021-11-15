@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
-import { act, Simulate } from 'react-dom/test-utils'; 
+import { act, Simulate } from 'react-dom/test-utils';  
+import MainView from './../components/MainView.jsx';
 import { 
   mainViewButtonSelectedStyle,
   mainViewButtonDeselectedStyle, 
@@ -12,7 +13,6 @@ import {
 	testObjectsForEquality,
 	makeObjectKeysLowerCase,
 } from './../utils/testUtils.js';
-import MainView from './../components/MainView.jsx';
 
 // =================================== Consts & Vars =================================== //
 let container;
@@ -35,7 +35,6 @@ const mainViewInfoText = {
 	]
 };
  
-
 // =================================== Setup / Teardown ================================= //
 beforeEach(() => {
 	container = document.createElement('div');
@@ -217,134 +216,6 @@ describe('.main-view-right', () => {
 
 					mainViewButtons.forEach(mainViewButton => {
 						expect(mainViewButton.style.opacity).toEqual('0.5')
-					})
-				})
-			})
-		})
-
-		describe('on click', () => {
-			describe('#now-button', () => {
-				it('should add mainViewButtonSelectedStyle to now button', () => {
-					// click future
-					const futureButton = document.querySelector('#future-button');  
-					act(() => Simulate.click(futureButton))
-
-					// click now
-					const nowButton = document.querySelector('#now-button');  
-					act(() => Simulate.click(nowButton))
-
-					// test now button
-					// get styles
-					const nowButtonStyle = getObjectFromStyle(nowButton.style); 
-					const selectedStyle = makeObjectKeysLowerCase(mainViewButtonSelectedStyle);
-					// test
-					const test = testObjectsForEquality(nowButtonStyle, selectedStyle);
-					expect(test).toEqual(true)
-				})
-
-				it('should add mainViewButtonDeselectedStyle to future button', () => {
-					// click future
-					const futureButton = document.querySelector('#future-button');  
-					act(() => Simulate.click(futureButton))
-
-					// click now
-					const nowButton = document.querySelector('#now-button');  
-					act(() => Simulate.click(nowButton))
-
-					// test future button
-					// get styles 
-					const futureButtonStyle = getObjectFromStyle(futureButton.style); 
-					const deSelectedStyle = makeObjectKeysLowerCase(mainViewButtonDeselectedStyle);
-
-					// test 
-					const test = testObjectsForEquality(futureButtonStyle, deSelectedStyle);
-					expect(test).toEqual(true) 
-				})
-
-				it('should update .main-view-info-numer', () => {
-					// click future
-					const futureButton = document.querySelector('#future-button');  
-					act(() => Simulate.click(futureButton))
-
-					// click now
-					const nowButton = document.querySelector('#now-button');  
-					act(() => Simulate.click(nowButton))
-
-					// test numbers
-					const numbers = document.querySelectorAll('.main-view-info-number');
-					numbers.forEach((number, i) => {
-						expect(number.textContent).toEqual(mainViewInfoText.now[i].number)
-					})
-				})
-
-				it('should update .main-view-info-text', () => {
-					// click future
-					const futureButton = document.querySelector('#future-button');  
-					act(() => Simulate.click(futureButton))
-
-					// click now
-					const nowButton = document.querySelector('#now-button');  
-					act(() => Simulate.click(nowButton))
-
-					// test text
-					const textElements = document.querySelectorAll('.main-view-info-text');
-					textElements.forEach((textElement, i) => {
-						expect(textElement.textContent).toEqual(mainViewInfoText.now[i].text)
-					})
-				})
-			})
-			
-			describe('#future-button', () => {
-				it('should add mainViewButtonSelectedStyle to future button', () => {
-					// click future
-					const futureButton = document.querySelector('#future-button');  
-					act(() => Simulate.click(futureButton))
-
-					// test future button
-					// get styles
-					const futureButtonStyle = getObjectFromStyle(futureButton.style); 
-					const selectedStyle = makeObjectKeysLowerCase(mainViewButtonSelectedStyle);
-					// test
-					const test = testObjectsForEquality(futureButtonStyle, selectedStyle);
-					expect(test).toEqual(true)
-				})
-
-				it('should add mainViewButtonDeselectedStyle to past button', () => {
-					// click future
-					const futureButton = document.querySelector('#future-button');  
-					act(() => Simulate.click(futureButton))
-
-					// test now button
-					// get styles
-					const nowButton = document.querySelector('#now-button');
-					const nowButtonStyle = getObjectFromStyle(nowButton.style); 
-					const deSelectedStyle = makeObjectKeysLowerCase(mainViewButtonDeselectedStyle);
-					// test
-					const test = testObjectsForEquality(nowButtonStyle, deSelectedStyle);
-					expect(test).toEqual(true)
-				})
-
-				it('should update .main-view-info-numer', () => {
-					// click future
-					const futureButton = document.querySelector('#future-button');  
-					act(() => Simulate.click(futureButton))
-
-					// test numbers
-					const numbers = document.querySelectorAll('.main-view-info-number');
-					numbers.forEach((number, i) => {
-						expect(number.textContent).toEqual(mainViewInfoText.future[i].number)
-					})
-				})
-
-				it('should update .main-view-info-text', () => {
-					// click future
-					const futureButton = document.querySelector('#future-button');  
-					act(() => Simulate.click(futureButton))
-
-					// test text
-					const textElements = document.querySelectorAll('.main-view-info-text');
-					textElements.forEach((textElement, i) => {
-						expect(textElement.textContent).toEqual(mainViewInfoText.future[i].text)
 					})
 				})
 			})

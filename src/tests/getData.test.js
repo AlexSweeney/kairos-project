@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import getData from './../utils/getData.js';
 
+/* ======================================= Consts ======================================= */
 const correctUserName = "correct-username";
 const correctPassword = "correct-password";
 
@@ -12,9 +13,10 @@ const axiosResponse = {
 	} 
 };
 
+/* ======================================= Mock ========================================= */
 jest.mock('axios')
 
-
+/* ======================================= Tests ======================================== */
 describe('getData()', () => {
 	describe('on success', () => {
 		it('should return { targetUsername: (data.username), targetPassword: (data.password)} ', async () => {

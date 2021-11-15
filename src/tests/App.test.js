@@ -16,6 +16,7 @@ import CRM from './../pages/CRM.jsx';
 import ElectronicOffice from './../pages/ElectronicOffice.jsx';
 import SSL from './../pages/SSL.jsx';
 
+/* ======================================= Mocks ================================================== */
 jest.mock('./../pages/Home.jsx')
 jest.mock('./../pages/AutoHome.jsx')
 jest.mock('./../pages/Sales.jsx')
@@ -24,7 +25,8 @@ jest.mock('./../pages/CRM.jsx')
 jest.mock('./../pages/ElectronicOffice.jsx')
 jest.mock('./../pages/SSL.jsx')
 jest.mock('./../App.jsx')
- 
+
+/* ======================================= Setup / Teardown ======================================= */
 beforeEach(() => { 
 	Home.mockImplementation(() => <p>MockHome</p>);
 	AutoHome.mockImplementation(() => <p>MockAutoHome</p>);
@@ -35,6 +37,7 @@ beforeEach(() => {
 	SSL.mockImplementation(() => <p>MockSSL</p>);
 }) 
 
+/* ======================================= Tests ================================================== */
 describe('<App/>', () => {
 	describe('render', () => {
 		it('should render <Header>', () => {
@@ -232,6 +235,6 @@ describe('<App/>', () => {
 // -> prioritize meeting customer specifications and testing by deadline
 // -> improve and tidy code if time left 
 // refactor / improve
+test.todo('merge MainView.test.js and MainViewClick.test.js')
 test.todo('make min-width settings cleaner')  
-test.todo('make main-info-button tests cleaner') 
-
+test.todo('make main-info-button tests cleaner')  

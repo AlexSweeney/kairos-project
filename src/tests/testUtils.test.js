@@ -10,6 +10,7 @@ import {
 	getObjectFromStyle,
 } from './../utils/testUtils.js';
 
+/* ======================================= Consts / Vars ================================ */
 let container;
 
 const depthOneClasses = ['child-1', 'child-2', 'child-3'];
@@ -52,16 +53,17 @@ function StyleDiv({style}) {
 	return <div className="style-div" style={style}></div>
 }
 
+/* ======================================= Setup / Teardown ================================ */
 beforeEach(() => {
 	container = document.createElement('div');
 	document.body.appendChild(container)
-
 })
 
 afterEach(() => {
 	unmountComponentAtNode(container)
 })
 
+/* ======================================= Tests ========================================== */
 it('hexToRGB()', () => {
 	const whiteHex = '#ffffff';
 	const whiteRGB = 'rgb(255, 255, 255)'; 
@@ -95,74 +97,3 @@ describe('getAllChildren()', () => {
 		})
 	})
 })
-
-/*describe('makeObjectKeysLowerCase() - shallow', () => {
-	it('should work for depth 1', () => {
-		const a = {'HELLO': 1, 'WorLd': 2};
-		const b = {'hello': 1, 'world': 2};
-
-		const res = makeObjectKeysLowerCase(a);
-		expect(res).toEqual(b)
-	})
-})
-
-describe('testObjectsForEquality() - shallow', () => {
-	describe('different keys length', () => {
-		it('should return false', () => {
-			const a = {'hello': 1, 'world': 2, 'today': 3};
-			const b = {'hello': 1, 'world': 2};
-
-			const test = testObjectsForEquality(a, b);
-			expect(test).toEqual(false)
-		})
-	})
-
-	describe('different keys', () => {
-		it('should return false', () => {
-			const a = {'hello': 1, 'world': 2, 'today': 3};
-			const b = {'hello': 1, 'world': 2, 'yesterday': 3};
-
-			const test = testObjectsForEquality(a, b);
-			expect(test).toEqual(false)
-		})
-	})
-
-	describe('different values', () => {
-		it('should return false', () => {
-			const a = {'hello': 1, 'world': 2, 'today': 3};
-			const b = {'hello': 1, 'world': 3, 'today': 3};
-
-			const test = testObjectsForEquality(a, b);
-			expect(test).toEqual(false)
-		})
-	})
-
-	describe('same keys and num keys, same key: value pairs', () => {
-		it('should return true', () => {
-			const a = {'hello': 1, 'world': 2, 'today': 3};
-			const b = {'hello': 1, 'world': 2, 'today': 3};
-
-			const test = testObjectsForEquality(a, b);
-			expect(test).toEqual(true)
-		})
-	})
-})*/
-
-/*describe('getObjectFromStyle', () => {
-	it('should return object with style key value pairs, dashes (-) inside style keys are removed', () => {
-		act(() => { render(<StyleDiv style={styleOne}/>, container)})
-		const style = document.querySelector('.style-div').style;
-		console.log(style)
-
-		const obj = getObjectFromStyle(style)
-		const objKeys = Object.keys(obj);
-		const styleOneKeys = Object.keys(styleOne);
-
-		expect(objKeys.length).toEqual(styleOneKeys.length)
-
-		Object.keys(obj).forEach((key, i) => {
-			expect(key).toEqual(Object.keys(styleOne)[i])
-			expect(obj[key]).toEqual(styleOne[key])
-		})
-	}) 
-})*/
