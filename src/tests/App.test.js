@@ -230,6 +230,4 @@ describe('<App/>', () => {
 			})
 		})
 	})
-})
-
-test.todo('make min-width settings cleaner')   
+}) 
