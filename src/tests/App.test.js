@@ -229,18 +229,16 @@ describe('<App/>', () => {
 	})
 })
 
-// some improvements to make
 // -> prioritize meeting customer specifications and testing by deadline
-// -> improve and tidy code if time left   
+// -> improve and tidy code if time left 
 test.todo('test testUtils.js')  
-test.todo('getData()')
 
 // refactor / improve
-test.todo('options test - use rtl make sure menu hidden when should be')
-test.todo('ids vs class, different styles? ')
 test.todo('make min-width settings cleaner') 
+
+test.todo('options test - use rtl make sure menu hidden when should be') 
 test.todo('make main-info-button tests cleaner') 
 test.todo('use .? optional chaining')
-test.todo('scss to pass highlight colors')
+test.todo('use scss to pass highlight colors')
 test.todo('refactor tests - use react testing library')
 

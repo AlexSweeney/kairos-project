@@ -338,10 +338,8 @@ describe('<LoginFrame/>', () => {
 		describe('Network error', () => {
 			it('message "Connection problem, please try again." should not be hidden, all others should ', async () => {
 				const errorMessage = 'Network Error';
+				axios.get.mockImplementationOnce(() => Promise.reject(new Error(errorMessage)))
 
-				axios.get.mockImplementationOnce(() =>
-		      Promise.reject(new Error(errorMessage)),
-		    );
 				// set input values
 				fireEvent.change(inputs[0], { target: { value: correctUserName }})
 				fireEvent.change(inputs[1], { target: { value: incorrectPassword }})
