@@ -231,13 +231,10 @@ describe('<App/>', () => {
 
 // some improvements to make
 // -> prioritize meeting customer specifications and testing by deadline
-// -> improve and tidy code if time left    
-
-test.todo('router test with useHistory to move, components just name no <> ?')
-test.todo('test getData')
+// -> improve and tidy code if time left  
 test.todo('axios error handling')
-test.todo('test font loads')
-test.todo('test testUtils.js') 
+test.todo('test testUtils.js')  
+test.todo('getData()')
 
 // refactor / improve
 test.todo('options test - use rtl make sure menu hidden when should be')

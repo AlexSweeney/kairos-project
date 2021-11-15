@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
 import getData from './../utils/getData.js';
-/*import {
-  mainViewLeftStyle, 
-  mainViewLeftHeaderStyle,
-  mainViewRightStyle,   
-  mainViewInfoTextStyle,
-} from './../styles/MainView.js';
-import { serviceInfoBoxButtonStyle } from './../styles/ServicesView.js';*/
-
 import { 
   mainViewRightHeaderStyle,  
   mainViewRightButtonStyle,
@@ -42,10 +34,10 @@ export default function LoginFrame({setLoggedIn}) {
 
     // get correct username and password
     const { targetUsername, targetPassword } = await getData();
-    setIsLoading(false)
+    setIsLoading(false) 
 
     // error
-    if(username === 'loading-error') {
+    if(targetUsername === 'loading-error') {
       setErrorStatus('loading-error')
       return;
     }

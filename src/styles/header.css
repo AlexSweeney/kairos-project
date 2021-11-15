@@ -61,6 +61,7 @@
 	mask-image: url('./../imgs/home-icon.svg');
 	mask-repeat: no-repeat; 
 	background: #181949;
+	overflow: visible;
 }
 
 .home-heading-hover {

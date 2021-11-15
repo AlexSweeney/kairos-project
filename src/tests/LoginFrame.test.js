@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { render, fireEvent, waitFor, cleanup} from '@testing-library/react';
 import LoginFrame from './../pages/LoginFrame.jsx';
 import {  
@@ -26,13 +27,22 @@ const correctPassword = "correct-password";
 const incorrectUserName = "incorrect-userName";
 const incorrectPassword = "incorrect-password";
 
+const axiosResponse = { 
+	data : {
+		username: correctUserName,
+		password: correctPassword,
+	} 
+};
+
 // =========================================== Mocks =================================================== // 
-jest.mock('./../utils/getData.js') 
+//jest.mock('./../utils/getData.js') 
+jest.mock('axios')
 
 // =========================================== Setup / teardown ======================================== // 
 beforeEach(() => {
 	setLoggedIn = jest.fn();
 	render(<LoginFrame setLoggedIn={setLoggedIn}/>)
+	
 	inputs = document.querySelectorAll('input');
 	submitButton = document.querySelector('.submit-button');
 	form = document.querySelector('form');
@@ -178,6 +188,8 @@ describe('<LoginFrame/>', () => {
 	describe('on form submit', () => {
 		describe('onLoading', () => {
 			it('should disable text inputs', async () => {
+				axios.get.mockImplementationOnce(() => Promise.resolve(axiosResponse));
+
 				await waitFor(() => { 
 					fireEvent.click(submitButton) 
 
@@ -188,6 +200,8 @@ describe('<LoginFrame/>', () => {
 			})
 
 			it('should disable submit button', async () => {
+				axios.get.mockImplementationOnce(() => Promise.resolve(axiosResponse));
+
 				await waitFor(() => { 
 					fireEvent.click(submitButton) 
 
@@ -197,6 +211,8 @@ describe('<LoginFrame/>', () => {
 			})
 
 			it('message "Logging in, please wait." should not be hidden, all others should', async () => {
+				axios.get.mockImplementationOnce(() => Promise.resolve(axiosResponse));
+
 				// click submit 
 				await waitFor(() => { 
 					fireEvent.click(submitButton) 
@@ -221,6 +237,8 @@ describe('<LoginFrame/>', () => {
 
 		describe('wrong username wrong password', () => {
 			it('message "Username not found, please try again." should not be hidden, all others should ', async () => {
+				axios.get.mockImplementationOnce(() => Promise.resolve(axiosResponse));
+
 				// set input values
 				fireEvent.change(inputs[0], { target: { value: incorrectUserName }})
 				fireEvent.change(inputs[1], { target: { value: incorrectPassword }})
@@ -247,6 +265,8 @@ describe('<LoginFrame/>', () => {
 
 		describe('wrong username right password', () => {
 			it('message "Username not found, please try again." should not be hidden, all others should ', async () => {
+				axios.get.mockImplementationOnce(() => Promise.resolve(axiosResponse));
+
 				// set input values
 				fireEvent.change(inputs[0], { target: { value: incorrectUserName }})
 				fireEvent.change(inputs[1], { target: { value: correctPassword }})
@@ -273,6 +293,8 @@ describe('<LoginFrame/>', () => {
 
 		describe('right username wrong password', () => {
 			it('message "Wrong password, please try again." should not be hidden, all others should ', async () => {
+				axios.get.mockImplementationOnce(() => Promise.resolve(axiosResponse));
+
 				// set input values
 				fireEvent.change(inputs[0], { target: { value: correctUserName }})
 				fireEvent.change(inputs[1], { target: { value: incorrectPassword }})
@@ -299,6 +321,8 @@ describe('<LoginFrame/>', () => {
 
 		describe('right username right password', () => {
 			it('should call setLoggedIn with true', async () => {
+				axios.get.mockImplementationOnce(() => Promise.resolve(axiosResponse));
+
 				// set input values
 				fireEvent.change(inputs[0], { target: { value: correctUserName }})
 				fireEvent.change(inputs[1], { target: { value: correctPassword }})
@@ -312,8 +336,13 @@ describe('<LoginFrame/>', () => {
 			})
 		})
 
-		describe('connection error', () => {
-			it.skip('message "Connection problem, please try again." should not be hidden, all others should ', async () => {
+		describe('Network error', () => {
+			it('message "Connection problem, please try again." should not be hidden, all others should ', async () => {
+				const errorMessage = 'Network Error';
+
+				axios.get.mockImplementationOnce(() =>
+		      Promise.reject(new Error(errorMessage)),
+		    );
 				// set input values
 				fireEvent.change(inputs[0], { target: { value: correctUserName }})
 				fireEvent.change(inputs[1], { target: { value: incorrectPassword }})
