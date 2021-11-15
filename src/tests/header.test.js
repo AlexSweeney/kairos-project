@@ -2,7 +2,7 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
-import { hexToRGB, containsTextContent, getAllChildren } from './../utils/testUtils.js';
+import { hexToRGB, getAllChildren } from './../utils/testUtils.js';
 import Header from './../components/Header.jsx';
 
 /* ======================================= Consts / Vars ================================ */
@@ -102,9 +102,8 @@ describe('.nav-link', () => {
 		const navLinks = container.querySelectorAll('.nav-link');
 		expect(navLinks.length).toEqual(navLinkNames.length) 
 
-		navLinkNames.forEach(navLinkName => {
-			const check = containsTextContent(navLinks, navLinkName); 
-			expect(check).toEqual(true)
+		navLinks.forEach((navLink, i) => {
+			expect(navLink.textContent).toEqual(navLinkNames[i])
 		})
 	})
 

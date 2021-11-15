@@ -2,6 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event'; 
 import { BrowserRouter, MemoryRouter, Routes, Route } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import '@testing-library/jest-dom'; 
 
 import Header from './../components/Header.jsx';
@@ -22,26 +23,9 @@ jest.mock('./../pages/CloudErp.jsx')
 jest.mock('./../pages/CRM.jsx')
 jest.mock('./../pages/ElectronicOffice.jsx')
 jest.mock('./../pages/SSL.jsx')
-
-let container; 
-
-function getByTextContent(nodes, textContent) { 
-	return Array.from(nodes).map(node => { 
-		if(node.textContent === textContent) return node;
-	}).filter(el => el) 
-}-
-
-function MockApp({pathname}) {
-	return (
-		<MemoryRouter initialEntries={[pathname]}>
-			<Header/>
-        
-      <MyRoutes/>
-		</MemoryRouter>
-	)
-}
-
-beforeEach(() => {
+jest.mock('./../App.jsx')
+ 
+beforeEach(() => { 
 	Home.mockImplementation(() => <p>MockHome</p>);
 	AutoHome.mockImplementation(() => <p>MockAutoHome</p>);
 	Sales.mockImplementation(() => <p>MockSales</p>);
@@ -89,9 +73,8 @@ describe('<App/>', () => {
 			it('should route when url matches', () => {
 				// render  
 				const pathname = '/';
-				render(<MockApp pathname={pathname}/>)
+				render(<App pathname={pathname}/>)
 
-				// change route 
 			  expect(screen.getByText(/MockHome/)).toBeInTheDocument() 
 			})
 		})
@@ -112,7 +95,7 @@ describe('<App/>', () => {
 			it('should route when url matches', () => {
 				// render  
 				const pathname = '/sales';
-				render(<MockApp pathname={pathname}/>)
+				render(<App pathname={pathname}/>)
 
 				// change route 
 			  expect(screen.getByText(/MockSales/)).toBeInTheDocument() 
@@ -133,9 +116,8 @@ describe('<App/>', () => {
 			})
 
 			it('should route when url matches', () => {
-				// render  
 				const pathname = '/cloud_erp';
-				render(<MockApp pathname={pathname}/>)
+				render(<App pathname={pathname}/>)
 
 				// change route 
 			  expect(screen.getByText(/MockCloudERP/i)).toBeInTheDocument() 
@@ -158,7 +140,7 @@ describe('<App/>', () => {
 			it('should route when url matches', () => {
 				// render  
 				const pathname = '/crm';
-				render(<MockApp pathname={pathname}/>)
+				render(<App pathname={pathname}/>)
 
 				// change route 
 			  expect(screen.getByText(/MockCrm/i)).toBeInTheDocument() 
@@ -181,7 +163,7 @@ describe('<App/>', () => {
 			it('should route when url matches', () => {
 				// render  
 				const pathname = '/electronic_office';
-				render(<MockApp pathname={pathname}/>)
+				render(<App pathname={pathname}/>)
 
 				// change route 
 			  expect(screen.getByText(/MockElectronicOffice/i)).toBeInTheDocument() 
@@ -204,7 +186,7 @@ describe('<App/>', () => {
 			it('should route when url matches', () => {
 				// render  
 				const pathname = '/sales';
-				render(<MockApp pathname={pathname}/>)
+				render(<App pathname={pathname}/>)
 
 				// change route 
 			  expect(screen.getByText(/MockSales/i)).toBeInTheDocument() 
@@ -227,7 +209,7 @@ describe('<App/>', () => {
 			it('should route when url matches', () => {
 				// render  
 				const pathname = '/ssl';
-				render(<MockApp pathname={pathname}/>)
+				render(<App pathname={pathname}/>)
 
 				// change route 
 			  expect(screen.getByText(/MockSSL/i)).toBeInTheDocument() 
@@ -238,7 +220,7 @@ describe('<App/>', () => {
 			it('should route to home page if unmatched url', () => {
 				// render  
 				const pathname = '/abc123';
-				render(<MockApp pathname={pathname}/>)
+				render(<App pathname={pathname}/>)
 
 				// change route 
 			  expect(screen.getByText(/MockHome/i)).toBeInTheDocument() 
@@ -250,11 +232,12 @@ describe('<App/>', () => {
 // some improvements to make
 // -> prioritize meeting customer specifications and testing by deadline
 // -> improve and tidy code if time left    
-test.todo('test testUtils.js') 
+
+test.todo('router test with useHistory to move, components just name no <> ?')
 test.todo('test getData')
 test.todo('axios error handling')
 test.todo('test font loads')
-test.todo('router test with useHistory to move, components just name no <> ?')
+test.todo('test testUtils.js') 
 
 // refactor / improve
 test.todo('options test - use rtl make sure menu hidden when should be')

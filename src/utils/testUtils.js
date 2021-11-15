@@ -8,10 +8,6 @@ export function hexToRGB(hex) {
   return `rgb(${a}, ${b}, ${c})`;
 }
 
-export function containsTextContent(nodes, text) {
-	return Array.from(nodes).some(node => node.textContent === text);
-} 
-
 export function getAllChildren(node) {
 	let children = [];
 

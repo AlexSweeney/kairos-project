@@ -7,7 +7,6 @@ import {
 } from './../styles/MainView.js';
 import { 
 	hexToRGB, 
-	containsTextContent, 
 	getAllChildren, 
 	getObjectFromStyle,
 	testObjectsForEquality,
@@ -125,9 +124,8 @@ describe('.main-view-right', () => {
 				const mainViewButtons = document.querySelectorAll('.main-view-button');
 				expect(mainViewButtons.length).toEqual(mainViewButtonsText.length)
 
-				mainViewButtonsText.forEach(mainViewButtonText => {
-					const res = containsTextContent(mainViewButtons, mainViewButtonText)
-					expect(res).toEqual(true)
+				mainViewButtons.forEach((mainViewButton, i) => { 
+					expect(mainViewButton.textContent).toEqual(mainViewButtonsText[i])
 				})
 			})
 

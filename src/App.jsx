@@ -6,7 +6,7 @@ import './styles/reset.css';
 import './styles/fonts.css';
 import './styles/App.css'; 
  
-function App() {   
+function App() {    
   return (
   	<div className="container">  
       <BrowserRouter> 
