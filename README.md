@@ -2,8 +2,6 @@
 
 Interview project for Kairos company
 
-* https://alexsweeney.github.io/kairos-project/
-
 ## Notes
 * to login go to electronic office and enter
 * username: Mona_Kassulke14
