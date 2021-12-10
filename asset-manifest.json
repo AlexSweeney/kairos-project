@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/AlexSweeney/kairos-project/static/css/main.2a203e33.chunk.css",
+    "main.js": "/AlexSweeney/kairos-project/static/js/main.396d33a7.chunk.js",
+    "main.js.map": "/AlexSweeney/kairos-project/static/js/main.396d33a7.chunk.js.map",
+    "runtime-main.js": "/AlexSweeney/kairos-project/static/js/runtime-main.b56b5ea0.js",
+    "runtime-main.js.map": "/AlexSweeney/kairos-project/static/js/runtime-main.b56b5ea0.js.map",
+    "static/js/2.5cd104a4.chunk.js": "/AlexSweeney/kairos-project/static/js/2.5cd104a4.chunk.js",
+    "static/js/2.5cd104a4.chunk.js.map": "/AlexSweeney/kairos-project/static/js/2.5cd104a4.chunk.js.map",
+    "index.html": "/AlexSweeney/kairos-project/index.html",
+    "static/css/main.2a203e33.chunk.css.map": "/AlexSweeney/kairos-project/static/css/main.2a203e33.chunk.css.map",
+    "static/js/2.5cd104a4.chunk.js.LICENSE.txt": "/AlexSweeney/kairos-project/static/js/2.5cd104a4.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "/AlexSweeney/kairos-project/static/media/Roboto-Regular.a8d6ac03.ttf",
+    "static/media/accounting-icon.ce9dd2aa.svg": "/AlexSweeney/kairos-project/static/media/accounting-icon.ce9dd2aa.svg",
+    "static/media/background-image.46dc1bc3.jpg": "/AlexSweeney/kairos-project/static/media/background-image.46dc1bc3.jpg",
+    "static/media/OptionMenu.css": "/AlexSweeney/kairos-project/static/media/chevron-icon.5293dcf3.svg",
+    "static/media/customer-icon.6f6e86d3.svg": "/AlexSweeney/kairos-project/static/media/customer-icon.6f6e86d3.svg",
+    "static/media/header.css": "/AlexSweeney/kairos-project/static/media/home-icon.8f06940c.svg",
+    "static/media/hr-admin-icon.76b5075a.svg": "/AlexSweeney/kairos-project/static/media/hr-admin-icon.76b5075a.svg",
+    "static/media/it-cloud-icon.3febe75f.svg": "/AlexSweeney/kairos-project/static/media/it-cloud-icon.3febe75f.svg",
+    "static/media/sales-icon.cb3ca4b2.svg": "/AlexSweeney/kairos-project/static/media/sales-icon.cb3ca4b2.svg",
+    "static/media/security-icon.22bc113c.svg": "/AlexSweeney/kairos-project/static/media/security-icon.22bc113c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b56b5ea0.js",
+    "static/js/2.5cd104a4.chunk.js",
+    "static/css/main.2a203e33.chunk.css",
+    "static/js/main.396d33a7.chunk.js"
+  ]
+}
