@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './../styles/MainView.css';
+import './../styles/mainView.css';
 import {
   mainViewLeftStyle, 
   mainViewLeftHeaderStyle,

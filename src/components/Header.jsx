@@ -9,9 +9,9 @@ import {
   optionsBarStyle, 
   navLinkLeftStyle,
   navLinkRightStyle,
-} from './../styles/Header.js'; 
+} from './../styles/header.js'; 
 import OptionMenu from './parts/OptionMenu.jsx';
-import './../styles/Header.css'; 
+import './../styles/header.css'; 
 
 export default function Header() { 
   const languageOptions = ['EN', 'KO', 'VN']; 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './../styles/MainView.css';
+import './../styles/mainView.css';
 import {
   mainViewLeftStyle, 
   mainViewLeftHeaderStyle,

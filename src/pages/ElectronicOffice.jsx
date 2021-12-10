@@ -7,7 +7,7 @@ import {
   mainViewLeftHeaderStyle,
   mainViewRightStyle,   
 } from './../styles/MainView.js';
-import './../styles/MainView.css';
+import './../styles/mainView.css';
 
 export default function ElectronicOffice() {
   const {loggedIn, setLoggedIn} = useStatus(); 
