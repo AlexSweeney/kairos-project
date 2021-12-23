@@ -1,0 +1,2 @@
+(this["webpackJsonpkairos-project"]=this["webpackJsonpkairos-project"]||[]).push([[0],{10:function(e,c,n){"use strict";n.r(c);var t=n(1),o=n.n(t),r=n(3),s=n.n(r),a=(n(8),n(0));var i=function(){return console.log("cancel app"),Object(a.jsx)("div",{className:"container",children:Object(a.jsx)("p",{children:"Hello world app"})})};s.a.render(Object(a.jsx)(o.a.StrictMode,{children:Object(a.jsx)(i,{})}),document.getElementById("root"))},8:function(e,c,n){}},[[10,1,2]]]);
+//# sourceMappingURL=main.5559d8da.chunk.js.map
