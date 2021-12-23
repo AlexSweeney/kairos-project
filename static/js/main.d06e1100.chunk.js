@@ -1,0 +1,2 @@
+(this["webpackJsonpkairos-project"]=this["webpackJsonpkairos-project"]||[]).push([[0],{10:function(e,n,o){"use strict";o.r(n);var t=o(1),c=o.n(t),s=o(3),r=o.n(s),i=(o(8),o(0));console.log("index js loaded"),r.a.render(Object(i.jsx)(c.a.StrictMode,{children:Object(i.jsx)("p",{children:"Index js"})}),document.getElementById("root"))},8:function(e,n,o){}},[[10,1,2]]]);
+//# sourceMappingURL=main.d06e1100.chunk.js.map
